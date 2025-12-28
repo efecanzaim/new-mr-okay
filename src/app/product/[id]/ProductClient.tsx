@@ -105,19 +105,19 @@ export default function ProductClient({ product, productId }: ProductClientProps
                 <h1 className="font-serif text-4xl lg:text-5xl text-black mb-4">
                   {product.name}
                 </h1>
-                <p className="text-2xl text-silver font-light">
+                <p className="text-2xl text-black font-light">
                   ₺{product.price.toLocaleString('tr-TR')}
                 </p>
-                <p className="text-sm text-silver-dark mt-1">{product.ml}ml</p>
+                <p className="text-sm text-black mt-1">{product.ml}ml</p>
               </div>
 
-              <p className="text-silver-dark font-light leading-relaxed">
+              <p className="text-black font-light leading-relaxed">
                 {product.description}
               </p>
 
               {/* Family */}
               <div>
-                <p className="text-xs tracking-ultrawide uppercase text-silver mb-2">
+                <p className="text-xs tracking-ultrawide uppercase text-black mb-2">
                   Koku Ailesi
                 </p>
                 <p className="text-black font-light">{product.family}</p>
@@ -125,7 +125,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
 
               {/* Quantity */}
               <div>
-                <p className="text-xs tracking-ultrawide uppercase text-silver mb-4">
+                <p className="text-xs tracking-ultrawide uppercase text-black mb-4">
                   Adet
                 </p>
                 <div className="flex items-center border border-black/20 w-fit">

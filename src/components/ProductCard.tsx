@@ -53,11 +53,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         >
           {/* Image Container */}
           <div className="relative aspect-[3/4] bg-silver-light overflow-hidden mb-6">
-            <motion.div
-              animate={{ scale: isHovered ? 1.05 : 1 }}
-              transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-              className="w-full h-full relative"
-            >
+            <div className="w-full h-full relative">
               {/* Default Image */}
               <AnimatePresence>
                 <motion.div
@@ -93,7 +89,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                 />
               </motion.div>
-            </motion.div>
+            </div>
 
             {/* Hover Overlay */}
             <motion.div

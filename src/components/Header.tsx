@@ -9,11 +9,11 @@ import { ShoppingBag, Menu, X, User, Heart, Mail, Search, MapPin } from "lucide-
 // Note: Some icons are used only in desktop view
 
 const businessmanCategories = [
-  { name: "Classic", href: "/collections/businessman/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
-  { name: "Avant-Garde", href: "/collections/businessman/avant-garde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
-  { name: "Elegant", href: "/collections/businessman/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
-  { name: "Holiday", href: "/collections/businessman/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },
-  { name: "Weekend", href: "/collections/businessman/weekend", description: "Rahat, modern ve hafif", image: "/products/weekend.png" },
+  { name: "Classic", href: "/product/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
+  { name: "Avant-Garde", href: "/product/avant-garde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
+  { name: "Elegant", href: "/product/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
+  { name: "Holiday", href: "/product/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },
+  { name: "Weekend", href: "/product/weekend", description: "Rahat, modern ve hafif", image: "/products/weekend.png" },
 ];
 
 export default function Header() {
@@ -39,18 +39,21 @@ export default function Header() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Scroll threshold for triggering logo animation (in pixels)
+  const SCROLL_THRESHOLD = 30;
+
   // Handle animation state based on page and scroll position
   useEffect(() => {
     if (isHomePage) {
-      // Check if we're in hero area (viewport height)
-      const isInHeroArea = window.scrollY < window.innerHeight;
+      // Check if we've scrolled past the threshold
+      const hasScrolled = window.scrollY > SCROLL_THRESHOLD;
 
-      if (isInHeroArea) {
-        // In hero area - show animation
+      if (!hasScrolled) {
+        // At top - show centered logo
         setLogoAnimationComplete(false);
         setShowNavigation(false);
       } else {
-        // Below hero area - skip animation, show normal state
+        // Scrolled past threshold - show normal header state
         setLogoAnimationComplete(true);
         setShowNavigation(true);
       }
@@ -67,16 +70,16 @@ export default function Header() {
 
       // Only run animation logic on home page
       if (isHomePage) {
-        const isInHeroArea = scrollYValue < window.innerHeight;
+        const hasScrolled = scrollYValue > SCROLL_THRESHOLD;
 
-        if (!isInHeroArea && !logoAnimationComplete) {
-          // Scrolled out of hero area - complete animation
+        if (hasScrolled && !logoAnimationComplete) {
+          // Scrolled past threshold - complete animation
           setLogoAnimationComplete(true);
           setTimeout(() => {
             setShowNavigation(true);
           }, 800);
-        } else if (isInHeroArea && logoAnimationComplete) {
-          // Scrolled back into hero area - reset animation
+        } else if (!hasScrolled && logoAnimationComplete) {
+          // Scrolled back to top - reset animation
           setLogoAnimationComplete(false);
           setShowNavigation(false);
         }

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,16 +8,10 @@ import Image from "next/image";
 export default function CollectionBanner() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-gray-50 overflow-hidden">
+    <section ref={ref} className="py-24 lg:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Businessman Collection */}
@@ -29,10 +23,7 @@ export default function CollectionBanner() {
           >
             <Link href="/collections/businessman">
               <div className="relative aspect-[4/5] overflow-hidden">
-                <motion.div
-                  style={{ y }}
-                  className="absolute inset-0 scale-110"
-                >
+                <div className="absolute inset-0">
                   <Image
                     src={`${basePath}/images/businessman_banner.jpg`}
                     alt="Businessman Collection"
@@ -40,11 +31,11 @@ export default function CollectionBanner() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                </motion.div>
-                
+                </div>
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                
+
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
@@ -75,10 +66,7 @@ export default function CollectionBanner() {
           >
             <Link href="/collections/smartwoman">
               <div className="relative aspect-[4/5] overflow-hidden">
-                <motion.div
-                  style={{ y }}
-                  className="absolute inset-0 scale-110"
-                >
+                <div className="absolute inset-0">
                   <Image
                     src={`${basePath}/images/smartwoman_banner.jpg`}
                     alt="Smartwoman Collection"
@@ -86,11 +74,11 @@ export default function CollectionBanner() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                </motion.div>
-                
+                </div>
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                
+
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
