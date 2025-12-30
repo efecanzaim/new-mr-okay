@@ -18,23 +18,23 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // BUSINESSMAN - CLASSIC
+  // BUSINESSMAN - ELEGANT
   {
-    id: "classic",
-    name: "Classic",
+    id: "elegant",
+    name: "Elegant",
     collection: "BUSINESSMAN",
     price: 1250,
     ml: 50,
-    image: "/products/classic.png",
+    image: "/products/elegant.png",
     category: "businessman",
-    subcategory: "classic",
+    subcategory: "elegant",
     scent: {
-      top: ["Bergamot", "Lavanta"],
-      middle: ["Geranyum", "Adaçayı"],
-      base: ["Meşe yosunu", "Vetiver", "Tonka fasulyesi"],
+      top: ["Bergamot", "Pembe Biber", "Lavanta"],
+      middle: ["Menekşe yaprakları", "Süsen (İris)", "Adaçayı"],
+      base: ["Sandal Ağacı", "Vetiver", "Kehribar", "Misk"],
     },
-    description: "Klasik, disiplinli, özgüvenli",
-    family: "Fougere",
+    description: "Sofistike, zarif ve entelektüel",
+    family: "Woody, Aromatik, Pudralı",
   },
 
   // BUSINESSMAN - AVANT-GARDE
@@ -56,42 +56,23 @@ export const products: Product[] = [
     family: "Woody, Spicy",
   },
 
-  // BUSINESSMAN - ELEGANT
+  // BUSINESSMAN - CLASSIC
   {
-    id: "elegant",
-    name: "Elegant",
+    id: "classic",
+    name: "Classic",
     collection: "BUSINESSMAN",
     price: 1250,
     ml: 50,
-    image: "/products/elegant.png",
+    image: "/products/classic.png",
     category: "businessman",
-    subcategory: "elegant",
+    subcategory: "classic",
     scent: {
-      top: ["Bergamot", "Pembe Biber", "Lavanta"],
-      middle: ["Menekşe yaprakları", "Süsen (İris)", "Adaçayı"],
-      base: ["Sandal Ağacı", "Vetiver", "Kehribar", "Misk"],
+      top: ["Bergamot", "Lavanta"],
+      middle: ["Geranyum", "Adaçayı"],
+      base: ["Meşe yosunu", "Vetiver", "Tonka fasulyesi"],
     },
-    description: "Sofistike, zarif ve entelektüel",
-    family: "Woody, Aromatik, Pudralı",
-  },
-
-  // BUSINESSMAN - HOLIDAY
-  {
-    id: "holiday",
-    name: "Holiday",
-    collection: "BUSINESSMAN",
-    price: 1250,
-    ml: 50,
-    image: "/products/holiday.png",
-    category: "businessman",
-    subcategory: "holiday",
-    scent: {
-      top: ["Limon", "Nane", "Yeşil Elma", "Deniz esintisi (Marine akorlar)"],
-      middle: ["Lavanta", "Ginger (Zencefil)", "Geranium"],
-      base: ["Sedir Ağacı", "Kehribar", "Beyaz Misk"],
-    },
-    description: "Hayatı dolu dolu yaşayan, özgür ruhlu ve enerjik iş adamı",
-    family: "Aquatic, Narenciye, Aromatik",
+    description: "Klasik, disiplinli, özgüvenli",
+    family: "Fougere",
   },
 
   // BUSINESSMAN - WEEKEND
@@ -111,6 +92,25 @@ export const products: Product[] = [
     },
     description: "Şehirli, modern, hafta sonlarının keyfini huzurla çıkaran bir stil",
     family: "Amber, Misk, Spicy",
+  },
+
+  // BUSINESSMAN - HOLIDAY
+  {
+    id: "holiday",
+    name: "Holiday",
+    collection: "BUSINESSMAN",
+    price: 1250,
+    ml: 50,
+    image: "/products/holiday.png",
+    category: "businessman",
+    subcategory: "holiday",
+    scent: {
+      top: ["Limon", "Nane", "Yeşil Elma", "Deniz esintisi (Marine akorlar)"],
+      middle: ["Lavanta", "Ginger (Zencefil)", "Geranium"],
+      base: ["Sedir Ağacı", "Kehribar", "Beyaz Misk"],
+    },
+    description: "Hayatı dolu dolu yaşayan, özgür ruhlu ve enerjik iş adamı",
+    family: "Aquatic, Narenciye, Aromatik",
   },
 ];
 

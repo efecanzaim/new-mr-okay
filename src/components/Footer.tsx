@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { Instagram, Facebook, Twitter, Mail, Send, MessageCircle, Truck, Store, RefreshCw, Shield } from "lucide-react";
+import { Instagram, Facebook, Twitter, Mail, Send, MessageCircle, Award, Sparkles, Globe } from "lucide-react";
 
 const footerLinks = {
   collections: [
@@ -40,7 +40,7 @@ export default function Footer() {
   return (
     <>
       {/* Newsletter & Social Section */}
-      <section className="bg-black py-6 lg:py-8 border-t border-white/10">
+      <section className="bg-gray-200 py-6 lg:py-8 border-t border-black/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             {/* Newsletter - Abone Ol */}
@@ -51,7 +51,7 @@ export default function Footer() {
               transition={{ duration: 0.8 }}
               className="flex flex-col lg:flex-row lg:items-center gap-3"
             >
-              <h3 className="avenir text-base lg:text-lg font-light text-white whitespace-nowrap">
+              <h3 className="avenir text-base lg:text-lg font-light text-black whitespace-nowrap">
                 Abone Ol
               </h3>
               <form onSubmit={handleSubscribe} className="flex flex-1 max-w-md">
@@ -61,13 +61,13 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="E-posta adresiniz"
                   required
-                  className="flex-1 px-3 py-2 bg-transparent border border-white/20 text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-white/40 transition-colors duration-300"
+                  className="flex-1 px-3 py-2 bg-white border border-black/20 text-black placeholder:text-black/40 text-sm focus:outline-none focus:border-black/40 transition-colors duration-300"
                 />
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-4 py-2 bg-white text-black hover:bg-white/90 transition-colors duration-300 flex items-center justify-center"
+                  className="px-4 py-2 bg-black text-white hover:bg-black/90 transition-colors duration-300 flex items-center justify-center"
                 >
                   <Send size={14} strokeWidth={1.5} />
                 </motion.button>
@@ -76,7 +76,7 @@ export default function Footer() {
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-xs text-green-400 lg:ml-4"
+                  className="text-xs text-green-600 lg:ml-4"
                 >
                   Başarıyla abone oldunuz!
                 </motion.p>
@@ -91,7 +91,7 @@ export default function Footer() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col lg:flex-row lg:items-center gap-3 lg:justify-end"
             >
-              <h3 className="avenir text-base lg:text-lg font-light text-white whitespace-nowrap">
+              <h3 className="avenir text-base lg:text-lg font-light text-black whitespace-nowrap">
                 Bizi Takip Edin
               </h3>
               <div className="flex items-center gap-2">
@@ -100,7 +100,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+                  className="w-9 h-9 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300"
                 >
                   <Instagram size={16} strokeWidth={1.5} />
                 </motion.a>
@@ -109,7 +109,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+                  className="w-9 h-9 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300"
                 >
                   <Facebook size={16} strokeWidth={1.5} />
                 </motion.a>
@@ -118,7 +118,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+                  className="w-9 h-9 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300"
                 >
                   <Twitter size={16} strokeWidth={1.5} />
                 </motion.a>
@@ -132,7 +132,7 @@ export default function Footer() {
       <section className="bg-black py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto">
-            {/* Ücretsiz Kargo */}
+            {/* Sektörel Uzmanlık */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -141,19 +141,16 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Truck size={24} strokeWidth={1.5} className="text-white" />
+                <Award size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div>
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Ücretsiz Kargo
+              <div className="flex items-center h-14">
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
+                  35+ Yıllık Sektörel Uzmanlık
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
-                  500 TL ve üzeri alışverişlerinizde kargo ücretsiz. Tüm Türkiye'ye hızlı teslimat.
-                </p>
               </div>
             </motion.div>
 
-            {/* Mağazadan Teslim */}
+            {/* Marka Lansmanı */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,19 +159,16 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Store size={24} strokeWidth={1.5} className="text-white" />
+                <Sparkles size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div>
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Mağazadan Teslim
+              <div className="flex items-center h-14">
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
+                  20+ Ulusal & Uluslararası Marka Lansmanı
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
-                  Online sipariş verin, mağazamızdan teslim alın. Aynı gün teslimat imkanı.
-                </p>
               </div>
             </motion.div>
 
-            {/* Güvenli Ödeme */}
+            {/* Pazar Deneyimi */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -183,15 +177,12 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Shield size={24} strokeWidth={1.5} className="text-white" />
+                <Globe size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div>
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Güvenli Ödeme
+              <div className="flex items-center h-14">
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
+                  10+ Ülkede Aktif Pazar Deneyimi
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
-                  256-bit SSL şifreleme ile güvenli alışveriş. Tüm kart bilgileriniz korunur.
-                </p>
               </div>
             </motion.div>
           </div>

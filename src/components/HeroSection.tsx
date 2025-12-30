@@ -1,15 +1,21 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Pause, Play } from "lucide-react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [resetKey, setResetKey] = useState(0);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+  const slides = [
+    { type: 'video', src: `${basePath}/images/hero_video.mp4`, heading: 'Klasik, Disiplinli, Özgüvenli' },
+    { type: 'image', src: `${basePath}/images/slider2.jpg`, heading: 'Yeni yılı, yeni kokunuzla karşılayın.' },
+  ];
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -17,65 +23,90 @@ export default function HeroSection() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
+  // Auto-advance slider - resets when resetKey changes
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 10000);
+    return () => clearInterval(timer);
+  }, [slides.length, resetKey]);
+
+  const resetTimer = useCallback(() => {
+    setResetKey((prev) => prev + 1);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    resetTimer();
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    resetTimer();
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    resetTimer();
   };
 
   return (
     <>
       <section ref={ref} className="relative h-screen w-full overflow-hidden">
-        {/* Video Background */}
+        {/* Slider Background */}
         <motion.div style={{ y, scale }} className="absolute top-0 left-0 w-screen h-screen">
-            <motion.video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-              className="absolute left-1/2 -translate-x-1/2 top-0 h-[120vh] w-[120vw] object-cover"
-        >
-          <source src={`${basePath}/images/hero_video.mp4`} type="video/mp4" />
-            </motion.video>
+          {/* All slides rendered, visibility controlled by opacity */}
+          {slides.map((slide, index) => (
+            slide.type === 'video' ? (
+              <motion.video
+                key={`video-${index}`}
+                initial={false}
+                animate={{ opacity: currentSlide === index ? 1 : 0 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute left-1/2 -translate-x-1/2 top-0 h-[120vh] w-[120vw] object-cover"
+              >
+                <source src={slide.src} type="video/mp4" />
+              </motion.video>
+            ) : (
+              <motion.div
+                key={`image-${index}`}
+                initial={false}
+                animate={{ opacity: currentSlide === index ? 1 : 0 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <Image
+                  src={slide.src}
+                  alt="Hero Slider"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </motion.div>
+            )
+          ))}
 
-        {/* Video Control Button */}
-        <motion.button
-          onClick={toggleVideo}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-12 right-12 z-20 w-12 h-12 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/40 hover:border-white/50 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {isPlaying ? (
-            <Pause size={18} strokeWidth={1.5} fill="white" />
-          ) : (
-            <Play size={18} strokeWidth={1.5} fill="white" />
-          )}
-        </motion.button>
-      </motion.div>
+        </motion.div>
 
       {/* CTA Content - Bottom of Hero */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pb-8 lg:pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <motion.h2
+            key={currentSlide}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 1, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
             className="avenir text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed tracking-wide mb-8"
+            style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
           >
-            Klasik, Disiplinli, Özgüvenli
+            {slides[currentSlide].heading}
           </motion.h2>
 
           {/* CTA Button */}
@@ -96,6 +127,45 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-white z-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </motion.button>
             </Link>
+          </motion.div>
+
+          {/* Slider Controls - Below CTA */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 1 }}
+            className="flex items-center justify-center gap-6 mt-8"
+          >
+            {/* Left Arrow */}
+            <button
+              onClick={prevSlide}
+              className="w-10 h-10 rounded-full border border-black/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-black/50 transition-all duration-300"
+            >
+              <ChevronLeft size={20} strokeWidth={1.5} />
+            </button>
+
+            {/* Slide Indicators */}
+            <div className="flex gap-3">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`h-2 rounded-full border border-black/30 transition-all duration-300 ${
+                    currentSlide === index
+                      ? 'bg-white w-8'
+                      : 'bg-white/50 hover:bg-white/70 w-2'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextSlide}
+              className="w-10 h-10 rounded-full border border-black/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-black/50 transition-all duration-300"
+            >
+              <ChevronRight size={20} strokeWidth={1.5} />
+            </button>
           </motion.div>
         </div>
       </div>

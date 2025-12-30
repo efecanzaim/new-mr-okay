@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BrandStory() {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,14 +25,15 @@ export default function BrandStory() {
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
             className="order-2 lg:order-1"
           >
-            <div className="relative aspect-[4/5] bg-gray-100">
-              {/* Placeholder - Replace with actual image */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-40 h-60 bg-gradient-to-b from-silver-dark/20 to-transparent" />
-                </div>
-              </div>
-              
+            <div className="relative aspect-[4/5]">
+              <Image
+                src="/images/hakan_okay.jpg"
+                alt="Hakan Okay - Mr. Okay"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+
               {/* Decorative border */}
               <div className="absolute -inset-4 border border-black/10 -z-10" />
             </div>

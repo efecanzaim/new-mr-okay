@@ -9,11 +9,11 @@ import { ShoppingBag, Menu, X, User, Heart, Mail, Search, MapPin } from "lucide-
 // Note: Some icons are used only in desktop view
 
 const businessmanCategories = [
-  { name: "Classic", href: "/product/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
-  { name: "Avant-Garde", href: "/product/avant-garde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
   { name: "Elegant", href: "/product/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
-  { name: "Holiday", href: "/product/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },
+  { name: "Avant-Garde", href: "/product/avant-garde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
+  { name: "Classic", href: "/product/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
   { name: "Weekend", href: "/product/weekend", description: "Rahat, modern ve hafif", image: "/products/weekend.png" },
+  { name: "Holiday", href: "/product/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },
 ];
 
 export default function Header() {
@@ -170,7 +170,12 @@ export default function Header() {
                 >
                   <h1
                     className={`text-3xl lg:text-4xl font-normal whitespace-nowrap origin-center ${!logoAnimationComplete ? 'text-white' : 'text-black'}`}
-                    style={{ fontFamily: 'Blacksword, serif', fontStyle: 'normal', letterSpacing: '0' }}
+                    style={{
+                      fontFamily: 'Blacksword, serif',
+                      fontStyle: 'normal',
+                      letterSpacing: '0',
+                      textShadow: !logoAnimationComplete ? '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' : 'none'
+                    }}
                   >
                     Mr. Okay
                   </h1>
