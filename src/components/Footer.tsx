@@ -40,7 +40,7 @@ export default function Footer() {
   return (
     <>
       {/* Newsletter & Social Section */}
-      <section className="bg-gray-200 py-6 lg:py-8 border-t border-black/10">
+      <section className="bg-[#faf9f6] py-6 lg:py-8 border-t border-black/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             {/* Newsletter - Abone Ol */}

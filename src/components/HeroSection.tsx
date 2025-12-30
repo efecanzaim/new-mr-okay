@@ -54,9 +54,9 @@ export default function HeroSection() {
 
   return (
     <>
-      <section ref={ref} className="relative h-screen w-full overflow-hidden">
+      <section ref={ref} className="relative h-[100dvh] w-full overflow-hidden">
         {/* Slider Background */}
-        <motion.div style={{ y, scale }} className="absolute top-0 left-0 w-screen h-screen">
+        <motion.div style={{ y, scale }} className="absolute top-0 left-0 w-full h-full">
           {/* All slides rendered, visibility controlled by opacity */}
           {slides.map((slide, index) => (
             slide.type === 'video' ? (
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 muted
                 loop
                 playsInline
-                className="absolute left-1/2 -translate-x-1/2 top-0 h-[120vh] w-[120vw] object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               >
                 <source src={slide.src} type="video/mp4" />
               </motion.video>
