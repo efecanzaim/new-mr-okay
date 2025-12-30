@@ -1,13 +1,12 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HeroSection() {
-  const ref = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [resetKey, setResetKey] = useState(0);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -16,14 +15,6 @@ export default function HeroSection() {
     { type: 'video', src: `${basePath}/images/hero_video.mp4`, heading: 'Klasik, Disiplinli, Özgüvenli' },
     { type: 'image', src: `${basePath}/images/slider2.jpg`, heading: 'Yeni yılı, yeni kokunuzla karşılayın.' },
   ];
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   // Auto-advance slider - resets when resetKey changes
   useEffect(() => {
@@ -54,9 +45,9 @@ export default function HeroSection() {
 
   return (
     <>
-      <section ref={ref} className="relative h-[100dvh] w-full overflow-hidden">
+      <section className="relative h-[100dvh] w-full overflow-hidden">
         {/* Slider Background */}
-        <motion.div style={{ y, scale }} className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 w-full h-full">
           {/* All slides rendered, visibility controlled by opacity */}
           {slides.map((slide, index) => (
             slide.type === 'video' ? (
@@ -87,12 +78,13 @@ export default function HeroSection() {
                   fill
                   className="object-cover object-center"
                   priority
+                  unoptimized
                 />
               </motion.div>
             )
           ))}
 
-        </motion.div>
+        </div>
 
       {/* CTA Content - Bottom of Hero */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pb-8 lg:pb-12 px-6">

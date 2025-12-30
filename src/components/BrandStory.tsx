@@ -47,25 +47,21 @@ export default function BrandStory() {
             className="order-1 lg:order-2"
           >
             <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
-              Felsefemiz
+              Kokunun Ardındaki Ustalık
             </p>
             
-            <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-black leading-[1.1] mb-8">
-              İfade
-              <br />
-              <span className="text-gradient-silver">Sanatı</span>
+            <h2 className="font-serif text-black leading-[1.4] mb-8">
+              <span className="block text-xl lg:text-2xl xl:text-3xl">35 Yıllık Birikimin</span>
+              <span className="block text-3xl lg:text-4xl xl:text-5xl text-gradient-silver pb-2">Mr. Okay'a</span>
+              <span className="block text-xl lg:text-2xl xl:text-3xl">Dönüşen Yolculuğu</span>
             </h2>
 
             <div className="space-y-6 text-silver-dark font-light leading-relaxed">
               <p>
-                Mr Okay'da kokunun en üst düzey kendini ifade biçimi olduğuna 
-                inanıyoruz. Tek kelime etmeden önce kim olduğunuz hakkında 
-                çok şey anlatan görünmez aksesuar.
+                Hakan Okay, 1985'ten bu yana kozmetik ve parfüm dünyasında markalar yaratan, pazarlara yön veren bir isimdir. Parfümü yalnızca bir ürün olarak değil, güçlü bir marka hikâyesi olarak ele alan bir uzmandır. 35 yılı aşkın kariyerinde, dünya markalarını Türkiye ile buluşturmuş ve yeni pazarların oluşmasına liderlik etmiştir.
               </p>
               <p>
-                Usta parfümörlerimiz dünyanın dört bir yanından en nadir 
-                malzemeleri tedarik ederek, trendleri aşan ve zamansız 
-                imzalara dönüşen kompozisyonlar yaratıyor.
+                Mr. Okay, bilgi, deneyim ve tutkunun birleştiği bu yolculuğun imza niteliğindeki yansımasıdır.
               </p>
             </div>
 
