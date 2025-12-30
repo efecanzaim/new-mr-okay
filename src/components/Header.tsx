@@ -157,11 +157,11 @@ export default function Header() {
                 <motion.div
                   initial={{
                     y: "20vh",
-                    scale: isMobile ? 2 : 2.8,
+                    scale: isMobile ? 1.5 : 2,
                   }}
                   animate={{
                     y: logoAnimationComplete ? "0px" : "20vh",
-                    scale: logoAnimationComplete ? 1 : (isMobile ? 2 : 2.8),
+                    scale: logoAnimationComplete ? 1 : (isMobile ? 1.5 : 2),
                   }}
                   transition={{
                     duration: 1.2,

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { Instagram, Facebook, Twitter, Mail, Send, MessageCircle, Award, Sparkles, Globe } from "lucide-react";
+import { Instagram, Facebook, Twitter, Mail, Send, MessageCircle, Truck, Store, Shield } from "lucide-react";
 
 const footerLinks = {
   collections: [
@@ -132,7 +132,7 @@ export default function Footer() {
       <section className="bg-black py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto">
-            {/* Sektörel Uzmanlık */}
+            {/* Ücretsiz Kargo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -141,16 +141,19 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Award size={24} strokeWidth={1.5} className="text-white" />
+                <Truck size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div className="flex items-center h-14">
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
-                  35+ Yıllık Sektörel Uzmanlık
+              <div>
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
+                  Ücretsiz Kargo
                 </h3>
+                <p className="text-xs text-silver font-light leading-relaxed">
+                  500 TL ve üzeri alışverişlerinizde kargo ücretsiz. Tüm Türkiye'ye hızlı teslimat.
+                </p>
               </div>
             </motion.div>
 
-            {/* Marka Lansmanı */}
+            {/* Mağazadan Teslim */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -159,16 +162,19 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Sparkles size={24} strokeWidth={1.5} className="text-white" />
+                <Store size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div className="flex items-center h-14">
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
-                  20+ Ulusal & Uluslararası Marka Lansmanı
+              <div>
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
+                  Mağazadan Teslim
                 </h3>
+                <p className="text-xs text-silver font-light leading-relaxed">
+                  Online sipariş verin, mağazamızdan teslim alın. Aynı gün teslimat imkanı.
+                </p>
               </div>
             </motion.div>
 
-            {/* Pazar Deneyimi */}
+            {/* Güvenli Ödeme */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -177,12 +183,15 @@ export default function Footer() {
               className="flex items-start space-x-4"
             >
               <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                <Globe size={24} strokeWidth={1.5} className="text-white" />
+                <Shield size={24} strokeWidth={1.5} className="text-white" />
               </div>
-              <div className="flex items-center h-14">
-                <h3 className="text-sm font-medium text-white uppercase tracking-wide">
-                  10+ Ülkede Aktif Pazar Deneyimi
+              <div>
+                <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
+                  Güvenli Ödeme
                 </h3>
+                <p className="text-xs text-silver font-light leading-relaxed">
+                  256-bit SSL şifreleme ile güvenli alışveriş. Tüm kart bilgileriniz korunur.
+                </p>
               </div>
             </motion.div>
           </div>

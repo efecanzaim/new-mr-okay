@@ -89,9 +89,9 @@ export default function BrandStory() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-black/10">
               {[
-                { number: "47", label: "Eşsiz Koku" },
-                { number: "12", label: "Yıllık Tecrübe" },
-                { number: "89", label: "Ülke" },
+                { number: "35+", label: "Yıllık Sektörel Uzmanlık" },
+                { number: "20+", label: "Ulusal & Uluslararası Marka Lansmanı" },
+                { number: "10+", label: "Ülkede Aktif Pazar Deneyimi" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
