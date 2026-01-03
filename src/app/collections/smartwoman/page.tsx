@@ -170,6 +170,7 @@ export default function SmartwomanCollectionPage() {
                         alt={product.name}
                         fill
                         className="object-contain p-8"
+                        quality={100}
                       />
                     </div>
                   </motion.div>

@@ -71,7 +71,8 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                     alt={product.name}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={100}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -89,7 +90,8 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                   alt={`${product.name} hover`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={100}
                 />
               </motion.div>
             </div>

@@ -78,7 +78,7 @@ export default function HeroSection() {
                   fill
                   className="object-cover object-center"
                   priority
-                  unoptimized
+                  quality={100}
                 />
               </motion.div>
             )

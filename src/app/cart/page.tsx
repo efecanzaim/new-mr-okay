@@ -63,6 +63,7 @@ export default function CartPage() {
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-500"
                         sizes="112px"
+                        quality={100}
                       />
                     </Link>
 

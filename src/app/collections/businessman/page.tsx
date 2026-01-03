@@ -58,6 +58,7 @@ export default function BusinessmanCollectionPage() {
                         alt={product.name}
                         fill
                         className="object-contain p-8"
+                        quality={100}
                       />
                     </div>
                   </motion.div>

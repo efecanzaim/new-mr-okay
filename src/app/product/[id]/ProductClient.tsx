@@ -70,6 +70,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={100}
                     priority
                   />
                 </motion.div>
@@ -87,6 +88,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={100}
                   />
                 </motion.div>
               </div>

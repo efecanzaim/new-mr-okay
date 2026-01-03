@@ -385,6 +385,7 @@ export default function Header() {
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                             sizes="20vw"
+                            quality={100}
                           />
                         </div>
                         <h3 className="font-serif text-lg text-black group-hover:text-silver-dark transition-colors duration-300">
