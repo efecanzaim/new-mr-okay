@@ -400,10 +400,10 @@ export default function Header() {
                 <div className="mt-8 pt-6 border-t border-black/5">
                   <Link
                     href="/collections/businessman"
-                    className="text-xs tracking-ultrawide uppercase text-silver-dark hover:text-black transition-colors duration-300"
+                    className="text-xs tracking-ultrawide uppercase text-black font-semibold hover:text-black transition-colors duration-300"
                     onClick={() => setIsMegaMenuOpen(false)}
                   >
-                    Tüm Businessman Koleksiyonunu Gör →
+                    Tüm BUSINESSMAN Koleksiyonunu Gör →
                   </Link>
                 </div>
               </div>
