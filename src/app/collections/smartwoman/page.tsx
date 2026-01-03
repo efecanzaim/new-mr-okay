@@ -132,13 +132,13 @@ export default function SmartwomanCollectionPage() {
           transition={{ duration: 1, delay: 0.3 }}
           className="relative z-10 text-center px-6"
         >
-          <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
+          <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-4">
             Koleksiyon
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black">
             SMARTWOMAN
           </h1>
-          <p className="text-lg text-silver-dark font-light mt-4 max-w-xl mx-auto">
+          <p className="text-lg text-black font-medium mt-4 max-w-xl mx-auto">
             Her notada zarif özgüven. Kendi kaderini şekillendiren kadınlar
             için tasarlanmış kokular.
           </p>
@@ -164,7 +164,7 @@ export default function SmartwomanCollectionPage() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                   >
-                    <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-white overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden" style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}>
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -182,29 +182,29 @@ export default function SmartwomanCollectionPage() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-3">
+                    <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-3">
                       {product.collection}
                     </p>
                     <h2 className="font-serif text-3xl lg:text-4xl text-black mb-4">
                       {product.name}
                     </h2>
-                    <p className="text-silver-dark font-light leading-relaxed mb-6">
+                    <p className="text-black font-medium leading-relaxed mb-6">
                       {product.description}
                     </p>
 
                     {/* Scent Notes */}
                     <div className="mb-8 space-y-3">
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Üst</span>
-                        <span className="text-sm text-black">{product.notes.top}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Üst</span>
+                        <span className="text-sm text-black font-medium">{product.notes.top}</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Orta</span>
-                        <span className="text-sm text-black">{product.notes.middle}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Orta</span>
+                        <span className="text-sm text-black font-medium">{product.notes.middle}</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Alt</span>
-                        <span className="text-sm text-black">{product.notes.base}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Alt</span>
+                        <span className="text-sm text-black font-medium">{product.notes.base}</span>
                       </div>
                     </div>
 
@@ -232,14 +232,14 @@ export default function SmartwomanCollectionPage() {
       <section className="py-24 lg:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
-            <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
+            <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-6">
               SMARTWOMAN Felsefesi
             </p>
             <h2 className="font-serif text-3xl lg:text-4xl text-black mb-8 leading-tight">
               &ldquo;Güç gürültülü değildir. Odadan ayrıldıktan çok sonra
               bile kalıcı olan sessiz özgüventir.&rdquo;
             </h2>
-            <p className="text-silver-dark font-light leading-relaxed">
+            <p className="text-black font-medium leading-relaxed">
               SMARTWOMAN koleksiyonu, modern kadınlığın çok yönlü doğasını
               kutlar. Toplantı odalarından gala gecelerine, bu kokular
               güçlendirmek ve ilham vermek için tasarlandı.

@@ -52,7 +52,10 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Image Container */}
-          <div className="relative aspect-[3/4] bg-silver-light overflow-hidden mb-6">
+          <div
+            className="relative aspect-[3/4] overflow-hidden mb-6"
+            style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
+          >
             <div className="w-full h-full relative">
               {/* Default Image */}
               <AnimatePresence>
@@ -112,7 +115,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-3 bg-black text-white text-xs tracking-ultrawide uppercase font-medium flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300"
+                className="w-full py-3 bg-black text-white text-xs tracking-ultrawide uppercase font-semibold flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300"
               >
                 <span>Keşfet</span>
               </motion.div>
@@ -120,7 +123,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
 
             {/* Category Tag */}
             <div className="absolute top-4 left-4">
-              <span className="text-[10px] tracking-ultrawide text-white bg-black/60 px-3 py-1 backdrop-blur-sm">
+              <span className="text-[10px] tracking-ultrawide text-white bg-black px-3 py-1 font-bold">
                 {product.category === 'businessman' ? 'YENİ' : product.category.toLocaleUpperCase('en-US')}
               </span>
             </div>
@@ -128,13 +131,13 @@ export default function ProductCard({ product, index }: ProductCardProps) {
 
           {/* Product Info */}
           <div className="space-y-2">
-            <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark">
+            <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-black">
               {product.collection}
             </p>
-            <h3 className="font-serif text-lg text-black group-hover:text-silver-dark transition-colors duration-300">
+            <h3 className="font-serif text-lg text-black font-semibold group-hover:text-silver-dark transition-colors duration-300">
               {product.name}
             </h3>
-            <p className="text-xs text-silver-dark font-light leading-relaxed">
+            <p className="text-xs text-silver-dark font-bold leading-relaxed">
               {product.description}
             </p>
           </div>

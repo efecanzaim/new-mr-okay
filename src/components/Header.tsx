@@ -378,7 +378,7 @@ export default function Header() {
                         className="group block"
                         onClick={() => setIsMegaMenuOpen(false)}
                       >
-                        <div className="aspect-[3/4] bg-silver-light mb-4 overflow-hidden relative">
+                        <div className="aspect-[3/4] mb-4 overflow-hidden relative" style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}>
                           <Image
                             src={category.image}
                             alt={category.name}

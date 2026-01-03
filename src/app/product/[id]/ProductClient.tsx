@@ -52,7 +52,8 @@ export default function ProductClient({ product, productId }: ProductClientProps
               transition={{ duration: 1 }}
             >
               <div
-                className="sticky top-32 aspect-[3/4] bg-gray-100 overflow-hidden cursor-pointer"
+                className="sticky top-32 aspect-[3/4] overflow-hidden cursor-pointer"
+                style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
                 onMouseEnter={() => setIsImageHovered(true)}
                 onMouseLeave={() => setIsImageHovered(false)}
               >

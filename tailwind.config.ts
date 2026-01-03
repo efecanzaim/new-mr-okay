@@ -12,9 +12,9 @@ const config: Config = {
         black: "#050505",
         white: "#FFFFFF",
         silver: {
-          DEFAULT: "#C0C0C0",
-          light: "#D4D4D4",
-          dark: "#8B8B8B",
+          DEFAULT: "#686868",
+          light: "#686868",
+          dark: "#686868",
         },
       },
       fontFamily: {

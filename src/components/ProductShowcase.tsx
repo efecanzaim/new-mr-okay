@@ -22,14 +22,14 @@ export default function ProductShowcase() {
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
           className="text-center mb-16 lg:mb-24"
         >
-          <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
+          <p className="text-[10px] tracking-ultrawide uppercase font-semibold mb-4" style={{ color: '#686868' }}>
             Seçkin Koleksiyon
           </p>
-          <h2 className="font-serif text-4xl lg:text-5xl text-black">
+          <h2 className="font-serif text-4xl lg:text-5xl" style={{ color: '#000000' }}>
             İmza Kokular
           </h2>
-          <p className="text-sm text-silver-dark font-light mt-4 max-w-lg mx-auto">
-            Her koku bir şaheser, nadir malzemeler ve 
+          <p className="text-sm font-semibold mt-4 max-w-lg mx-auto" style={{ color: '#686868' }}>
+            Her koku bir şaheser, nadir malzemeler ve
             ödünsüz detay özeniyle tasarlandı.
           </p>
         </motion.div>
@@ -49,15 +49,11 @@ export default function ProductShowcase() {
           className="text-center mt-16 lg:mt-24"
         >
           <Link href="/collections/businessman">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative px-12 py-4 border border-black/20 text-xs tracking-ultrawide uppercase font-light overflow-hidden transition-all duration-500 hover:border-black/40"
+            <button
+              className="px-12 py-4 bg-white text-black border border-black text-xs tracking-ultrawide uppercase font-semibold transition-colors duration-300 hover:bg-black hover:text-white"
             >
-              <span className="relative z-10 text-silver-dark group-hover:text-black transition-colors duration-300">
-                Tüm Kokuları Keşfet
-              </span>
-            </motion.button>
+              Tüm Kokuları Keşfet
+            </button>
           </Link>
         </motion.div>
       </div>

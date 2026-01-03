@@ -108,59 +108,37 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 1.8, ease: [0.23, 1, 0.32, 1] }}
           >
             <Link href="/collections/businessman">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-4 border border-white/30 bg-white/10 backdrop-blur-sm text-xs tracking-ultrawide uppercase font-light overflow-hidden transition-colors duration-300 hover:bg-white avenir-thin"
+              <button
+                className="px-12 py-4 bg-white text-black text-xs tracking-ultrawide uppercase font-medium transition-colors duration-300 hover:bg-black hover:text-white avenir"
               >
-                <span className="relative z-10 text-white group-hover:text-black transition-colors duration-300">
-                  Keşfet
-                </span>
-                <div className="absolute inset-0 bg-white z-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              </motion.button>
+                Keşfet
+              </button>
             </Link>
-          </motion.div>
-
-          {/* Slider Controls - Below CTA */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-            className="flex items-center justify-center gap-6 mt-8"
-          >
-            {/* Left Arrow */}
-            <button
-              onClick={prevSlide}
-              className="w-10 h-10 rounded-full border border-black/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-black/50 transition-all duration-300"
-            >
-              <ChevronLeft size={20} strokeWidth={1.5} />
-            </button>
-
-            {/* Slide Indicators */}
-            <div className="flex gap-3">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`h-2 rounded-full border border-black/30 transition-all duration-300 ${
-                    currentSlide === index
-                      ? 'bg-white w-8'
-                      : 'bg-white/50 hover:bg-white/70 w-2'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Right Arrow */}
-            <button
-              onClick={nextSlide}
-              className="w-10 h-10 rounded-full border border-black/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-black/50 transition-all duration-300"
-            >
-              <ChevronRight size={20} strokeWidth={1.5} />
-            </button>
           </motion.div>
         </div>
       </div>
+
+      {/* Left Arrow - Centered on left edge */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        onClick={prevSlide}
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+      >
+        <ChevronLeft size={20} strokeWidth={1.5} />
+      </motion.button>
+
+      {/* Right Arrow - Centered on right edge */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        onClick={nextSlide}
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+      >
+        <ChevronRight size={20} strokeWidth={1.5} />
+      </motion.button>
     </section>
     </>
   );

@@ -147,7 +147,7 @@ export default function Footer() {
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
                   Ücretsiz Kargo
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
+                <p className="text-xs text-white font-semibold leading-relaxed">
                   500 TL ve üzeri alışverişlerinizde kargo ücretsiz. Tüm Türkiye'ye hızlı teslimat.
                 </p>
               </div>
@@ -168,7 +168,7 @@ export default function Footer() {
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
                   Mağazadan Teslim
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
+                <p className="text-xs text-white font-semibold leading-relaxed">
                   Online sipariş verin, mağazamızdan teslim alın. Aynı gün teslimat imkanı.
                 </p>
               </div>
@@ -189,7 +189,7 @@ export default function Footer() {
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
                   Güvenli Ödeme
                 </h3>
-                <p className="text-xs text-silver font-light leading-relaxed">
+                <p className="text-xs text-white font-semibold leading-relaxed">
                   256-bit SSL şifreleme ile güvenli alışveriş. Tüm kart bilgileriniz korunur.
                 </p>
               </div>
@@ -218,7 +218,7 @@ export default function Footer() {
                   </h1>
                 </div>
               </Link>
-              <p className="text-sm text-silver-light font-light leading-relaxed max-w-sm">
+              <p className="text-sm text-white font-semibold leading-relaxed max-w-sm">
                 Farklı olmaya cesaret edenler için olağanüstü kokular yaratıyoruz.
                 Her koku, sofistike ve bireysellik hikayesi anlatır.
               </p>
@@ -233,7 +233,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
-                <h3 className="text-xs font-sans font-medium tracking-ultrawide uppercase text-white mb-6">
+                <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
                   Koleksiyonlar
                 </h3>
                 <ul className="space-y-4">
@@ -241,7 +241,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-sm text-silver hover:text-white transition-colors duration-300 font-light"
+                        className="text-sm text-white hover:text-white/70 transition-colors duration-300 font-semibold"
                       >
                         {link.name}
                       </Link>
@@ -257,7 +257,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <h3 className="text-xs font-sans font-medium tracking-ultrawide uppercase text-white mb-6">
+                <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
                   Şirket
                 </h3>
                 <ul className="space-y-4">
@@ -265,7 +265,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-sm text-silver hover:text-white transition-colors duration-300 font-light"
+                        className="text-sm text-white hover:text-white/70 transition-colors duration-300 font-semibold"
                       >
                         {link.name}
                       </Link>
@@ -281,7 +281,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <h3 className="text-xs font-sans font-medium tracking-ultrawide uppercase text-white mb-6">
+                <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
                   Yasal
                 </h3>
                 <ul className="space-y-4">
@@ -289,7 +289,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-sm text-silver hover:text-white transition-colors duration-300 font-light"
+                        className="text-sm text-white hover:text-white/70 transition-colors duration-300 font-semibold"
                       >
                         {link.name}
                       </Link>
@@ -304,7 +304,7 @@ export default function Footer() {
         {/* Bize Ulaşın Row */}
         <div className="py-12 border-t border-white/10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-center gap-8">
-            <h3 className="text-xs font-sans font-medium tracking-ultrawide uppercase text-white text-center md:text-left">
+            <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white text-center md:text-left">
               Bize Ulaşın
             </h3>
             <div className="flex items-center justify-center gap-8">
@@ -317,7 +317,7 @@ export default function Footer() {
                 <div className="w-16 h-16 rounded-lg border border-white/20 flex items-center justify-center mb-2 group-hover:border-white/40 transition-colors duration-300">
                   <MessageCircle size={28} strokeWidth={1} className="text-white" />
                 </div>
-                <span className="text-xs text-silver group-hover:text-white transition-colors duration-300 font-light">
+                <span className="text-xs text-white group-hover:text-white/70 transition-colors duration-300 font-semibold">
                   Whatsapp
                 </span>
               </a>
@@ -328,7 +328,7 @@ export default function Footer() {
                 <div className="w-16 h-16 rounded-lg border border-white/20 flex items-center justify-center mb-2 group-hover:border-white/40 transition-colors duration-300">
                   <Mail size={28} strokeWidth={1} className="text-white" />
                 </div>
-                <span className="text-xs text-silver group-hover:text-white transition-colors duration-300 font-light">
+                <span className="text-xs text-white group-hover:text-white/70 transition-colors duration-300 font-semibold">
                   İletişim
                 </span>
               </a>
@@ -339,10 +339,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-silver font-light tracking-wide">
+            <p className="text-xs text-white font-semibold tracking-wide">
               © {currentYear} Mr Okay Parfümeri. Tüm hakları saklıdır.
             </p>
-            <p className="text-xs text-silver-dark font-light tracking-wide">
+            <p className="text-xs text-white font-semibold tracking-wide">
               Detaylara olan tutku ile üretildi.
             </p>
           </div>

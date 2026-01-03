@@ -20,13 +20,13 @@ export default function BusinessmanCollectionPage() {
           transition={{ duration: 1, delay: 0.3 }}
           className="relative z-10 text-center px-6"
         >
-          <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
+          <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-4">
             Koleksiyon
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black">
             BUSINESSMAN
           </h1>
-          <p className="text-lg text-silver-dark font-light mt-4 max-w-xl mx-auto">
+          <p className="text-lg text-black font-medium mt-4 max-w-xl mx-auto">
             Erkekliğin cesur ifadeleri. Dikkat çeken ve kalıcı izlenimler
             bırakan kokular.
           </p>
@@ -52,7 +52,7 @@ export default function BusinessmanCollectionPage() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                   >
-                    <div className="relative aspect-square bg-gradient-to-br from-silver-light/20 to-white overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden" style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}>
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -70,29 +70,29 @@ export default function BusinessmanCollectionPage() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-3">
+                    <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-3">
                       {product.family}
                     </p>
                     <h2 className="font-serif text-3xl lg:text-4xl text-black mb-4">
                       {product.name}
                     </h2>
-                    <p className="text-silver-dark font-light leading-relaxed mb-6">
+                    <p className="text-black font-medium leading-relaxed mb-6">
                       {product.description}
                     </p>
 
                     {/* Scent Notes */}
                     <div className="mb-8 space-y-3">
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Üst</span>
-                        <span className="text-sm text-black">{product.scent.top.join(", ")}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Üst</span>
+                        <span className="text-sm text-black font-medium">{product.scent.top.join(", ")}</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Orta</span>
-                        <span className="text-sm text-black">{product.scent.middle.join(", ")}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Orta</span>
+                        <span className="text-sm text-black font-medium">{product.scent.middle.join(", ")}</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark w-16">Alt</span>
-                        <span className="text-sm text-black">{product.scent.base.join(", ")}</span>
+                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Alt</span>
+                        <span className="text-sm text-black font-medium">{product.scent.base.join(", ")}</span>
                       </div>
                     </div>
 
@@ -120,14 +120,14 @@ export default function BusinessmanCollectionPage() {
       <section className="py-24 lg:py-32 bg-white border-t border-black/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
-            <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
+            <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-6">
               BUSINESSMAN Felsefesi
             </p>
             <h2 className="font-serif text-3xl lg:text-4xl text-black mb-8 leading-tight">
               &ldquo;Başarının bir kokusu var. Tek kelime etmeden önce
               giydiğiniz özgüven o.&rdquo;
             </h2>
-            <p className="text-silver-dark font-light leading-relaxed">
+            <p className="text-black font-medium leading-relaxed">
               BUSINESSMAN koleksiyonu, ilk izlenimlerin önemini anlayan erkekler
               için tasarlandı. Bu koleksiyondaki her koku, otorite,
               sofistike ve unutulmaz bir varlık yansıtmak için tasarlandı.

@@ -46,7 +46,7 @@ export default function BrandStory() {
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
+            <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-6">
               Kokunun Ardındaki Ustalık
             </p>
             
@@ -56,7 +56,7 @@ export default function BrandStory() {
               <span className="block text-xl lg:text-2xl xl:text-3xl">Dönüşen Yolculuğu</span>
             </h2>
 
-            <div className="space-y-6 text-silver-dark font-light leading-relaxed">
+            <div className="space-y-6 text-black font-semibold leading-relaxed">
               <p>
                 Hakan Okay, 1985'ten bu yana kozmetik ve parfüm dünyasında markalar yaratan, pazarlara yön veren bir isimdir. Parfümü yalnızca bir ürün olarak değil, güçlü bir marka hikâyesi olarak ele alan bir uzmandır. 35 yılı aşkın kariyerinde, dünya markalarını Türkiye ile buluşturmuş ve yeni pazarların oluşmasına liderlik etmiştir.
               </p>
@@ -75,7 +75,7 @@ export default function BrandStory() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="text-xs tracking-ultrawide uppercase text-black border-b border-black/30 pb-2 hover:border-black transition-colors duration-300"
+                  className="text-xs tracking-ultrawide uppercase text-black border-b border-black/30 font-semibold pb-2 hover:border-black transition-colors duration-300"
                 >
                   Hikayemizi Keşfet
                 </motion.button>
@@ -98,7 +98,7 @@ export default function BrandStory() {
                   <p className="font-serif text-3xl lg:text-4xl text-black mb-2">
                     {stat.number}
                   </p>
-                  <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark">
+                  <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold">
                     {stat.label}
                   </p>
                 </motion.div>
