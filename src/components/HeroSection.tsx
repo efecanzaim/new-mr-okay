@@ -12,8 +12,8 @@ export default function HeroSection() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const slides = [
-    { type: 'video', src: `${basePath}/images/hero_video.mp4`, heading: 'Klasik, Disiplinli, Özgüvenli' },
     { type: 'image', src: `${basePath}/images/slider2.jpg`, heading: 'Yeni yılı, yeni kokunuzla karşılayın.' },
+    { type: 'video', src: `${basePath}/images/hero_video.mp4`, heading: 'Klasik, Disiplinli, Özgüvenli' },
   ];
 
   // Auto-advance slider - resets when resetKey changes
