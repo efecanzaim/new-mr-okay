@@ -42,7 +42,7 @@ export default function CollectionBanner() {
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
                     Erkekler İçin
                   </p>
-                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 group-hover:text-silver-light transition-colors duration-500">
+                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
                     BUSINESSMAN
                   </h3>
                   <p className="text-sm text-white/70 font-light max-w-sm">
@@ -95,7 +95,7 @@ export default function CollectionBanner() {
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
                     Kadınlar İçin
                   </p>
-                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 group-hover:text-silver-light transition-colors duration-500">
+                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
                     SMARTWOMAN
                   </h3>
                   <p className="text-sm text-white/70 font-light max-w-sm">
