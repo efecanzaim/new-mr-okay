@@ -19,7 +19,7 @@ const blogPosts = [
     id: 2,
     title: "Şişenin Arkasında: Noir Absolute",
     excerpt:
-      "En çok satan Avant-Garde parfümümüzün yaratım sürecine özel bir bakış.",
+      "En çok satan Avant-garde parfümümüzün yaratım sürecine özel bir bakış.",
     date: "10 Ara 2024",
     category: "Kamera Arkası",
     readTime: "8 dk okuma",

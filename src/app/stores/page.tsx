@@ -34,7 +34,7 @@ const storeData: StoreLocation[] = [
   // Adana
   {
     id: "adana-2",
-    name: "Adana 2",
+    name: "Adana/Seyhan/Çınar Mahallesi",
     type: "physical",
     city: "Adana",
     district: "Seyhan",
@@ -43,7 +43,7 @@ const storeData: StoreLocation[] = [
   },
   {
     id: "adana-5",
-    name: "Adana 5",
+    name: "Adana/Seyhan/Bülent Angın Bulvarı",
     type: "physical",
     city: "Adana",
     district: "Seyhan",
@@ -53,7 +53,7 @@ const storeData: StoreLocation[] = [
   // Ankara
   {
     id: "ankara-kizilay",
-    name: "Ankara Kızılay",
+    name: "Ankara/Kızılay",
     type: "physical",
     city: "Ankara",
     district: "Çankaya",
@@ -63,7 +63,7 @@ const storeData: StoreLocation[] = [
   // Çanakkale
   {
     id: "canakkale-17-burda",
-    name: "Çanakkale 17 Burda AVM",
+    name: "Çanakkale/17 Burda AVM",
     type: "physical",
     city: "Çanakkale",
     district: "Merkez",
@@ -73,7 +73,7 @@ const storeData: StoreLocation[] = [
   // İstanbul
   {
     id: "istanbul-besiktas",
-    name: "İstanbul Beşiktaş",
+    name: "İstanbul/Beşiktaş",
     type: "physical",
     city: "İstanbul",
     district: "Beşiktaş",
@@ -82,7 +82,7 @@ const storeData: StoreLocation[] = [
   },
   {
     id: "istanbul-beyoglu",
-    name: "İstanbul Beyoğlu",
+    name: "İstanbul/Beyoğlu",
     type: "physical",
     city: "İstanbul",
     district: "Beyoğlu",
@@ -91,7 +91,7 @@ const storeData: StoreLocation[] = [
   },
   {
     id: "istanbul-kadikoy",
-    name: "İstanbul Kadıköy",
+    name: "İstanbul/Kadıköy",
     type: "physical",
     city: "İstanbul",
     district: "Kadıköy",
@@ -100,7 +100,7 @@ const storeData: StoreLocation[] = [
   },
   {
     id: "istanbul-nisantasi",
-    name: "İstanbul Nişantaşı",
+    name: "İstanbul/Nişantaşı",
     type: "physical",
     city: "İstanbul",
     district: "Şişli",
@@ -109,7 +109,7 @@ const storeData: StoreLocation[] = [
   },
   {
     id: "istanbul-sisli",
-    name: "İstanbul Şişli",
+    name: "İstanbul/Şişli",
     type: "physical",
     city: "İstanbul",
     district: "Şişli",

@@ -19,56 +19,6 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // BUSINESSMAN - ELEGANT
-  {
-    id: "elegant",
-    name: "Elegant",
-    collection: "BUSINESSMAN",
-    price: 1250,
-    ml: 50,
-    image: "/products/elegant.png",
-    images: [
-      "/products/elegant.png",
-      "/products/elegant_hover.png",
-      "/products/elegant_detail1.png",
-      "/products/elegant_detail2.png",
-    ],
-    category: "businessman",
-    subcategory: "elegant",
-    scent: {
-      top: ["Bergamot", "Pembe Biber", "Lavanta"],
-      middle: ["Menekşe yaprakları", "Süsen (İris)", "Adaçayı"],
-      base: ["Sandal Ağacı", "Vetiver", "Kehribar", "Misk"],
-    },
-    description: "Sofistike, zarif ve entelektüel",
-    family: "Woody, Aromatik, Pudralı",
-  },
-
-  // BUSINESSMAN - AVANT-GARDE
-  {
-    id: "avant-garde",
-    name: "Avant-Garde",
-    collection: "BUSINESSMAN",
-    price: 1250,
-    ml: 50,
-    image: "/products/avantgarde.png",
-    images: [
-      "/products/avantgarde.png",
-      "/products/avantgarde_hover.png",
-      "/products/avantgarde_detail1.png",
-      "/products/avantgarde_detail2.png",
-    ],
-    category: "businessman",
-    subcategory: "avant-garde",
-    scent: {
-      top: ["Siyah Biber", "Zencefil", "Bergamot", "Kakule"],
-      middle: ["Tütsü", "Süet Deri", "Kakao özü veya bitter çikolata", "Adaçayı", "Sedir Ağacı"],
-      base: ["Vetiver", "Amber", "Misk", "Labdanum", "Oud"],
-    },
-    description: "Yaratıcı, vizyoner, cesur",
-    family: "Woody, Spicy",
-  },
-
   // BUSINESSMAN - CLASSIC
   {
     id: "classic",
@@ -117,6 +67,56 @@ export const products: Product[] = [
     },
     description: "Şehirli, modern, hafta sonlarının keyfini huzurla çıkaran bir stil",
     family: "Amber, Misk, Spicy",
+  },
+
+  // BUSINESSMAN - ELEGANT
+  {
+    id: "elegant",
+    name: "Elegant",
+    collection: "BUSINESSMAN",
+    price: 1250,
+    ml: 50,
+    image: "/products/elegant.png",
+    images: [
+      "/products/elegant.png",
+      "/products/elegant_hover.png",
+      "/products/elegant_detail1.png",
+      "/products/elegant_detail2.png",
+    ],
+    category: "businessman",
+    subcategory: "elegant",
+    scent: {
+      top: ["Bergamot", "Pembe Biber", "Lavanta"],
+      middle: ["Menekşe yaprakları", "Süsen (İris)", "Adaçayı"],
+      base: ["Sandal Ağacı", "Vetiver", "Kehribar", "Misk"],
+    },
+    description: "Sofistike, zarif ve entelektüel",
+    family: "Woody, Aromatik, Pudralı",
+  },
+
+  // BUSINESSMAN - AVANT-GARDE
+  {
+    id: "avantgarde",
+    name: "Avant-garde",
+    collection: "BUSINESSMAN",
+    price: 1250,
+    ml: 50,
+    image: "/products/avantgarde.png",
+    images: [
+      "/products/avantgarde.png",
+      "/products/avantgarde_hover.png",
+      "/products/avantgarde_detail1.png",
+      "/products/avantgarde_detail2.png",
+    ],
+    category: "businessman",
+    subcategory: "avant-garde",
+    scent: {
+      top: ["Siyah Biber", "Zencefil", "Bergamot", "Kakule"],
+      middle: ["Tütsü", "Süet Deri", "Kakao özü veya bitter çikolata", "Adaçayı", "Sedir Ağacı"],
+      base: ["Vetiver", "Amber", "Misk", "Labdanum", "Oud"],
+    },
+    description: "Yaratıcı, vizyoner, cesur",
+    family: "Woody, Spicy",
   },
 
   // BUSINESSMAN - HOLIDAY

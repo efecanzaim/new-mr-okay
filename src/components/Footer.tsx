@@ -129,9 +129,9 @@ export default function Footer() {
       </section>
 
       {/* Pre-Footer */}
-      <section className="bg-black py-12 lg:py-16">
+      <section className="bg-black py-8 lg:py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Ücretsiz Kargo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

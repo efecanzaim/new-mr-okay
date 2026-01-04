@@ -3,7 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { Minus, Plus, Heart, Share2 } from "lucide-react";
+import { Heart, Share2 } from "lucide-react";
+import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import MagneticButton from "@/components/MagneticButton";
 import ProductCard from "@/components/ProductCard";
@@ -15,12 +16,17 @@ interface ProductClientProps {
 }
 
 export default function ProductClient({ product, productId }: ProductClientProps) {
-  const [quantity, setQuantity] = useState(1);
+  const [selectedMl, setSelectedMl] = useState<50 | 100 | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Galeri görselleri - images varsa onu kullan, yoksa sadece ana görseli kullan
+  // Galeri görselleri - sıralama: detail2, detail1, hover, ana görsel
   const galleryImages = product.images && product.images.length > 0
-    ? product.images
+    ? [
+        product.images[3], // detail2
+        product.images[2], // detail1
+        product.images[1], // hover
+        product.images[0], // ana görsel
+      ]
     : [product.image];
 
   // Get related products (exclude current product)
@@ -131,50 +137,92 @@ export default function ProductClient({ product, productId }: ProductClientProps
                 <h1 className="font-serif text-4xl lg:text-5xl text-black mb-2">
                   {product.name}
                 </h1>
-                <p className="text-black font-semibold leading-relaxed mb-4">
-                  {product.description}
-                </p>
+                
+                {/* Custom Product Descriptions */}
+                {productId === "classic" && (
+                  <div className="mb-4">
+                    <p className="text-black font-bold text-lg mb-2">Özgüveni keşfet.</p>
+                    <p className="text-black font-medium leading-relaxed">
+                      Düzen, netlik ve zamansız bir maskülenlik üzerine kurulu bir koku. İlk anda berrak ve sakin, zamanla derinleşen yapısıyla disiplinli ve kendinden emin bir duruşu yansıtır.
+                    </p>
+                  </div>
+                )}
+
+                {productId === "weekend" && (
+                  <div className="mb-4">
+                    <p className="text-black font-bold text-lg mb-2">Ritmini değiştir.</p>
+                    <p className="text-black font-medium leading-relaxed">
+                      Şehirden kopmadan özgürleşmenin kokusu. Canlı, ferah ve modern bir açılışın ardından, rahat ama kontrollü bir enerjiyle hafta sonlarının keyfini taşır.
+                    </p>
+                  </div>
+                )}
+
+                {productId === "elegant" && (
+                  <div className="mb-4">
+                    <p className="text-black font-bold text-lg mb-2">Derinliği hisset.</p>
+                    <p className="text-black font-medium leading-relaxed">
+                      Sessiz bir güç ve rafine bir zarafet. İlk anda net ve sofistike, ilerledikçe koyulaşan dokusuyla entelektüel bir imza bırakır.
+                    </p>
+                  </div>
+                )}
+
+                {productId === "avant-garde" && (
+                  <div className="mb-4">
+                    <p className="text-black font-bold text-lg mb-2">Sınırları zorla.</p>
+                    <p className="text-black font-medium leading-relaxed">
+                      Cesur, yaratıcı ve öngörülemez bir enerjiyle açılır; baharatlı bir kıvılcım düşünceyi harekete geçirir. Derinleştikçe karanlık, sanatsal ve güçlü bir iz bırakır. Vizyoner bir erkeğin sessiz ama iddialı imzası.
+                    </p>
+                  </div>
+                )}
+
+                {productId === "holiday" && (
+                  <div className="mb-4">
+                    <p className="text-black font-bold text-lg mb-2">Özgürlüğü hisset.</p>
+                    <p className="text-black font-medium leading-relaxed">
+                      Canlı, ferah ve enerjik bir açılışla hayatı dolu dolu yaşamayı çağrıştırır. Akdeniz esintisini anımsatan taze dokusuyla, özgür ruhlu bir erkeğin hafif ama kalıcı izini bırakır.
+                    </p>
+                  </div>
+                )}
+
                 <p className="text-xs tracking-ultrawide uppercase text-black mb-2 font-semibold">
                   Koku Ailesi
                 </p>
                 <p className="text-black font-semibold">{product.family}</p>
               </div>
 
-              {/* Price & ML */}
+              {/* ML Selector */}
               <div>
-                <p className="text-2xl text-black font-semibold">
-                  ₺{product.price.toLocaleString('tr-TR')}
-                </p>
-                <p className="text-sm text-black mt-1 font-semibold">{product.ml}ml</p>
-              </div>
-
-              {/* Quantity Selector */}
-              <div>
-                <p className="text-xs tracking-ultrawide uppercase text-black mb-3 font-semibold">
-                  Adet
-                </p>
-                <div className="flex items-center border border-black w-fit">
+                <div className="flex gap-2">
                   <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="p-3 bg-white text-black hover:bg-gray-100 transition-colors"
+                    onClick={() => setSelectedMl(50)}
+                    className={`px-4 py-2 border transition-all text-sm font-semibold ${
+                      selectedMl === 50
+                        ? 'bg-black text-white border-black'
+                        : 'bg-white text-black border-black hover:bg-gray-100'
+                    }`}
                   >
-                    <Minus size={16} />
+                    50ml
                   </button>
-                  <span className="w-12 text-center text-black font-semibold">{quantity}</span>
                   <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="p-3 bg-white text-black hover:bg-gray-100 transition-colors"
+                    onClick={() => setSelectedMl(100)}
+                    className={`px-4 py-2 border transition-all text-sm font-semibold ${
+                      selectedMl === 100
+                        ? 'bg-black text-white border-black'
+                        : 'bg-white text-black border-black hover:bg-gray-100'
+                    }`}
                   >
-                    <Plus size={16} />
+                    100ml
                   </button>
                 </div>
               </div>
 
               {/* Actions */}
               <div className="flex flex-col gap-4 pt-2">
-                <MagneticButton variant="primary" size="lg" className="w-full">
-                  Sepete Ekle
-                </MagneticButton>
+                <Link href="/stores" className="w-full">
+                  <MagneticButton variant="primary" size="lg" className="w-full">
+                    Satın Alma Noktaları
+                  </MagneticButton>
+                </Link>
 
                 <div className="flex gap-3">
                   <motion.button
@@ -218,7 +266,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                   <div className="flex items-start gap-4">
                     <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">
-                      Kalp
+                      Orta
                     </span>
                     <div className="flex-1 flex flex-wrap gap-2">
                       {product.scent.middle.map((note) => (
@@ -233,7 +281,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                   <div className="flex items-start gap-4">
                     <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">
-                      Taban
+                      Alt
                     </span>
                     <div className="flex-1 flex flex-wrap gap-2">
                       {product.scent.base.map((note) => (
