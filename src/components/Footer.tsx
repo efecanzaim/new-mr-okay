@@ -340,7 +340,7 @@ export default function Footer() {
         <div className="py-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white font-semibold tracking-wide">
-              © {currentYear} Mr Okay Parfümeri. Tüm hakları saklıdır.
+              © {currentYear} Mr Okay Tüm hakları saklıdır.
             </p>
             <p className="text-xs text-white font-semibold tracking-wide">
               Detaylara olan tutku ile üretildi.
