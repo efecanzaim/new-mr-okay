@@ -12,7 +12,7 @@ export default function BusinessmanCollectionPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -20,6 +20,7 @@ export default function BusinessmanCollectionPage() {
             alt="Businessman Collection"
             fill
             className="object-cover"
+            style={{ objectPosition: '50% 80%' }}
             priority
             quality={100}
           />
