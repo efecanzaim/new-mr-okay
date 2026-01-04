@@ -166,7 +166,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                 )}
 
-                {productId === "avant-garde" && (
+                {productId === "avantgarde" && (
                   <div className="mb-4">
                     <p className="text-black font-bold text-lg mb-2">Sınırları zorla.</p>
                     <p className="text-black font-medium leading-relaxed">

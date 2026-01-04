@@ -59,7 +59,7 @@ export default function BrandStory() {
 
             <div className="space-y-6 text-black font-semibold leading-relaxed">
               <p>
-                Hakan Okay, 1985'ten bu yana kozmetik ve parfüm dünyasında markalar yaratan, pazarlara yön veren bir isimdir. Parfümü yalnızca bir ürün olarak değil, güçlü bir marka hikâyesi olarak ele alan bir uzmandır. 35 yılı aşkın kariyerinde, dünya markalarını Türkiye ile buluşturmuş ve yeni pazarların oluşmasına liderlik etmiştir.
+                Hakan Okay, 1985'ten bu yana kozmetik ve parfüm dünyasında markalar yaratan, pazarlara yön veren bir isimdir. Parfümü yalnızca bir ürün olarak değil, güçlü bir marka hikâyesi olarak ele alan bir uzmandır. 35 yılı aşkın kariyerinde, dünya markalarını Türkiye ile buluşturmuş ve Türk markalarının da yeni pazarlara girmesine liderlik etmiştir.
               </p>
               <p>
                 Mr. Okay, bilgi, deneyim ve tutkunun birleştiği bu yolculuğun imza niteliğindeki yansımasıdır.
