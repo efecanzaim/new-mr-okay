@@ -144,6 +144,17 @@ export default function BusinessmanCollectionPage() {
                       </div>
                     )}
 
+                    {product.id === "holiday" && (
+                      <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
+                        <p>
+                          Zamanı yavaşlatan bir anla başlar. Suyun altındaki sessizlik, zihindeki gürültüyü susturur; tuzlu bir esinti gibi ferah ve hafif bir his bırakır. İlk sıkımda serin, canlı ve özgürdür; sorumluluklardan arınmış bir sabah dalışı gibi.
+                        </p>
+                        <p>
+                          Tenle buluştukça rahatlar, yayılır ve güneşle ısınan bir günün huzuruna dönüşür. Holiday, planlara değil anlara eşlik eder; aceleye değil keyfe yakışır. Bu koku, kaçmak için değil, gerçekten nefes almak için vardır. Tatilin kendisi değil, o tatilde hissettiğin özgürlük duygusudur.
+                        </p>
+                      </div>
+                    )}
+
                     {/* Discover Button */}
                     <Link
                       href={`/product/${product.id}`}
