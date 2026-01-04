@@ -81,6 +81,15 @@ export default function CollectionBanner() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
+                {/* Coming Soon Badge */}
+                <div className="absolute top-8 lg:top-12 left-1/2 -translate-x-1/2">
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-sm shadow-lg">
+                    <p className="text-base lg:text-lg font-semibold text-black tracking-widest">
+                      ÇOK YAKINDA
+                    </p>
+                  </div>
+                </div>
+
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
