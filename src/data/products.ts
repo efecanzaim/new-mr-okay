@@ -7,7 +7,7 @@ export interface Product {
   image: string;
   images?: string[]; // Galeri görselleri
   category: "businessman" | "smartwoman";
-  subcategory: "classic" | "avant-garde" | "elegant" | "holiday" | "weekend";
+  subcategory: "classic" | "avantgarde" | "elegant" | "holiday" | "weekend";
   scent: {
     top: string[];
     middle: string[];
@@ -109,7 +109,7 @@ export const products: Product[] = [
       "/products/avantgarde_detail2.png",
     ],
     category: "businessman",
-    subcategory: "avant-garde",
+    subcategory: "avantgarde",
     scent: {
       top: ["Siyah Biber", "Zencefil", "Bergamot", "Kakule"],
       middle: ["Tütsü", "Süet Deri", "Kakao özü veya bitter çikolata", "Adaçayı", "Sedir Ağacı"],

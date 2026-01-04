@@ -10,7 +10,7 @@ import { ShoppingBag, Menu, X, User, Heart, Mail, Search, MapPin } from "lucide-
 
 const businessmanCategories = [
   { name: "Elegant", href: "/product/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
-  { name: "Avant-garde", href: "/product/avant-garde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
+  { name: "Avant-garde", href: "/product/avantgarde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
   { name: "Classic", href: "/product/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
   { name: "Weekend", href: "/product/weekend", description: "Rahat, modern ve hafif", image: "/products/weekend.png" },
   { name: "Holiday", href: "/product/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },

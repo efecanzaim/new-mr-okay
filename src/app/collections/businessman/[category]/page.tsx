@@ -5,7 +5,7 @@ import { getProductsBySubcategory } from "@/data/products";
 export function generateStaticParams() {
   return [
     { category: "classic" },
-    { category: "avant-garde" },
+    { category: "avantgarde" },
     { category: "elegant" },
     { category: "holiday" },
     { category: "weekend" },
@@ -13,7 +13,7 @@ export function generateStaticParams() {
 }
 
 const categoryInfo: Record<string, { title: string; description: string }> = {
-  "avant-garde": {
+  "avantgarde": {
     title: "Avangard",
     description: "Yaratıcı, özgün, cesur",
   },
