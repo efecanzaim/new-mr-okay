@@ -5,6 +5,7 @@ export interface Product {
   price: number;
   ml: number;
   image: string;
+  images?: string[]; // Galeri görselleri
   category: "businessman" | "smartwoman";
   subcategory: "classic" | "avant-garde" | "elegant" | "holiday" | "weekend";
   scent: {
@@ -26,6 +27,12 @@ export const products: Product[] = [
     price: 1250,
     ml: 50,
     image: "/products/elegant.png",
+    images: [
+      "/products/elegant.png",
+      "/products/elegant_hover.png",
+      "/products/elegant_detail1.png",
+      "/products/elegant_detail2.png",
+    ],
     category: "businessman",
     subcategory: "elegant",
     scent: {
@@ -45,6 +52,12 @@ export const products: Product[] = [
     price: 1250,
     ml: 50,
     image: "/products/avantgarde.png",
+    images: [
+      "/products/avantgarde.png",
+      "/products/avantgarde_hover.png",
+      "/products/avantgarde_detail1.png",
+      "/products/avantgarde_detail2.png",
+    ],
     category: "businessman",
     subcategory: "avant-garde",
     scent: {
@@ -64,6 +77,12 @@ export const products: Product[] = [
     price: 1250,
     ml: 50,
     image: "/products/classic.png",
+    images: [
+      "/products/classic.png",
+      "/products/classic_hover.png",
+      "/products/classic_detail1.png",
+      "/products/classic_detail2.png",
+    ],
     category: "businessman",
     subcategory: "classic",
     scent: {
@@ -83,6 +102,12 @@ export const products: Product[] = [
     price: 1250,
     ml: 50,
     image: "/products/weekend.png",
+    images: [
+      "/products/weekend.png",
+      "/products/weekend_hover.png",
+      "/products/weekend_detail1.png",
+      "/products/weekend_detail2.png",
+    ],
     category: "businessman",
     subcategory: "weekend",
     scent: {
@@ -102,6 +127,12 @@ export const products: Product[] = [
     price: 1250,
     ml: 50,
     image: "/products/holiday.png",
+    images: [
+      "/products/holiday.png",
+      "/products/holiday_hover.png",
+      "/products/holiday_detail1.png",
+      "/products/holiday_detail2.png",
+    ],
     category: "businessman",
     subcategory: "holiday",
     scent: {

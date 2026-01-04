@@ -13,20 +13,32 @@ export default function BusinessmanCollectionPage() {
     <div className="bg-white min-h-screen">
       {/* Hero */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-silver-light/30 via-white to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/businessman_hero.png"
+            alt="Businessman Collection"
+            fill
+            className="object-cover"
+            priority
+            quality={100}
+          />
+        </div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="relative z-10 text-center px-6"
         >
-          <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-4">
+          <p className="text-[10px] tracking-ultrawide uppercase text-white font-semibold mb-4">
             Koleksiyon
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl text-black">
+          <h1 className="font-serif text-5xl md:text-7xl text-white">
             BUSINESSMAN
           </h1>
-          <p className="text-lg text-black font-medium mt-4 max-w-xl mx-auto">
+          <p className="text-lg text-white font-semibold mt-4 max-w-xl mx-auto">
             Erkekliğin cesur ifadeleri. Dikkat çeken ve kalıcı izlenimler
             bırakan kokular.
           </p>
@@ -82,30 +94,48 @@ export default function BusinessmanCollectionPage() {
                     </p>
 
                     {/* Scent Notes */}
-                    <div className="mb-8 space-y-3">
-                      <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Üst</span>
-                        <span className="text-sm text-black font-medium">{product.scent.top.join(", ")}</span>
+                    <div className="mb-8 space-y-4">
+                      <div className="flex items-start gap-4">
+                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">Üst</span>
+                        <div className="flex-1 flex flex-wrap gap-2">
+                          {product.scent.top.map((note) => (
+                            <span key={note} className="px-3 py-1 bg-black/5 text-sm text-black">
+                              {note}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Orta</span>
-                        <span className="text-sm text-black font-medium">{product.scent.middle.join(", ")}</span>
+                      <div className="flex items-start gap-4">
+                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">Orta</span>
+                        <div className="flex-1 flex flex-wrap gap-2">
+                          {product.scent.middle.map((note) => (
+                            <span key={note} className="px-3 py-1 bg-black/5 text-sm text-black">
+                              {note}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <span className="text-[10px] tracking-ultrawide uppercase text-black font-semibold w-16">Alt</span>
-                        <span className="text-sm text-black font-medium">{product.scent.base.join(", ")}</span>
+                      <div className="flex items-start gap-4">
+                        <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">Alt</span>
+                        <div className="flex-1 flex flex-wrap gap-2">
+                          {product.scent.base.map((note) => (
+                            <span key={note} className="px-3 py-1 bg-black/5 text-sm text-black">
+                              {note}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
                     {/* Price */}
-                    <p className="text-2xl text-black mb-8">
+                    <p className="text-2xl text-black font-semibold mb-8">
                       {product.price.toLocaleString("tr-TR")} ₺
                     </p>
 
                     {/* Discover Button */}
                     <Link
                       href={`/product/${product.id}`}
-                      className="inline-block border border-black px-8 py-4 text-xs tracking-ultrawide uppercase text-black hover:bg-black hover:text-white transition-all duration-300"
+                      className="inline-block bg-black text-white font-bold border border-black px-8 py-4 text-xs tracking-ultrawide uppercase hover:bg-white hover:text-black transition-all duration-300"
                     >
                       Keşfet
                     </Link>

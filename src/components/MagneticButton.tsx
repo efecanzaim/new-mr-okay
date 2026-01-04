@@ -18,11 +18,11 @@ export default function MagneticButton({
   ...props
 }: MagneticButtonProps) {
   const baseStyles =
-    "relative overflow-hidden font-sans tracking-ultrawide uppercase transition-all duration-500";
+    "relative overflow-hidden font-sans uppercase transition-all duration-500";
 
   const variants = {
     primary:
-      "bg-white text-black border border-black hover:bg-black hover:text-white",
+      "bg-black text-white font-bold border border-black hover:bg-white hover:text-black",
     secondary:
       "bg-gray-100 text-black border border-black/20 hover:border-black/40",
     outline:

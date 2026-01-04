@@ -111,8 +111,8 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-          isScrolled
-            ? "glass py-6 shadow-sm"
+          isScrolled || !isHomePage
+            ? "bg-white py-6 shadow-sm"
             : "bg-transparent py-10"
         }`}
       >
