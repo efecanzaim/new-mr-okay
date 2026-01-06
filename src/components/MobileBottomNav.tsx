@@ -3,13 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { User, Heart, ShoppingBag, MapPin } from "lucide-react";
+import { Home, MapPin, Mail } from "lucide-react";
 
 const navItems = [
-  { href: "/account", icon: User, label: "Hesabım" },
-  { href: "/favorites", icon: Heart, label: "Favoriler" },
-  { href: "/cart", icon: ShoppingBag, label: "Sepetim" },
+  { href: "/", icon: Home, label: "Ana Sayfa" },
   { href: "/stores", icon: MapPin, label: "Mağaza Bul" },
+  { href: "/contact", icon: Mail, label: "İletişim" },
 ];
 
 export default function MobileBottomNav() {
@@ -44,11 +43,6 @@ export default function MobileBottomNav() {
                     isActive ? "text-black" : "text-black/50"
                   }`}
                 />
-                {item.href === "/cart" && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-black text-white text-[9px] rounded-full flex items-center justify-center font-medium">
-                    0
-                  </span>
-                )}
               </motion.div>
               <span
                 className={`text-[10px] mt-1 transition-colors duration-300 ${

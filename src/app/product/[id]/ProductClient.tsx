@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { Heart, Share2 } from "lucide-react";
+import { Share2 } from "lucide-react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import MagneticButton from "@/components/MagneticButton";
@@ -225,14 +225,6 @@ export default function ProductClient({ product, productId }: ProductClientProps
                 </Link>
 
                 <div className="flex gap-3">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 border border-black hover:bg-black transition-colors flex items-center justify-center gap-2 group"
-                  >
-                    <Heart size={18} strokeWidth={1.5} className="text-black group-hover:text-white transition-colors" />
-                    <span className="text-xs tracking-wide uppercase text-black font-bold group-hover:text-white transition-colors">Favorilere Ekle</span>
-                  </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
