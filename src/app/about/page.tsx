@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function AboutPage() {
@@ -36,34 +37,56 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <div className="relative aspect-[4/5] bg-gray-100">
-                <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200" />
+              <div className="relative aspect-[3/4] lg:aspect-[3/5] bg-gray-100">
+                <Image
+                  src="/images/hakan_okay.jpg"
+                  alt="Hakan Okay"
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute -inset-4 border border-black/10 -z-10" />
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.2}>
-              <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
-                2012'de Kuruldu
-              </p>
               <h2 className="font-serif text-4xl lg:text-5xl text-black mb-8">
-                Tutkudan Doğdu
+                Hakan Okay
               </h2>
-              <div className="space-y-6 text-silver-dark font-light leading-relaxed">
+              <div className="space-y-6 text-silver-dark font-semibold leading-relaxed">
                 <p>
-                  Mr Okay, basit ama cesur bir vizyonla başladı: sadece bir kişiye 
-                  eşlik etmeyen, kimliğinin ayrılmaz bir parçası haline gelen 
-                  kokular yaratmak.
+                  Türkiye'de modern parfüm ve kozmetik sektörünün temellerinin atıldığı dönemde
+                  kariyerine adım atmış, sektörü sıfırdan sahaya inerek öğrenmiş ve inşa etmiş
+                  öncü bir isimdir. 1985 yılında VEPA Kozmetik'te başladığı yolculuk, Estée Lauder,
+                  Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti ve Aramis gibi dünya
+                  markalarının Türkiye'de konumlandırılmasında aktif rol üstlenmesiyle şekillenmiştir.
                 </p>
                 <p>
-                  Kurucumuz, detaylara olan takıntılı dikkat ve parfümeri 
-                  sanatına derin bir takdir ile Grasse, Paris ve Floransa'dan 
-                  usta parfümörlerden bir ekip kurdu.
+                  Bayilik sistemleri kurmuş, lansmanlar yönetmiş, vitrinleri bizzat tasarlamış;
+                  pazarı masa başından değil, sahadan okuyarak büyütmüştür. Türkiye'de AVM ve
+                  zincir parfümerilerin henüz olmadığı yıllarda, markaları 400'ü aşkın seçkin
+                  noktaya taşımış, basınla, perakendeyle ve tüketiciyle doğrudan temas kurmuştur.
+                  COSMOPROF başta olmak üzere uluslararası fuarlarda hem gözlemci hem katılımcı
+                  olarak yer almış, küresel kozmetik dinamiklerini birebir deneyimlemiştir.
+                  AROMEL/İNTERKOZ Kozmetik'te hissedar ve üst düzey yönetici olarak, üretimden
+                  ihracata uzanan çok katmanlı süreçleri yönetmiş; markaları yurt dışına taşımıştır.
+                  Carrefour gibi organize perakendenin Türkiye'ye girişinde aktif rol almış,
+                  pazarlama anlayışının dönüşümüne katkı sağlamıştır.
                 </p>
                 <p>
-                  Birlikte, dünyanın dört bir köşesinden en nadir malzemeleri 
-                  tedarik etmek için bir yolculuğa çıktılar—Kamboçya'dan ud, 
-                  Calabria'dan bergamot, Hindistan'dan yasemin.
+                  Kozmetik bilgisini akademik derinlikle birleştirerek MBA ve doktora eğitimlerini
+                  tamamlamış; entelektüel sermaye, inovasyon ve sürdürülebilir rekabet üzerine
+                  uzmanlaşmıştır. Deneyimlerini kitaplara, eğitimlere ve danışmanlık projelerine
+                  dönüştürmüş; bilgisini sektöre aktarmayı ilke edinmiştir. Sanat tarihi, estetik
+                  ve klasik müzikle beslenen vizyonu, markaya yalnızca ticari değil kültürel bir
+                  perspektif kazandırmıştır.
+                </p>
+                <p>
+                  Bugün, yıllar boyunca global markalar için kurduğu dünyayı, bu kez kendi imzasıyla
+                  hayata geçirmektedir. Mr. Okay, Türkiye'den çıkan ve uluslararası arenada söz
+                  söylemeyi hedefleyen bir parfüm markası olarak doğmuştur. Bu marka, bir ürün değil;
+                  birikimin, disiplinin ve vizyonun doğal sonucudur. Tıpkı Armani ya da Tom Ford'un
+                  arkasındaki kurucular gibi, Mr. Okay'ın arkasında da hikâyesi olan bir isim vardır.
+                  Ve bu hikâye, Türkiye'den dünyaya uzanan yeni bir başlangıcı temsil eder.
                 </p>
               </div>
             </ScrollReveal>
@@ -76,17 +99,18 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
-              Felsefe
+              Felsefemiz
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl text-black mb-8 leading-tight">
-              &ldquo;Bir koku, bir konuşmadaki 
+              &ldquo;Bazı kokular, konuşmadan önce karar verir;
               <br />
-              <span className="text-gradient-silver">son söz olmalı</span>&rdquo;
+              <span className="text-gradient-silver">bittikten sonra da hükmünü korur.</span>&rdquo;
             </h2>
             <p className="text-silver-dark font-light leading-relaxed max-w-2xl mx-auto">
-              En güçlü izlenimlerin genellikle en ince olanlar olduğuna 
-              inanıyoruz. Kokularımız hafızada kalmak, duygu uyandırmak 
-              ve hatırlanmaya değer anları tanımlamak için tasarlandı.
+              Mr. Okay parfüm serisi, gücün sesini yükseltmeden de hissedilebileceğine inanır.
+              En kalıcı etkilerin çoğu zaman en sessiz anlarda ortaya çıktığını bilir.
+              Bu yüzden kokularımız; fark edilmek için değil, hatırlanmak için tasarlanır.
+              Her formül, bir duruşu, bir anı ve geriye dönüp bakıldığında unutulmayan o hissi taşır.
             </p>
           </ScrollReveal>
         </div>

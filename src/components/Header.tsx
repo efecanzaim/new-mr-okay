@@ -5,7 +5,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { ShoppingBag, Menu, X, User, Heart, Mail, Search, MapPin } from "lucide-react";
+import { Menu, X, Mail, Search, MapPin } from "lucide-react";
+// Hidden for now: ShoppingBag, User, Heart
 // Note: Some icons are used only in desktop view
 
 const businessmanCategories = [
@@ -138,12 +139,11 @@ export default function Header() {
                 BUSINESSMAN
               </Link>
 
-              <Link
-                href="/collections/smartwoman"
-                className="text-base font-sans font-light uppercase text-black/70 hover:text-black transition-colors duration-400 line-through-hover header-font"
+              <span
+                className="text-base font-sans font-light uppercase text-black/30 cursor-not-allowed header-font"
               >
                 SMARTWOMAN
-              </Link>
+              </span>
             </div>
 
             {/* Center Logo */}
@@ -275,7 +275,7 @@ export default function Header() {
                 </motion.div>
               </Link>
 
-              {/* Account Icon */}
+              {/* Account Icon - Hidden for now
               <Link href="/account" className="group">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -292,8 +292,9 @@ export default function Header() {
                   />
                 </motion.div>
               </Link>
+              */}
 
-              {/* Favorites Icon */}
+              {/* Favorites Icon - Hidden for now
               <Link href="/favorites" className="group">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -310,8 +311,9 @@ export default function Header() {
                   />
                 </motion.div>
               </Link>
+              */}
 
-              {/* Cart Icon */}
+              {/* Cart Icon - Hidden for now
               <Link href="/cart" className="relative group">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -335,6 +337,7 @@ export default function Header() {
                   0
                 </span>
               </Link>
+              */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -486,13 +489,11 @@ export default function Header() {
                   transition={{ delay: 0.6 }}
                   className="pt-4"
                 >
-                  <Link
-                    href="/collections/smartwoman"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors"
+                  <span
+                    className="block font-serif text-2xl text-black/30 cursor-not-allowed"
                   >
                     {'Smartwoman'.toLocaleUpperCase('en-US')}
-                  </Link>
+                  </span>
                 </motion.div>
 
                 {/* İletişim */}

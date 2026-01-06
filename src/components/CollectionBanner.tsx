@@ -65,7 +65,7 @@ export default function CollectionBanner() {
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
             className="group"
           >
-            <Link href="/collections/smartwoman">
+            <div className="cursor-default">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <div className="absolute inset-0">
                   <Image
@@ -108,7 +108,7 @@ export default function CollectionBanner() {
                   />
                 </div>
               </div>
-            </Link>
+            </div>
           </motion.div>
         </div>
       </div>
