@@ -173,6 +173,12 @@ const marketplaces = [
     url: "https://www.trendyol.com/pd/loris/mr-okay-businessman-classic-50-ml-p-1075310730",
   },
   {
+    id: "lorisparfum",
+    name: "Loris Parfum",
+    logo: "",
+    url: "https://lorisparfum.com/collections/kreasyon/products/businessman-classic-50-ml?_pos=1&_fid=efd173327&_ss=c",
+  },
+  {
     id: "hepsiburada",
     name: "Hepsiburada",
     logo: "https://images.hepsiburada.net/assets/svg/hepsiburada-logo.svg",
@@ -189,6 +195,24 @@ const marketplaces = [
     name: "LC Waikiki",
     logo: "https://lcwaikiki.com/assets/images/logo.svg",
     url: "https://www.lcw.com/mr-okay-businessman-classic-50-ml-renksiz-o-5260536",
+  },
+  {
+    id: "pazarama",
+    name: "Pazarama",
+    logo: "",
+    url: "https://www.pazarama.com/mr-okay-businessman-classic-50-ml-p-8681933131355",
+  },
+  {
+    id: "n11",
+    name: "N11",
+    logo: "",
+    url: "https://www.n11.com/urun/mr-okay-businessman-classic-50-ml-fresh-116348820",
+  },
+  {
+    id: "idefix",
+    name: "Idefix",
+    logo: "",
+    url: "https://www.idefix.com/mr-okay-businessman-classic-50-ml-p-18090284",
   },
 ];
 
