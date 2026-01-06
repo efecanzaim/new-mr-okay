@@ -4,8 +4,18 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function BrandStory() {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -48,21 +58,21 @@ export default function BrandStory() {
             className="order-1 lg:order-2"
           >
             <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-6">
-              Kokunun Ardındaki Ustalık
+              {t["brandStory.subtitle"]}
             </p>
             
             <h2 className="font-serif text-black leading-[1.4] mb-8">
-              <span className="block text-xl lg:text-2xl xl:text-3xl">35 Yıllık Birikimin</span>
-              <span className="block text-3xl lg:text-4xl xl:text-5xl text-gradient-silver pb-2">Mr. Okay'a</span>
-              <span className="block text-xl lg:text-2xl xl:text-3xl">Dönüşen Yolculuğu</span>
+              <span className="block text-xl lg:text-2xl xl:text-3xl">{t["brandStory.title1"]}</span>
+              <span className="block text-3xl lg:text-4xl xl:text-5xl text-gradient-silver pb-2">{t["brandStory.title2"]}</span>
+              <span className="block text-xl lg:text-2xl xl:text-3xl">{t["brandStory.title3"]}</span>
             </h2>
 
             <div className="space-y-6 text-black font-semibold leading-relaxed">
               <p>
-                Hakan Okay, 1985'ten bu yana kozmetik ve parfüm dünyasında markalar yaratan, pazarlara yön veren bir isimdir. Parfümü yalnızca bir ürün olarak değil, güçlü bir marka hikâyesi olarak ele alan bir uzmandır. 35 yılı aşkın kariyerinde, dünya markalarını Türkiye ile buluşturmuş ve Türk markalarının da yeni pazarlara girmesine liderlik etmiştir.
+                {t["brandStory.bio1"]}
               </p>
               <p>
-                Mr. Okay, bilgi, deneyim ve tutkunun birleştiği bu yolculuğun imza niteliğindeki yansımasıdır.
+                {t["brandStory.bio2"]}
               </p>
             </div>
 
@@ -78,7 +88,7 @@ export default function BrandStory() {
                   whileTap={{ scale: 0.98 }}
                   className="text-xs tracking-ultrawide uppercase text-black border-b border-black/30 font-semibold pb-2 hover:border-black transition-colors duration-300"
                 >
-                  Hikayemizi Keşfet
+                  {t["brandStory.discoverStory"]}
                 </motion.button>
               </Link>
             </motion.div>
@@ -86,9 +96,9 @@ export default function BrandStory() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-black/10">
               {[
-                { number: "35+", label: "Yıllık Sektörel Uzmanlık" },
-                { number: "20+", label: "Ulusal & Uluslararası Marka Lansmanı" },
-                { number: "10+", label: "Ülkede Aktif Pazar Deneyimi" },
+                { number: t["brandStory.stat1.number"], label: t["brandStory.stat1.label"] },
+                { number: t["brandStory.stat2.number"], label: t["brandStory.stat2.label"] },
+                { number: t["brandStory.stat3.number"], label: t["brandStory.stat3.label"] },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

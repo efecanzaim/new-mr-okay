@@ -5,10 +5,20 @@ import { useRef } from "react";
 import Link from "next/link";
 import ProductCard from "./ProductCard";
 import { getFeaturedProducts } from "@/data/products";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 const featuredProducts = getFeaturedProducts(5);
 
 export default function ProductShowcase() {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -23,14 +33,13 @@ export default function ProductShowcase() {
           className="text-center mb-16 lg:mb-24"
         >
           <p className="text-[10px] tracking-ultrawide uppercase font-semibold mb-4" style={{ color: '#686868' }}>
-            Seçkin Koleksiyon
+            {t["showcase.subtitle"]}
           </p>
           <h2 className="font-serif text-4xl lg:text-5xl" style={{ color: '#000000' }}>
-            İmza Kokular
+            {t["showcase.title"]}
           </h2>
           <p className="text-sm font-semibold mt-4 max-w-lg mx-auto" style={{ color: '#686868' }}>
-            Her koku bir şaheser, nadir malzemeler ve
-            ödünsüz detay özeniyle tasarlandı.
+            {t["showcase.desc"]}
           </p>
         </motion.div>
 
@@ -52,7 +61,7 @@ export default function ProductShowcase() {
             <button
               className="px-12 py-4 bg-white text-black border border-black text-xs tracking-ultrawide uppercase font-semibold transition-colors duration-300 hover:bg-black hover:text-white"
             >
-              Tüm Kokuları Keşfet
+              {t["showcase.viewAll"]}
             </button>
           </Link>
         </motion.div>

@@ -4,6 +4,14 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 interface Product {
   id: string;
@@ -28,6 +36,8 @@ const getHoverImagePath = (imagePath: string): string => {
 };
 
 export default function ProductCard({ product, index }: ProductCardProps) {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isHovered, setIsHovered] = useState(false);
@@ -119,14 +129,14 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 whileTap={{ scale: 0.98 }}
                 className="w-full py-3 bg-black text-white text-xs tracking-ultrawide uppercase font-semibold flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300"
               >
-                <span>Keşfet</span>
+                <span>{t["productCard.discover"]}</span>
               </motion.div>
             </motion.div>
 
             {/* Category Tag */}
             <div className="absolute top-4 left-4">
               <span className="text-[10px] tracking-ultrawide text-white bg-black px-3 py-1 font-bold">
-                {product.category === 'businessman' ? 'YENİ' : product.category.toLocaleUpperCase('en-US')}
+                {product.category === 'businessman' ? t["productCard.new"] : product.category.toLocaleUpperCase('en-US')}
               </span>
             </div>
           </div>
@@ -140,7 +150,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               {product.name}
             </h3>
             <p className="text-xs text-silver-dark font-bold leading-relaxed">
-              {product.description}
+              {t[`product.${product.id}.desc`] || product.description}
             </p>
           </div>
         </div>

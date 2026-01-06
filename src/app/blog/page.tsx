@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 const blogPosts = [
   {
@@ -63,6 +71,9 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
@@ -75,13 +86,13 @@ export default function BlogPage() {
           className="relative z-10 text-center px-6"
         >
           <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
-            Dergi
+            {t["blog.subtitle"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black">
-            Blog
+            {t["blog.title"]}
           </h1>
           <p className="text-silver-dark font-light mt-4 max-w-lg mx-auto">
-            Hikayeler, içgörüler ve kaliteli parfümeri sanatı
+            {t["blog.desc"]}
           </p>
         </motion.div>
       </section>
@@ -112,7 +123,7 @@ export default function BlogPage() {
                     {blogPosts[0].excerpt}
                   </p>
                   <div className="flex items-center text-xs tracking-ultrawide uppercase text-silver group-hover:text-black transition-colors">
-                    <span>Makaleyi Oku</span>
+                    <span>{t["blog.readArticle"]}</span>
                     <ArrowRight
                       size={14}
                       className="ml-2 group-hover:translate-x-2 transition-transform"

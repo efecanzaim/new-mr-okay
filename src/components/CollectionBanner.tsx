@@ -4,11 +4,21 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function CollectionBanner() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const { language } = useLanguage();
+  const t = allTranslations[language];
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-white overflow-hidden">
@@ -40,13 +50,13 @@ export default function CollectionBanner() {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
-                    Erkekler İçin
+                    {t["collection.forMen"]}
                   </p>
                   <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
                     BUSINESSMAN
                   </h3>
                   <p className="text-sm text-white/70 font-light max-w-sm">
-                    Erkekliğin cesur ifadesi. Dikkat çeken kokular.
+                    {t["collection.businessman.desc"]}
                   </p>
                   <motion.div
                     initial={{ width: "0%" }}
@@ -85,7 +95,7 @@ export default function CollectionBanner() {
                 <div className="absolute top-8 lg:top-12 left-1/2 -translate-x-1/2">
                   <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-sm shadow-lg">
                     <p className="text-base lg:text-lg font-semibold text-black tracking-widest">
-                      ÇOK YAKINDA
+                      {t["collection.comingSoon"]}
                     </p>
                   </div>
                 </div>
@@ -93,13 +103,13 @@ export default function CollectionBanner() {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
                   <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
-                    Kadınlar İçin
+                    {t["collection.forWomen"]}
                   </p>
                   <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
                     SMARTWOMAN
                   </h3>
                   <p className="text-sm text-white/70 font-light max-w-sm">
-                    Her notada zarif güven. Güçlendiren kokular.
+                    {t["collection.smartwoman.desc"]}
                   </p>
                   <motion.div
                     initial={{ width: "0%" }}

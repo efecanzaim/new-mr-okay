@@ -6,6 +6,14 @@ import Image from "next/image";
 import { Trash2, Minus, Plus } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 import { getProductById } from "@/data/products";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 // Sample cart data using real products
 const cartItemsData = [
@@ -26,6 +34,8 @@ const cartItems = cartItemsData
   .filter((item): item is NonNullable<typeof item> => item !== null);
 
 export default function CartPage() {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -40,7 +50,7 @@ export default function CartPage() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-serif text-4xl lg:text-5xl text-black mb-12">
-            Alışveriş Sepeti
+            {t["cart.title"]}
           </h1>
 
           {cartItems.length > 0 ? (
@@ -117,36 +127,36 @@ export default function CartPage() {
               <div className="lg:col-span-1">
                 <div className="bg-gray-50 p-8 sticky top-32">
                   <h2 className="text-xs tracking-ultrawide uppercase text-silver mb-8">
-                    Sipariş Özeti
+                    {t["cart.orderSummary"]}
                   </h2>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex justify-between text-sm">
-                      <span className="text-silver-dark">Ara Toplam</span>
+                      <span className="text-silver-dark">{t["cart.subtotal"]}</span>
                       <span className="text-black">₺{subtotal.toLocaleString('tr-TR')}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-silver-dark">Kargo</span>
-                      <span className="text-black">Ücretsiz</span>
+                      <span className="text-silver-dark">{t["cart.shipping"]}</span>
+                      <span className="text-black">{t["cart.free"]}</span>
                     </div>
                   </div>
 
                   <div className="flex justify-between py-4 border-t border-black/10 mb-8">
-                    <span className="text-black">Toplam</span>
+                    <span className="text-black">{t["cart.total"]}</span>
                     <span className="text-xl text-black font-light">
                       ₺{subtotal.toLocaleString('tr-TR')}
                     </span>
                   </div>
 
                   <MagneticButton variant="primary" size="lg" className="w-full">
-                    Ödemeye Geç
+                    {t["cart.checkout"]}
                   </MagneticButton>
 
                   <Link
                     href="/collections/businessman"
                     className="block text-center text-xs tracking-ultrawide uppercase text-silver-dark hover:text-black transition-colors mt-6"
                   >
-                    Alışverişe Devam Et
+                    {t["cart.continueShopping"]}
                   </Link>
                 </div>
               </div>
@@ -154,11 +164,11 @@ export default function CartPage() {
           ) : (
             <div className="text-center py-24">
               <p className="text-silver-dark font-light mb-8">
-                Sepetiniz boş.
+                {t["cart.empty"]}
               </p>
               <Link href="/collections/businessman">
                 <MagneticButton variant="outline">
-                  Koleksiyonu Keşfet
+                  {t["cart.discoverCollection"]}
                 </MagneticButton>
               </Link>
             </div>

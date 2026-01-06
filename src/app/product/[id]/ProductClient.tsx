@@ -9,6 +9,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 import MagneticButton from "@/components/MagneticButton";
 import ProductCard from "@/components/ProductCard";
 import { Product, products } from "@/data/products";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 interface ProductClientProps {
   product: Product;
@@ -16,6 +24,8 @@ interface ProductClientProps {
 }
 
 export default function ProductClient({ product, productId }: ProductClientProps) {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
   const [selectedMl, setSelectedMl] = useState<50 | 100 | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -141,51 +151,51 @@ export default function ProductClient({ product, productId }: ProductClientProps
                 {/* Custom Product Descriptions */}
                 {productId === "classic" && (
                   <div className="mb-4">
-                    <p className="text-black font-bold text-lg mb-2">Özgüveni keşfet.</p>
+                    <p className="text-black font-bold text-lg mb-2">{t["product.classic.tagline"]}</p>
                     <p className="text-black font-medium leading-relaxed">
-                      Düzen, netlik ve zamansız bir maskülenlik üzerine kurulu bir koku. İlk anda berrak ve sakin, zamanla derinleşen yapısıyla disiplinli ve kendinden emin bir duruşu yansıtır.
+                      {t["product.classic.desc"]}
                     </p>
                   </div>
                 )}
 
                 {productId === "weekend" && (
                   <div className="mb-4">
-                    <p className="text-black font-bold text-lg mb-2">Ritmini değiştir.</p>
+                    <p className="text-black font-bold text-lg mb-2">{t["product.weekend.tagline"]}</p>
                     <p className="text-black font-medium leading-relaxed">
-                      Şehirden kopmadan özgürleşmenin kokusu. Canlı, ferah ve modern bir açılışın ardından, rahat ama kontrollü bir enerjiyle hafta sonlarının keyfini taşır.
+                      {t["product.weekend.desc"]}
                     </p>
                   </div>
                 )}
 
                 {productId === "elegant" && (
                   <div className="mb-4">
-                    <p className="text-black font-bold text-lg mb-2">Derinliği hisset.</p>
+                    <p className="text-black font-bold text-lg mb-2">{t["product.elegant.tagline"]}</p>
                     <p className="text-black font-medium leading-relaxed">
-                      Sessiz bir güç ve rafine bir zarafet. İlk anda net ve sofistike, ilerledikçe koyulaşan dokusuyla entelektüel bir imza bırakır.
+                      {t["product.elegant.desc"]}
                     </p>
                   </div>
                 )}
 
                 {productId === "avantgarde" && (
                   <div className="mb-4">
-                    <p className="text-black font-bold text-lg mb-2">Sınırları zorla.</p>
+                    <p className="text-black font-bold text-lg mb-2">{t["product.avantgarde.tagline"]}</p>
                     <p className="text-black font-medium leading-relaxed">
-                      Cesur, yaratıcı ve öngörülemez bir enerjiyle açılır; baharatlı bir kıvılcım düşünceyi harekete geçirir. Derinleştikçe karanlık, sanatsal ve güçlü bir iz bırakır. Vizyoner bir erkeğin sessiz ama iddialı imzası.
+                      {t["product.avantgarde.desc"]}
                     </p>
                   </div>
                 )}
 
                 {productId === "holiday" && (
                   <div className="mb-4">
-                    <p className="text-black font-bold text-lg mb-2">Özgürlüğü hisset.</p>
+                    <p className="text-black font-bold text-lg mb-2">{t["product.holiday.tagline"]}</p>
                     <p className="text-black font-medium leading-relaxed">
-                      Canlı, ferah ve enerjik bir açılışla hayatı dolu dolu yaşamayı çağrıştırır. Akdeniz esintisini anımsatan taze dokusuyla, özgür ruhlu bir erkeğin hafif ama kalıcı izini bırakır.
+                      {t["product.holiday.desc"]}
                     </p>
                   </div>
                 )}
 
                 <p className="text-xs tracking-ultrawide uppercase text-black mb-2 font-semibold">
-                  Koku Ailesi
+                  {t["product.scentFamily"]}
                 </p>
                 <p className="text-black font-semibold">{product.family}</p>
               </div>
@@ -220,7 +230,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
               <div className="flex flex-col gap-4 pt-2">
                 <Link href="/stores" className="w-full">
                   <MagneticButton variant="primary" size="lg" className="w-full">
-                    Satın Alma Noktaları
+                    {t["product.buyPoints"]}
                   </MagneticButton>
                 </Link>
 
@@ -238,12 +248,12 @@ export default function ProductClient({ product, productId }: ProductClientProps
               {/* Fragrance Notes */}
               <div className="pt-6 border-t border-black/10">
                 <p className="text-xs tracking-ultrawide uppercase text-black mb-6 font-semibold">
-                  Koku Notaları
+                  {t["product.scentNotes"]}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">
-                      Üst
+                      {t["product.top"]}
                     </span>
                     <div className="flex-1 flex flex-wrap gap-2">
                       {product.scent.top.map((note) => (
@@ -258,7 +268,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                   <div className="flex items-start gap-4">
                     <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">
-                      Orta
+                      {t["product.middle"]}
                     </span>
                     <div className="flex-1 flex flex-wrap gap-2">
                       {product.scent.middle.map((note) => (
@@ -273,7 +283,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                   <div className="flex items-start gap-4">
                     <span className="text-[10px] tracking-ultrawide uppercase text-silver-dark font-semibold w-12 pt-0.5">
-                      Alt
+                      {t["product.base"]}
                     </span>
                     <div className="flex-1 flex flex-wrap gap-2">
                       {product.scent.base.map((note) => (
@@ -298,10 +308,10 @@ export default function ProductClient({ product, productId }: ProductClientProps
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <ScrollReveal className="text-center mb-16">
             <p className="text-[10px] tracking-ultrawide font-semibold uppercase text-black mb-4">
-              Koleksiyonunuzu Tamamlayın
+              {t["product.completeCollection"]}
             </p>
             <h2 className="font-serif text-3xl lg:text-4xl text-black">
-              Bunları da Beğenebilirsiniz
+              {t["product.youMayLike"]}
             </h2>
           </ScrollReveal>
 

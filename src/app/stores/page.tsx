@@ -15,6 +15,14 @@ import {
   Navigation,
 } from "lucide-react";
 import type { StoreLocation } from "@/components/StoreMap";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 // Dynamic import for Leaflet (SSR disabled)
 const StoreMap = dynamic(() => import("@/components/StoreMap"), {
@@ -224,6 +232,8 @@ export default function StoresPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const [activeTab, setActiveTab] = useState<"physical" | "marketplace">("physical");
+  const { language } = useLanguage();
+  const t = allTranslations[language];
 
   const filteredStores = useMemo(() => {
     return storeData.filter((store) => {
@@ -274,10 +284,10 @@ export default function StoresPage() {
             <MapPin size={24} strokeWidth={1} className="text-black/70" />
           </motion.div>
           <p className="text-[10px] tracking-ultrawide uppercase text-stone-500 mb-4">
-            Satış Noktalarımız
+            {t["stores.subtitle"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black mb-4">
-            Bizi Bulun
+            {t["stores.title"]}
           </h1>
         </motion.div>
       </section>
@@ -297,7 +307,7 @@ export default function StoresPage() {
                       : "bg-transparent text-stone-600 hover:bg-stone-100"
                   }`}
                 >
-                  Fiziksel Mağazalar
+                  {t["stores.physicalStores"]}
                 </button>
                 <button
                   onClick={() => setActiveTab("marketplace")}
@@ -307,7 +317,7 @@ export default function StoresPage() {
                       : "bg-transparent text-stone-600 hover:bg-stone-100"
                   }`}
                 >
-                  Pazar Yerleri
+                  {t["stores.marketplaces"]}
                 </button>
               </div>
             </div>
@@ -325,7 +335,7 @@ export default function StoresPage() {
                   <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" />
                   <input
                     type="text"
-                    placeholder="Mağaza veya şehir ara..."
+                    placeholder={t["stores.searchPlaceholder"]}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 bg-white border border-stone-200 text-sm focus:outline-none focus:border-black transition-colors"
@@ -336,7 +346,7 @@ export default function StoresPage() {
                 <div className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-200">
                   <Store size={14} className="text-stone-600" />
                   <span className="text-xs tracking-wide text-stone-600">
-                    {physicalStores.length} Mağaza
+                    {physicalStores.length} {t["stores.results"]}
                   </span>
                 </div>
 
@@ -346,7 +356,7 @@ export default function StoresPage() {
                   className="flex items-center gap-2 px-4 py-2 text-xs tracking-wide uppercase bg-white border border-stone-200 hover:border-black transition-colors"
                 >
                   <Filter size={14} />
-                  Şehir Filtresi
+                  {t["stores.cityFilter"]}
                   <ChevronRight size={14} className={`transition-transform ${showFilters ? "rotate-90" : ""}`} />
                 </button>
               </div>
@@ -395,8 +405,8 @@ export default function StoresPage() {
                         <Store size={18} className="text-white" />
                       </div>
                       <div>
-                        <h2 className="font-serif text-2xl text-black">Fiziksel Mağazalar</h2>
-                        <p className="text-xs text-stone-500">{physicalStores.length} lokasyon</p>
+                        <h2 className="font-serif text-2xl text-black">{t["stores.physicalStores"]}</h2>
+                        <p className="text-xs text-stone-500">{physicalStores.length} {t["stores.location"]}</p>
                       </div>
                     </div>
 

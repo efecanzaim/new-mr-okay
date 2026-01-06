@@ -4,15 +4,25 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, MapPin, Mail } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
 
-const navItems = [
-  { href: "/", icon: Home, label: "Ana Sayfa" },
-  { href: "/stores", icon: MapPin, label: "Mağaza Bul" },
-  { href: "/contact", icon: Mail, label: "İletişim" },
-];
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
+  const { language } = useLanguage();
+  const t = allTranslations[language];
+
+  const navItems = [
+    { href: "/", icon: Home, label: t["nav.home"] },
+    { href: "/stores", icon: MapPin, label: t["nav.findStore"] },
+    { href: "/contact", icon: Mail, label: t["nav.contact"] },
+  ];
 
   return (
     <motion.nav

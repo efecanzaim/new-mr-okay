@@ -5,10 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getProductsByCategory } from "@/data/products";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 const businessmanProducts = getProductsByCategory("businessman");
 
 export default function BusinessmanCollectionPage() {
+  const { language } = useLanguage();
+  const t = allTranslations[language];
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
@@ -36,7 +47,7 @@ export default function BusinessmanCollectionPage() {
           className="relative z-10 text-center px-6 pt-32"
         >
           <p className="text-[10px] tracking-ultrawide uppercase text-white font-semibold mb-4">
-            Koleksiyon
+            {t["businessman.collection"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-white">
             BUSINESSMAN
@@ -50,8 +61,8 @@ export default function BusinessmanCollectionPage() {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative z-10 text-center px-6 pb-16"
         >
-          <p className="text-4xl text-white font-normal max-w-6xl mx-auto">
-            İş, şehir ve özgürlük arasında dengelenmiş bir yaşam koleksiyonu...
+          <p className="text-lg md:text-3xl text-white font-normal max-w-6xl mx-auto">
+            {t["businessman.tagline"]}
           </p>
         </motion.div>
       </section>
@@ -102,56 +113,36 @@ export default function BusinessmanCollectionPage() {
                     {/* Custom Description */}
                     {product.id === "classic" && (
                       <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
-                        <p>
-                          Siyah-beyaz bir zeminde başlayan sessiz bir oyunun merkezindedir. İlk sıkımda ferah ve kontrollü bir açılış hissi verir; net, ölçülü ve kararlı. Satranç taşları gibi acele etmez, hamlelerini hesaplar. Bu koku, gücünü bağırarak değil, duruşuyla hissettiren erkekler için tasarlanmıştır.
-                        </p>
-                        <p>
-                          Zaman geçtikçe derinleşen yapısı, zemine düşen uzun bir gölge gibi varlığını kalıcı kılar. Classic, iş hayatında stratejiyle hareket eden, şehirde kendi alanını bilen ve liderliği doğal kabul eden erkeklerin imzasıdır. Ne fazlalık ister ne de tesadüf; doğru hamlenin, doğru anda yapılması gibi.
-                        </p>
+                        <p>{t["product.classic.story1"]}</p>
+                        <p>{t["product.classic.story2"]}</p>
                       </div>
                     )}
 
                     {product.id === "weekend" && (
                       <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
-                        <p>
-                          Hafta sonuna hazırlanmanın kendine özgü bir ritüel olduğunu bilen erkekler için tasarlandı. Bu koku, aceleyle değil özenle seçilir; dışarı çıkmadan önce yapılan son dokunuş gibidir. Şehir ışıkları yanmadan, planlar netleşmeden önce devreye girer ve günün temposunu keyfe dönüştürür.
-                        </p>
-                        <p>
-                          Sıkıldığında ferah, enerjik ve modern bir etki yaratır; tıpkı özel bir akşam için hazırlanan bir sahne gibi. Weekend, ilgi görmekten çekinmeyen, detaylara önem veren ve hafta sonunu sıradan bir mola değil, bir deneyim olarak yaşayan erkeklerin imzasıdır. Bu bir kaçış değil; şehirde, doğru anda, doğru şekilde görünme halidir.
-                        </p>
+                        <p>{t["product.weekend.story1"]}</p>
+                        <p>{t["product.weekend.story2"]}</p>
                       </div>
                     )}
 
                     {product.id === "elegant" && (
                       <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
-                        <p>
-                          Sıradan olanla yetinmeyen erkekler için tasarlanmış nadir bir imzadır. Tıpkı ustasının elinden çıkmış eşsiz bir kılıç gibi; sessiz, kusursuz ve geri dönülmez bir etki bırakır. İlk anda sakin ve soğukkanlıdır; gücünü göstermek için yükselmez, varlığıyla alan yaratır.
-                        </p>
-                        <p>
-                          Tenle buluştukça derinleşir ve yalnızca gerçekten özel anlarda kendini ele verir. Elegant, herkesin fark etmesi için değil, doğru bakışların onu tanıması için vardır. Bu bir stil değil, bir ayrıcalıktır; geçici etkilerden arınmış, kalıcı bir zarafet halidir.
-                        </p>
+                        <p>{t["product.elegant.story1"]}</p>
+                        <p>{t["product.elegant.story2"]}</p>
                       </div>
                     )}
 
                     {product.id === "avantgarde" && (
                       <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
-                        <p>
-                          Alışılmış yolların dışına çıkma cesaretiyle başlar. Yağmurun şehirle bütünleştiği bir gecede, düşünceler berraklaşır; ışıklar silikleşirken zihnin yönü netleşir. Bu koku ilk anda canlı ve keskindir, güvenli sınırları değil yeni ihtimalleri çağırır.
-                        </p>
-                        <p>
-                          Ten üzerinde ilerledikçe sakinleşir ama kaybolmaz; tıpkı gece boyunca parlayan bir fikir gibi. Avant-garde, kalıplara uyum sağlamak için değil, kendi çizgisini yaratmak için vardır. Bu bir duruş değil, bir bakış açısıdır; modern, bağımsız ve ileriye dönük.
-                        </p>
+                        <p>{t["product.avantgarde.story1"]}</p>
+                        <p>{t["product.avantgarde.story2"]}</p>
                       </div>
                     )}
 
                     {product.id === "holiday" && (
                       <div className="text-black font-medium leading-relaxed mb-8 space-y-4">
-                        <p>
-                          Zamanı yavaşlatan bir anla başlar. Suyun altındaki sessizlik, zihindeki gürültüyü susturur; tuzlu bir esinti gibi ferah ve hafif bir his bırakır. İlk sıkımda serin, canlı ve özgürdür; sorumluluklardan arınmış bir sabah dalışı gibi.
-                        </p>
-                        <p>
-                          Tenle buluştukça rahatlar, yayılır ve güneşle ısınan bir günün huzuruna dönüşür. Holiday, planlara değil anlara eşlik eder; aceleye değil keyfe yakışır. Bu koku, kaçmak için değil, gerçekten nefes almak için vardır. Tatilin kendisi değil, o tatilde hissettiğin özgürlük duygusudur.
-                        </p>
+                        <p>{t["product.holiday.story1"]}</p>
+                        <p>{t["product.holiday.story2"]}</p>
                       </div>
                     )}
 
@@ -160,7 +151,7 @@ export default function BusinessmanCollectionPage() {
                       href={`/product/${product.id}`}
                       className="inline-block bg-black text-white font-bold border border-black px-8 py-4 text-xs tracking-ultrawide uppercase hover:bg-white hover:text-black transition-all duration-300"
                     >
-                      Keşfet
+                      {t["businessman.discover"]}
                     </Link>
                   </motion.div>
                 </div>
@@ -175,16 +166,13 @@ export default function BusinessmanCollectionPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <p className="text-[10px] tracking-ultrawide uppercase text-black font-semibold mb-6">
-              BUSINESSMAN Felsefesi
+              {t["businessman.philosophy"]}
             </p>
             <h2 className="font-serif text-3xl lg:text-4xl text-black mb-8 leading-tight">
-              &ldquo;Başarının bir kokusu var. Tek kelime etmeden önce
-              giydiğiniz özgüven o.&rdquo;
+              &ldquo;{t["businessman.philosophy.quote"]}&rdquo;
             </h2>
             <p className="text-black font-medium leading-relaxed">
-              BUSINESSMAN koleksiyonu, ilk izlenimlerin önemini anlayan erkekler
-              için tasarlandı. Bu koleksiyondaki her koku, otorite,
-              sofistike ve unutulmaz bir varlık yansıtmak için tasarlandı.
+              {t["businessman.philosophy.text"]}
             </p>
           </ScrollReveal>
         </div>

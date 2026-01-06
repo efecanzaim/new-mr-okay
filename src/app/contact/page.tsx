@@ -5,6 +5,14 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import MagneticButton from "@/components/MagneticButton";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,6 +21,8 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const { language } = useLanguage();
+  const t = allTranslations[language];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,10 +42,10 @@ export default function ContactPage() {
           className="relative z-10 text-center px-6"
         >
           <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
-            Bize Ulaşın
+            {t["contact.subtitle"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black">
-            İletişim
+            {t["contact.title"]}
           </h1>
         </motion.div>
       </section>
@@ -49,14 +59,12 @@ export default function ContactPage() {
               <div className="space-y-12">
                 <div>
                   <h2 className="font-serif text-3xl lg:text-4xl text-black mb-6">
-                    Birlikte
+                    {t["contact.intro.title"]}
                     <br />
-                    <span className="text-gradient-silver">Olağanüstü Bir Şey Yaratalım</span>
+                    <span className="text-gradient-silver">{t["contact.intro.subtitle"]}</span>
                   </h2>
                   <p className="text-silver-dark font-light leading-relaxed">
-                    İster imza kokunuzu arıyor olun, ister iş birliğiyle 
-                    ilgileniyor olun, ya da sadece bir sorunuz olsun, 
-                    sizden haber almaktan mutluluk duyarız.
+                    {t["contact.intro.desc"]}
                   </p>
                 </div>
 
@@ -67,7 +75,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs tracking-ultrawide uppercase text-silver mb-1">
-                        Ana Mağaza
+                        {t["contact.info.mainStore"]}
                       </p>
                       <p className="text-silver-dark font-light">
                         Nişantaşı Caddesi No: 123
@@ -83,7 +91,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs tracking-ultrawide uppercase text-silver mb-1">
-                        E-posta
+                        {t["contact.info.email"]}
                       </p>
                       <p className="text-silver-dark font-light">
                         iletisim@mrokay.com
@@ -97,7 +105,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs tracking-ultrawide uppercase text-silver mb-1">
-                        Telefon
+                        {t["contact.info.phone"]}
                       </p>
                       <p className="text-silver-dark font-light">
                         +90 (212) 555 01 23
@@ -108,12 +116,12 @@ export default function ContactPage() {
 
                 <div className="pt-8 border-t border-black/10">
                   <p className="text-xs tracking-ultrawide uppercase text-silver mb-4">
-                    Çalışma Saatleri
+                    {t["contact.info.workingHours"]}
                   </p>
                   <div className="space-y-2 text-silver-dark font-light text-sm">
-                    <p>Pazartesi – Cuma: 10:00 – 19:00</p>
-                    <p>Cumartesi: 11:00 – 18:00</p>
-                    <p>Pazar: Kapalı</p>
+                    <p>{t["contact.info.hours.weekdays"]}</p>
+                    <p>{t["contact.info.hours.saturday"]}</p>
+                    <p>{t["contact.info.hours.sunday"]}</p>
                   </div>
                 </div>
               </div>
@@ -125,7 +133,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs tracking-ultrawide uppercase text-silver mb-3">
-                      Ad Soyad
+                      {t["contact.form.name"]}
                     </label>
                     <input
                       type="text"
@@ -139,7 +147,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="block text-xs tracking-ultrawide uppercase text-silver mb-3">
-                      E-posta
+                      {t["contact.form.email"]}
                     </label>
                     <input
                       type="email"
@@ -155,7 +163,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-xs tracking-ultrawide uppercase text-silver mb-3">
-                    Konu
+                    {t["contact.form.subject"]}
                   </label>
                   <input
                     type="text"
@@ -170,7 +178,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-xs tracking-ultrawide uppercase text-silver mb-3">
-                    Mesaj
+                    {t["contact.form.message"]}
                   </label>
                   <textarea
                     value={formData.message}
@@ -185,7 +193,7 @@ export default function ContactPage() {
 
                 <div className="pt-4">
                   <MagneticButton type="submit" variant="primary" size="lg">
-                    Mesaj Gönder
+                    {t["contact.form.send"]}
                   </MagneticButton>
                 </div>
               </form>

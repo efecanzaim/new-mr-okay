@@ -5,9 +5,23 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Menu, X, Mail, Search, MapPin } from "lucide-react";
+import { Menu, X, Mail, Search, MapPin, Globe, ChevronDown } from "lucide-react";
+import { useLanguage, languages } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
 // Hidden for now: ShoppingBag, User, Heart
 // Note: Some icons are used only in desktop view
+
+const allTranslations = {
+  tr,
+  en,
+  de,
+  fr,
+  ar,
+};
 
 const businessmanCategories = [
   { name: "Elegant", href: "/product/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
@@ -27,8 +41,13 @@ export default function Header() {
   const [logoAnimationComplete, setLogoAnimationComplete] = useState(false);
   const [showNavigation, setShowNavigation] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const languageMenuRef = useRef<HTMLDivElement>(null);
+  
+  const { language, setLanguage } = useLanguage();
+  const t = allTranslations[language];
 
   // Check if mobile on mount and resize
   useEffect(() => {
@@ -38,6 +57,17 @@ export default function Header() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Close language menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
+        setIsLanguageMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Scroll threshold for triggering logo animation (in pixels)
@@ -211,7 +241,7 @@ export default function Header() {
                     >
                       <input
                         type="text"
-                        placeholder="Ara..."
+                        placeholder={t["header.search"]}
                         autoFocus
                         className="w-full px-3 py-1.5 text-sm border border-black/20 bg-white text-black placeholder:text-black/40 focus:outline-none focus:border-black/40 transition-colors"
                       />
@@ -274,6 +304,75 @@ export default function Header() {
                   />
                 </motion.div>
               </Link>
+
+              {/* Language Selector */}
+              <div className="relative" ref={languageMenuRef}>
+                <button
+                  onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+                  className="group flex items-center space-x-1"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex items-center space-x-1"
+                  >
+                    <Globe
+                      size={22}
+                      strokeWidth={1.5}
+                      className={`transition-colors duration-500 ${
+                        isHomePage && !logoAnimationComplete
+                          ? 'text-white/70 group-hover:text-white'
+                          : 'text-black/70 group-hover:text-black'
+                      }`}
+                    />
+                    <span className={`text-sm font-medium uppercase transition-colors duration-500 ${
+                      isHomePage && !logoAnimationComplete
+                        ? 'text-white/70 group-hover:text-white'
+                        : 'text-black/70 group-hover:text-black'
+                    }`}>
+                      {language}
+                    </span>
+                    <ChevronDown
+                      size={14}
+                      className={`transition-all duration-300 ${
+                        isLanguageMenuOpen ? 'rotate-180' : ''
+                      } ${
+                        isHomePage && !logoAnimationComplete
+                          ? 'text-white/70'
+                          : 'text-black/70'
+                      }`}
+                    />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {isLanguageMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full right-0 mt-2 bg-white shadow-lg border border-black/10 min-w-[140px] z-50"
+                    >
+                      {languages.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => {
+                            setLanguage(lang.code);
+                            setIsLanguageMenuOpen(false);
+                          }}
+                          className={`w-full px-4 py-2.5 text-left text-sm flex items-center space-x-2 hover:bg-black/5 transition-colors ${
+                            language === lang.code ? 'bg-black/5 font-medium' : ''
+                          }`}
+                        >
+                          <span>{lang.flag}</span>
+                          <span>{lang.name}</span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Account Icon - Hidden for now
               <Link href="/account" className="group">
@@ -444,7 +543,7 @@ export default function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors"
                   >
-                    Hakkımızda
+                    {t["header.aboutUs"]}
                   </Link>
                 </motion.div>
 
@@ -508,8 +607,32 @@ export default function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors"
                   >
-                    İletişim
+                    {t["header.contact"]}
                   </Link>
+                </motion.div>
+
+                {/* Dil Seçici */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="pt-8 border-t border-black/10 mt-8"
+                >
+                  <div className="flex items-center justify-center space-x-3">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => setLanguage(lang.code)}
+                        className={`px-3 py-2 text-sm font-medium uppercase transition-colors ${
+                          language === lang.code
+                            ? 'bg-black text-white'
+                            : 'bg-black/5 text-black hover:bg-black/10'
+                        }`}
+                      >
+                        {lang.code}
+                      </button>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
             </motion.nav>

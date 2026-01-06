@@ -4,10 +4,20 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function AboutPage() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
+  const { language } = useLanguage();
+  const t = allTranslations[language];
 
   return (
     <div className="bg-white min-h-screen">
@@ -21,13 +31,13 @@ export default function AboutPage() {
           className="relative z-10 text-center px-6"
         >
           <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
-            Hikayemiz
+            {t["about.story"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black">
             Mr Okay
           </h1>
           <p className="text-lg text-silver-dark font-light mt-4 max-w-xl mx-auto">
-            Olağanüstü ustalığın mirası
+            {t["about.legacy"]}
           </p>
         </motion.div>
       </section>
@@ -53,41 +63,10 @@ export default function AboutPage() {
                 Hakan Okay
               </h2>
               <div className="space-y-6 text-silver-dark font-semibold leading-relaxed">
-                <p>
-                  Türkiye'de modern parfüm ve kozmetik sektörünün temellerinin atıldığı dönemde
-                  kariyerine adım atmış, sektörü sıfırdan sahaya inerek öğrenmiş ve inşa etmiş
-                  öncü bir isimdir. 1985 yılında VEPA Kozmetik'te başladığı yolculuk, Estée Lauder,
-                  Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti ve Aramis gibi dünya
-                  markalarının Türkiye'de konumlandırılmasında aktif rol üstlenmesiyle şekillenmiştir.
-                </p>
-                <p>
-                  Bayilik sistemleri kurmuş, lansmanlar yönetmiş, vitrinleri bizzat tasarlamış;
-                  pazarı masa başından değil, sahadan okuyarak büyütmüştür. Türkiye'de AVM ve
-                  zincir parfümerilerin henüz olmadığı yıllarda, markaları 400'ü aşkın seçkin
-                  noktaya taşımış, basınla, perakendeyle ve tüketiciyle doğrudan temas kurmuştur.
-                  COSMOPROF başta olmak üzere uluslararası fuarlarda hem gözlemci hem katılımcı
-                  olarak yer almış, küresel kozmetik dinamiklerini birebir deneyimlemiştir.
-                  AROMEL/İNTERKOZ Kozmetik'te hissedar ve üst düzey yönetici olarak, üretimden
-                  ihracata uzanan çok katmanlı süreçleri yönetmiş; markaları yurt dışına taşımıştır.
-                  Carrefour gibi organize perakendenin Türkiye'ye girişinde aktif rol almış,
-                  pazarlama anlayışının dönüşümüne katkı sağlamıştır.
-                </p>
-                <p>
-                  Kozmetik bilgisini akademik derinlikle birleştirerek MBA ve doktora eğitimlerini
-                  tamamlamış; entelektüel sermaye, inovasyon ve sürdürülebilir rekabet üzerine
-                  uzmanlaşmıştır. Deneyimlerini kitaplara, eğitimlere ve danışmanlık projelerine
-                  dönüştürmüş; bilgisini sektöre aktarmayı ilke edinmiştir. Sanat tarihi, estetik
-                  ve klasik müzikle beslenen vizyonu, markaya yalnızca ticari değil kültürel bir
-                  perspektif kazandırmıştır.
-                </p>
-                <p>
-                  Bugün, yıllar boyunca global markalar için kurduğu dünyayı, bu kez kendi imzasıyla
-                  hayata geçirmektedir. Mr. Okay, Türkiye'den çıkan ve uluslararası arenada söz
-                  söylemeyi hedefleyen bir parfüm markası olarak doğmuştur. Bu marka, bir ürün değil;
-                  birikimin, disiplinin ve vizyonun doğal sonucudur. Tıpkı Armani ya da Tom Ford'un
-                  arkasındaki kurucular gibi, Mr. Okay'ın arkasında da hikâyesi olan bir isim vardır.
-                  Ve bu hikâye, Türkiye'den dünyaya uzanan yeni bir başlangıcı temsil eder.
-                </p>
+                <p>{t["about.hakan.bio1"]}</p>
+                <p>{t["about.hakan.bio2"]}</p>
+                <p>{t["about.hakan.bio3"]}</p>
+                <p>{t["about.hakan.bio4"]}</p>
               </div>
             </ScrollReveal>
           </div>
@@ -99,18 +78,13 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-6">
-              Felsefemiz
+              {t["about.philosophy"]}
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl text-black mb-8 leading-tight">
-              &ldquo;Bazı kokular, konuşmadan önce karar verir;
-              <br />
-              <span className="text-gradient-silver">bittikten sonra da hükmünü korur.</span>&rdquo;
+              &ldquo;{t["about.philosophy.quote"]}&rdquo;
             </h2>
             <p className="text-silver-dark font-light leading-relaxed max-w-2xl mx-auto">
-              Mr. Okay parfüm serisi, gücün sesini yükseltmeden de hissedilebileceğine inanır.
-              En kalıcı etkilerin çoğu zaman en sessiz anlarda ortaya çıktığını bilir.
-              Bu yüzden kokularımız; fark edilmek için değil, hatırlanmak için tasarlanır.
-              Her formül, bir duruşu, bir anı ve geriye dönüp bakıldığında unutulmayan o hissi taşır.
+              {t["about.philosophy.text"]}
             </p>
           </ScrollReveal>
         </div>
@@ -120,25 +94,22 @@ export default function AboutPage() {
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="font-serif text-4xl text-black">Değerlerimiz</h2>
+            <h2 className="font-serif text-4xl text-black">{t["about.values"]}</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
-                title: "Ödünsüz Kalite",
-                description:
-                  "Her malzeme el ile seçilir, her formül Mr Okay adını kazanmadan önce yüzlerce kez test edilir.",
+                title: t["about.values.quality"],
+                description: t["about.values.quality.desc"],
               },
               {
-                title: "Zamansız Zarafet",
-                description:
-                  "Trendleri takip etmiyoruz. Mevsimleri aşan ve on yıllar boyunca geçerli kalan imzalar yaratıyoruz.",
+                title: t["about.values.elegance"],
+                description: t["about.values.elegance.desc"],
               },
               {
-                title: "Sürdürülebilir Lüks",
-                description:
-                  "Gerçek lüks sorumludur. Güzellikten ödün vermeden etik kaynak kullanıyor ve sürdürülebilir paketliyoruz.",
+                title: t["about.values.sustainability"],
+                description: t["about.values.sustainability.desc"],
               },
             ].map((value, index) => (
               <ScrollReveal key={value.title} delay={index * 0.1}>

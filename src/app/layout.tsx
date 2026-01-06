@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "Mr Okay | Lüks Parfümeri",
@@ -64,10 +65,12 @@ export default function RootLayout({
         }} />
       </head>
       <body className="bg-white text-black antialiased">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <MobileBottomNav />
+        <Providers>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <MobileBottomNav />
+        </Providers>
       </body>
     </html>
   );

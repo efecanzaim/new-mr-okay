@@ -4,29 +4,39 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { Instagram, Facebook, Twitter, Mail, Send, MessageCircle, Truck, Store, Shield } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
 
-const footerLinks = {
-  collections: [
-    { name: "BUSINESSMAN", href: "/collections/businessman" },
-    { name: "SMARTWOMAN", href: "/collections/smartwoman" },
-    { name: "LIMITED EDITION", href: "/collections/limited" },
-  ],
-  company: [
-    { name: "Hikayemiz", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "İletişim", href: "/contact" },
-  ],
-  legal: [
-    { name: "Gizlilik Politikası", href: "/privacy" },
-    { name: "Kullanım Koşulları", href: "/terms" },
-    { name: "Kargo", href: "/shipping" },
-  ],
-};
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const { language } = useLanguage();
+  const t = allTranslations[language];
+
+  const footerLinks = {
+    collections: [
+      { name: "BUSINESSMAN", href: "/collections/businessman" },
+      { name: "SMARTWOMAN", href: "/collections/smartwoman" },
+      { name: t["footer.limitedEdition"], href: "/collections/limited" },
+    ],
+    company: [
+      { name: t["footer.ourStory"], href: "/about" },
+      { name: t["footer.blog"], href: "/blog" },
+      { name: t["footer.contact"], href: "/contact" },
+    ],
+    legal: [
+      { name: t["footer.privacy"], href: "/privacy" },
+      { name: t["footer.terms"], href: "/terms" },
+      { name: t["footer.shipping"], href: "/shipping" },
+    ],
+  };
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,14 +62,14 @@ export default function Footer() {
               className="flex flex-col lg:flex-row lg:items-center gap-3"
             >
               <h3 className="avenir text-base lg:text-lg font-light text-black whitespace-nowrap">
-                Abone Ol
+                {t["footer.subscribe"]}
               </h3>
               <form onSubmit={handleSubscribe} className="flex flex-1 max-w-md">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="E-posta adresiniz"
+                  placeholder={t["footer.subscribe.placeholder"]}
                   required
                   className="flex-1 px-3 py-2 bg-white border border-black/20 text-black placeholder:text-black/40 text-sm focus:outline-none focus:border-black/40 transition-colors duration-300"
                 />
@@ -78,7 +88,7 @@ export default function Footer() {
                   animate={{ opacity: 1 }}
                   className="text-xs text-green-600 lg:ml-4"
                 >
-                  Başarıyla abone oldunuz!
+                  {t["footer.subscribe.success"]}
                 </motion.p>
               )}
             </motion.div>
@@ -92,7 +102,7 @@ export default function Footer() {
               className="flex flex-col lg:flex-row lg:items-center gap-3 lg:justify-end"
             >
               <h3 className="avenir text-base lg:text-lg font-light text-black whitespace-nowrap">
-                Bizi Takip Edin
+                {t["footer.followUs"]}
               </h3>
               <div className="flex items-center gap-2">
                 <motion.a
@@ -145,10 +155,10 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Ücretsiz Kargo
+                  {t["footer.freeShipping"]}
                 </h3>
                 <p className="text-xs text-white font-semibold leading-relaxed">
-                  500 TL ve üzeri alışverişlerinizde kargo ücretsiz. Tüm Türkiye'ye hızlı teslimat.
+                  {t["footer.freeShipping.desc"]}
                 </p>
               </div>
             </motion.div>
@@ -166,10 +176,10 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Mağazadan Teslim
+                  {t["footer.storePickup"]}
                 </h3>
                 <p className="text-xs text-white font-semibold leading-relaxed">
-                  Online sipariş verin, mağazamızdan teslim alın. Aynı gün teslimat imkanı.
+                  {t["footer.storePickup.desc"]}
                 </p>
               </div>
             </motion.div>
@@ -187,10 +197,10 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-white uppercase tracking-wide mb-2">
-                  Güvenli Ödeme
+                  {t["footer.securePayment"]}
                 </h3>
                 <p className="text-xs text-white font-semibold leading-relaxed">
-                  256-bit SSL şifreleme ile güvenli alışveriş. Tüm kart bilgileriniz korunur.
+                  {t["footer.securePayment.desc"]}
                 </p>
               </div>
             </motion.div>
@@ -219,8 +229,7 @@ export default function Footer() {
                 </div>
               </Link>
               <p className="text-sm text-white font-semibold leading-relaxed max-w-sm">
-                Farklı olmaya cesaret edenler için olağanüstü kokular yaratıyoruz.
-                Her koku, sofistike ve bireysellik hikayesi anlatır.
+                {t["footer.brandDesc"]}
               </p>
             </motion.div>
 
@@ -234,7 +243,7 @@ export default function Footer() {
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
                 <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
-                  Koleksiyonlar
+                  {t["footer.collections"]}
                 </h3>
                 <ul className="space-y-4">
                   {footerLinks.collections.map((link) => (
@@ -258,7 +267,7 @@ export default function Footer() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
-                  Şirket
+                  {t["footer.company"]}
                 </h3>
                 <ul className="space-y-4">
                   {footerLinks.company.map((link) => (
@@ -282,7 +291,7 @@ export default function Footer() {
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white mb-6">
-                  Yasal
+                  {t["footer.legal"]}
                 </h3>
                 <ul className="space-y-4">
                   {footerLinks.legal.map((link) => (
@@ -305,7 +314,7 @@ export default function Footer() {
         <div className="py-12 border-t border-white/10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-center gap-8">
             <h3 className="text-xs font-sans font-semibold tracking-ultrawide uppercase text-white text-center md:text-left">
-              Bize Ulaşın
+              {t["footer.contactUs"]}
             </h3>
             <div className="flex items-center justify-center gap-8">
               <a
@@ -318,7 +327,7 @@ export default function Footer() {
                   <MessageCircle size={28} strokeWidth={1} className="text-white" />
                 </div>
                 <span className="text-xs text-white group-hover:text-white/70 transition-colors duration-300 font-semibold">
-                  Whatsapp
+                  {t["footer.whatsapp"]}
                 </span>
               </a>
               <a
@@ -329,7 +338,7 @@ export default function Footer() {
                   <Mail size={28} strokeWidth={1} className="text-white" />
                 </div>
                 <span className="text-xs text-white group-hover:text-white/70 transition-colors duration-300 font-semibold">
-                  İletişim
+                  {t["footer.contact"]}
                 </span>
               </a>
             </div>
@@ -340,10 +349,10 @@ export default function Footer() {
         <div className="py-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white font-semibold tracking-wide">
-              © {currentYear} Mr Okay Tüm hakları saklıdır.
+              © {currentYear} Mr. Okay {t["footer.rights"]}
             </p>
             <p className="text-xs text-white font-semibold tracking-wide">
-              Detaylara olan tutku ile üretildi.
+              {t["footer.madeWith"]}
             </p>
           </div>
         </div>

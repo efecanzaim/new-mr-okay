@@ -5,15 +5,25 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { tr } from "@/translations/tr";
+import { en } from "@/translations/en";
+import { de } from "@/translations/de";
+import { fr } from "@/translations/fr";
+import { ar } from "@/translations/ar";
+
+const allTranslations = { tr, en, de, fr, ar };
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [resetKey, setResetKey] = useState(0);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const { language } = useLanguage();
+  const t = allTranslations[language];
 
   const slides = [
-    { type: 'image', src: `${basePath}/images/slider2.jpg`, heading: 'Yeni yılı, yeni kokunuzla yaşayın.' },
-    { type: 'video', src: `${basePath}/images/hero_video.mp4`, heading: 'Klasik, Disiplinli, Özgüvenli' },
+    { type: 'image', src: `${basePath}/images/slider2.jpg`, headingKey: 'home.hero.subtitle' },
+    { type: 'video', src: `${basePath}/images/hero_video.mp4`, headingKey: 'product.classic.tagline' },
   ];
 
   // Auto-advance slider - resets when resetKey changes
@@ -98,7 +108,7 @@ export default function HeroSection() {
             className="avenir text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed tracking-wide mb-8"
             style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
           >
-            {slides[currentSlide].heading}
+            {t[slides[currentSlide].headingKey] || slides[currentSlide].headingKey}
           </motion.h2>
 
           {/* CTA Button */}
@@ -111,7 +121,7 @@ export default function HeroSection() {
               <button
                 className="px-12 py-4 bg-white text-black text-xs tracking-ultrawide uppercase font-medium transition-colors duration-300 hover:bg-black hover:text-white avenir"
               >
-                Keşfet
+                {t["home.hero.discover"]}
               </button>
             </Link>
           </motion.div>
