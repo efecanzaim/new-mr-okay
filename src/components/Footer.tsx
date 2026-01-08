@@ -22,9 +22,9 @@ export default function Footer() {
 
   const footerLinks = {
     collections: [
-      { name: "BUSINESSMAN", href: "/collections/businessman" },
-      { name: "SMARTWOMAN", href: "/collections/smartwoman" },
-      { name: t["footer.limitedEdition"], href: "/collections/limited" },
+      { name: "BUSINESSMAN", href: "/collections/businessman", disabled: false },
+      { name: "SMARTWOMAN", href: "/collections/smartwoman", disabled: true },
+      { name: t["footer.limitedEdition"], href: "/collections/limited", disabled: false },
     ],
     company: [
       { name: t["footer.ourStory"], href: "/about" },
@@ -248,12 +248,18 @@ export default function Footer() {
                 <ul className="space-y-4">
                   {footerLinks.collections.map((link) => (
                     <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white hover:text-white/70 transition-colors duration-300 font-semibold"
-                      >
-                        {link.name}
-                      </Link>
+                      {link.disabled ? (
+                        <span className="text-sm text-white/40 cursor-not-allowed font-semibold">
+                          {link.name}
+                        </span>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-white hover:text-white/70 transition-colors duration-300 font-semibold"
+                        >
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
