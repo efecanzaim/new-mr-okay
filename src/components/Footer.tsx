@@ -24,7 +24,7 @@ export default function Footer() {
     collections: [
       { name: "BUSINESSMAN", href: "/collections/businessman", disabled: false },
       { name: "SMARTWOMAN", href: "/collections/smartwoman", disabled: true },
-      { name: t["footer.limitedEdition"], href: "/collections/limited", disabled: false },
+      { name: t["footer.limitedEdition"], href: "/collections/limited", disabled: true },
     ],
     company: [
       { name: t["footer.ourStory"], href: "/about" },

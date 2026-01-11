@@ -29,12 +29,12 @@ export default function ProductClient({ product, productId }: ProductClientProps
   const [selectedMl, setSelectedMl] = useState<50 | 100 | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Galeri görselleri - sıralama: detail2, detail1, hover, ana görsel
+  // Galeri görselleri - sıralama: detail2, hover, detail1, ana görsel
   const galleryImages = product.images && product.images.length > 0
     ? [
         product.images[3], // detail2
-        product.images[2], // detail1
         product.images[1], // hover
+        product.images[2], // detail1
         product.images[0], // ana görsel
       ]
     : [product.image];
@@ -64,11 +64,50 @@ export default function ProductClient({ product, productId }: ProductClientProps
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="space-y-4"
+              className="flex flex-col-reverse lg:flex-row gap-3"
             >
+              {/* Thumbnail Gallery - Sol tarafta dikey, büyük resimle aynı yükseklikte */}
+              {galleryImages.length > 1 && (
+                <div className="flex lg:flex-col gap-2 lg:w-28 flex-shrink-0 lg:self-stretch">
+                  {galleryImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImageIndex(index)}
+                      className="relative group flex-1"
+                    >
+                      {/* Thumbnail Image */}
+                      <div
+                        className="relative h-full w-full overflow-hidden"
+                        style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${product.name} - Thumbnail ${index + 1}`}
+                          fill
+                          className="object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          sizes="80px"
+                          quality={80}
+                        />
+                      </div>
+                      {/* Sliding Indicator Line */}
+                      <motion.div
+                        className="absolute -bottom-1 lg:-right-1 lg:bottom-0 left-0 lg:left-auto right-0 lg:top-0 h-0.5 lg:h-auto lg:w-0.5 bg-black"
+                        initial={false}
+                        animate={{
+                          scaleX: selectedImageIndex === index ? 1 : 0,
+                          scaleY: selectedImageIndex === index ? 1 : 0,
+                          opacity: selectedImageIndex === index ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+
               {/* Main Image */}
               <div
-                className="relative aspect-[3/4] overflow-hidden"
+                className="relative aspect-[3/4] overflow-hidden flex-1"
                 style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
               >
                 <AnimatePresence mode="wait">
@@ -92,44 +131,6 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </motion.div>
                 </AnimatePresence>
               </div>
-
-              {/* Thumbnail Gallery */}
-              {galleryImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-2 pb-4">
-                  {galleryImages.map((img, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImageIndex(index)}
-                      className="relative group"
-                    >
-                      {/* Thumbnail Image */}
-                      <div
-                        className="relative aspect-[3/4] overflow-hidden"
-                        style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${product.name} - Thumbnail ${index + 1}`}
-                          fill
-                          className="object-cover transition-opacity duration-300 group-hover:opacity-80"
-                          sizes="25vw"
-                          quality={80}
-                        />
-                      </div>
-                      {/* Sliding Indicator Line */}
-                      <motion.div
-                        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-black"
-                        initial={false}
-                        animate={{
-                          scaleX: selectedImageIndex === index ? 1 : 0,
-                          opacity: selectedImageIndex === index ? 1 : 0,
-                        }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
             </motion.div>
 
             {/* Right Side - Product Info */}
