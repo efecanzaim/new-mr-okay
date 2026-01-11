@@ -21,7 +21,7 @@ export default function BusinessmanCollectionPage() {
   const t = allTranslations[language];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen overflow-x-hidden">
       {/* Hero */}
       <section className="relative h-[100vh] flex flex-col justify-between overflow-hidden">
         {/* Background Image */}

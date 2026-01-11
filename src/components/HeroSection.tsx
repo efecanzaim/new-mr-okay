@@ -97,7 +97,7 @@ export default function HeroSection() {
         </div>
 
       {/* CTA Content - Bottom of Hero */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 pb-8 lg:pb-12 px-6">
+      <div className="absolute bottom-0 left-0 right-0 z-10 pb-24 lg:pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <motion.h2
