@@ -5,25 +5,86 @@ import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import Providers from "@/components/Providers";
 
+const siteUrl = "https://mrokay.com";
+
 export const metadata: Metadata = {
-  title: "Mr Okay | Lüks Parfümeri",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Mr Okay | Lüks Erkek Parfümleri",
+    template: "%s | Mr Okay",
+  },
   description:
-    "Sofistike bireyler için özenle hazırlanmış eşsiz kokular. Mr Okay - Zarafetin duyularla buluştuğu yer.",
+    "Sofistike erkekler için özenle hazırlanmış eşsiz kokular. Mr Okay - Zarafetin duyularla buluştuğu yer. Businessman koleksiyonu ile fark yaratın.",
   keywords: [
     "lüks parfüm",
-    "parfümeri",
-    "koku",
-    "kolonya",
+    "erkek parfümü",
+    "businessman parfüm",
+    "premium koku",
     "Mr Okay",
-    "tasarım kokular",
+    "tasarım parfüm",
+    "özel koku",
+    "hediye parfüm",
+    "erkek hediye",
+    "lüks hediye",
   ],
-  openGraph: {
-    title: "Mr Okay | Lüks Parfümeri",
-    description:
-      "Sofistike bireyler için özenle hazırlanmış eşsiz kokular.",
-    type: "website",
-    locale: "tr_TR",
+  authors: [{ name: "Mr Okay" }],
+  creator: "Mr Okay",
+  publisher: "Mr Okay",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
+  openGraph: {
+    title: "Mr Okay | Lüks Erkek Parfümleri",
+    description:
+      "Sofistike erkekler için özenle hazırlanmış eşsiz kokular. Businessman koleksiyonu ile fark yaratın.",
+    url: siteUrl,
+    siteName: "Mr Okay",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mr Okay - Lüks Erkek Parfümleri",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mr Okay | Lüks Erkek Parfümleri",
+    description:
+      "Sofistike erkekler için özenle hazırlanmış eşsiz kokular. Businessman koleksiyonu ile fark yaratın.",
+    images: ["/images/og-image.jpg"],
+    creator: "@mrokay",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code",
+  },
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      "tr-TR": `${siteUrl}/tr`,
+      "en-US": `${siteUrl}/en`,
+      "de-DE": `${siteUrl}/de`,
+      "fr-FR": `${siteUrl}/fr`,
+      "ar-SA": `${siteUrl}/ar`,
+    },
+  },
+  category: "parfüm",
 };
 
 export default function RootLayout({
