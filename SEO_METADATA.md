@@ -13,9 +13,9 @@
 | Başlık Şablonu      | %s \| Mr Okay                                                                                                                                    |
 | Açıklama            | Sofistike erkekler için özenle hazırlanmış eşsiz kokular. Mr Okay - Zarafetin duyularla buluştuğu yer. Businessman koleksiyonu ile fark yaratın. |
 | Twitter Hesabı      | @mrokay                                                                                                                                          |
-| Google Verification | google-site-verification-code _(Gerçek kodla değiştirin)_                                                                                        |
+| Google Verification | google-site-verification-code _(Gerçek kodla değiştirilecek)_                                                                                    |
 
-### Anahtar Kelimeler
+### Örnek Anahtar Kelimeler
 
 - lüks parfüm
 - erkek parfümü
@@ -28,7 +28,7 @@
 - erkek hediye
 - lüks hediye
 
-### Open Graph Görseli
+### Open Graph Görseli (İnsanlar sosyal medyada paylaşım yaparken gözükecek resim)
 
 **Dosya:** `public/images/og-image.jpg`
 
@@ -54,10 +54,10 @@
 
 **Dosya:** `src/app/about/layout.tsx`
 
-| Alan     | Değer                                                                                                                      |
-| -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Başlık   | Hakkımızda                                                                                                                 |
-| Açıklama | Mr Okay'in hikayesini keşfedin. 1920'lerden bu yana lüks parfümeri sanatını sürdüren, İstanbul merkezli bir miras markası. |
+| Alan     | Değer                           |
+| -------- | ------------------------------- |
+| Başlık   | Hakkımızda                      |
+| Açıklama | Mr Okay'in hikayesini keşfedin. |
 
 **Anahtar Kelimeler:**
 
@@ -160,7 +160,7 @@
 | -------- | ---------------------------------------------------------------------------------------- |
 | Başlık   | Sepetim                                                                                  |
 | Açıklama | Mr Okay alışveriş sepetiniz. Seçtiğiniz parfümleri inceleyin ve siparişinizi tamamlayın. |
-| Robots   | noindex, nofollow _(Arama motorlarında görünmez)_                                        |
+| Robots   | noindex, nofollow _(Arama motorlarında görünmemesi için)_                                |
 
 ---
 
@@ -223,38 +223,7 @@ Sitemap: https://mrokay.com/sitemap.xml
 
 ---
 
-## ✏️ Düzenleme Rehberi
-
-### Başlık Değiştirmek İçin:
-
-1. İlgili `layout.tsx` dosyasını açın
-2. `metadata` objesi içindeki `title` değerini güncelleyin
-
-### Açıklama Değiştirmek İçin:
-
-1. İlgili `layout.tsx` dosyasını açın
-2. `metadata` objesi içindeki `description` değerini güncelleyin
-
-### Anahtar Kelime Eklemek İçin:
-
-1. İlgili `layout.tsx` dosyasını açın
-2. `metadata.keywords` dizisine yeni kelimeler ekleyin
-
-### Site URL'ini Değiştirmek İçin:
-
-1. `src/app/layout.tsx` dosyasındaki `siteUrl` değişkenini güncelleyin
-2. `src/app/robots.ts` dosyasındaki `siteUrl` değişkenini güncelleyin
-3. `src/app/sitemap.ts` dosyasındaki `siteUrl` değişkenini güncelleyin
-
-### Google Site Verification Eklemek İçin:
-
-1. `src/app/layout.tsx` dosyasını açın
-2. `verification.google` değerini Google'dan aldığınız kodla değiştirin
-
----
-
 ## 📌 Önemli Notlar
 
-1. **OG Görseli:** `public/images/og-image.jpg` dosyasını 1200x630 piksel boyutunda oluşturun
-2. **Twitter:** `@mrokay` hesabını gerçek hesap adıyla değiştirin
-3. **Diller:** Alternatif dil URL'leri şu anda placeholder olarak eklenmiştir, çoklu dil desteği aktifleştirildiğinde güncelleyin
+1. **OG Görseli:** `public/images/og-image.jpg` dosyasını 1200x630 piksel boyutunda oluşturulmalı
+2. **Sosyal Medya Hesapları:** `@mrokay` hesabı gerçek hesap adlarıyla değiştirilecek
