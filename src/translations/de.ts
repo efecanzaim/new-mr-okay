@@ -51,6 +51,10 @@ export const de: Record<string, string> = {
   "about.section3.p3": "Und jetzt…",
   "about.section3.p4": "All diese Ansammlung kommt zum ersten Mal in einer einzigen Marke zusammen. Mr. Okay ist die persönliche Signatur von Hakan Okays fast 40-jähriger Erfahrung, Intuition und Perspektive.",
 
+  // Hakan Okay Quote
+  "about.quote.line1": "Worte und Taten mögen vergessen werden, aber das Gefühl, das ein wirkungsvolles Parfüm erzeugt, ist unvergesslich!",
+  "about.quote.line2": "Ihr Duft ist Ihre Signatur, die Spur, die Sie hinterlassen!",
+
   // Philosophy Section
   "about.philosophy": "UNSERE PHILOSOPHIE",
   "about.philosophy.quote": "Manche Düfte entscheiden, bevor das Gespräch beginnt; sie behalten ihren Einfluss auch nachdem es endet.",

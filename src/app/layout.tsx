@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import Providers from "@/components/Providers";
+
+const GA_MEASUREMENT_ID = "G-V1DMQ3GKR1";
 
 const siteUrl = "https://mrokay.com";
 
@@ -100,6 +103,19 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <style dangerouslySetInnerHTML={{
           __html: `
             @font-face {

@@ -59,11 +59,11 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl lg:text-4xl text-black mb-8">
                 {t["about.section1.title"]}
               </h2>
-              <div className="space-y-5 text-silver-dark font-normal leading-relaxed text-[15px]">
-                <p>{t["about.section1.p1"]}</p>
+              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
+                <p dangerouslySetInnerHTML={{ __html: t["about.section1.p1"] }} />
                 <p>{t["about.section1.p2"]}</p>
                 <p>{t["about.section1.p3"]}</p>
-                <p>{t["about.section1.p4"]}</p>
+                <p dangerouslySetInnerHTML={{ __html: t["about.section1.p4"] }} />
                 <p>{t["about.section1.p5"]}</p>
               </div>
             </ScrollReveal>
@@ -79,14 +79,14 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl lg:text-4xl text-black mb-4">
                 {t["about.section2.title"]}
               </h2>
-              <p className="text-lg text-silver-dark font-light mb-8 italic">
+              <p className="text-lg text-black font-medium mb-8 italic">
                 {t["about.section2.subtitle"]}
               </p>
-              <div className="space-y-5 text-silver-dark font-normal leading-relaxed text-[15px]">
-                <p>{t["about.section2.p1"]}</p>
-                <p>{t["about.section2.p2"]}</p>
-                <p>{t["about.section2.p3"]}</p>
-                <p>{t["about.section2.p4"]}</p>
+              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
+                <p dangerouslySetInnerHTML={{ __html: t["about.section2.p1"] }} />
+                <p dangerouslySetInnerHTML={{ __html: t["about.section2.p2"] }} />
+                <p dangerouslySetInnerHTML={{ __html: t["about.section2.p3"] }} />
+                <p dangerouslySetInnerHTML={{ __html: t["about.section2.p4"] }} />
               </div>
             </ScrollReveal>
 
@@ -125,17 +125,34 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl lg:text-4xl text-black mb-4">
                 {t["about.section3.title"]}
               </h2>
-              <p className="text-lg text-silver-dark font-light mb-8 italic">
+              <p className="text-lg text-black font-medium mb-8 italic">
                 {t["about.section3.subtitle"]}
               </p>
-              <div className="space-y-5 text-silver-dark font-normal leading-relaxed text-[15px]">
+              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
                 <p>{t["about.section3.p1"]}</p>
                 <p>{t["about.section3.p2"]}</p>
-                <p className="font-medium text-black">{t["about.section3.p3"]}</p>
-                <p>{t["about.section3.p4"]}</p>
+                <p className="font-semibold text-black">{t["about.section3.p3"]}</p>
+                <p dangerouslySetInnerHTML={{ __html: t["about.section3.p4"] }} />
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Hakan Okay Quote */}
+      <section className="py-24 lg:py-32 bg-black">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <ScrollReveal>
+            <div className="w-px h-16 bg-white/30 mx-auto mb-8" />
+            <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-8">
+              <p className="mb-4">{t["about.quote.line1"]}</p>
+              <p>{t["about.quote.line2"]}</p>
+            </blockquote>
+            <div className="w-px h-16 bg-white/30 mx-auto mb-6" />
+            <p className="text-white/60 text-sm tracking-widest uppercase">
+              Hakan Okay
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -51,6 +51,10 @@ export const en: Record<string, string> = {
   "about.section3.p3": "And now…",
   "about.section3.p4": "All this accumulation comes together in a single brand for the first time. Mr. Okay is the personal signature of Hakan Okay's nearly 40 years of experience, intuition, and perspective.",
 
+  // Hakan Okay Quote
+  "about.quote.line1": "Words and actions may be forgotten, but the feeling created by an effective perfume is unforgettable!",
+  "about.quote.line2": "Your scent is your signature, the mark you leave behind!",
+
   // Philosophy Section
   "about.philosophy": "OUR PHILOSOPHY",
   "about.philosophy.quote": "Some fragrances decide before the conversation begins; they retain their influence even after it ends.",

@@ -51,6 +51,10 @@ export const ar: Record<string, string> = {
   "about.section3.p3": "والآن…",
   "about.section3.p4": "كل هذا التراكم يجتمع لأول مرة في علامة تجارية واحدة. Mr. Okay هو التوقيع الشخصي لما يقرب من 40 عاماً من خبرة حكان أوكاي وحدسه ومنظوره.",
 
+  // Hakan Okay Quote
+  "about.quote.line1": "قد تُنسى الكلمات والأفعال، لكن الشعور الذي يخلقه العطر الفعال لا يُنسى!",
+  "about.quote.line2": "عطرك هو توقيعك، الأثر الذي تتركه!",
+
   // Philosophy Section
   "about.philosophy": "فلسفتنا",
   "about.philosophy.quote": "بعض العطور تقرر قبل أن تبدأ المحادثة؛ وتحتفظ بتأثيرها حتى بعد انتهائها.",

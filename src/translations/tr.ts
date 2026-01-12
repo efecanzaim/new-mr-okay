@@ -29,19 +29,19 @@ export const tr: Record<string, string> = {
 
   // Section 1 - Kozmetik Dünyasında Bir Ömür
   "about.section1.title": "Kozmetik Dünyasında Bir Ömür",
-  "about.section1.p1": "1985 yılında, Türkiye'de ithalatın serbest bırakıldığı dönemde başlayan bir yolculuk… Hakan Okay, üniversite ve MBA eğitiminin ardından, sektöre VEPA Kozmetik A.Ş.'de Kozmetik Ürün Sorumlusu olarak adım attı. O yıllarda Türkiye'nin en yaygın satış ağına sahip şirketlerinden biri olan VEPA, aynı dönemde Estée Lauder ve Enrico Coveri gibi dünya markalarını Türkiye pazarına kazandırıyordu.",
+  "about.section1.p1": "1985 yılında, Türkiye'de ithalatın serbest bırakıldığı dönemde başlayan bir yolculuk… Hakan Okay, üniversite ve MBA eğitiminin ardından, sektöre VEPA Kozmetik A.Ş.'de <strong>Kozmetik Ürün Sorumlusu</strong> olarak adım attı. O yıllarda Türkiye'nin en yaygın satış ağına sahip şirketlerinden biri olan VEPA, aynı dönemde <strong>Estée Lauder</strong> ve <strong>Enrico Coveri</strong> gibi dünya markalarını Türkiye pazarına kazandırıyordu.",
   "about.section1.p2": "Bu süreçte Hakan Okay; ürün yönetimi, tanıtım stratejileri, bayilik yapılanması ve saha satış operasyonlarını bizzat yönetti.",
   "about.section1.p3": "Türkiye genelinde yüzlerce parfümeri ve eczaneye ulaşan dağıtım ağları kurdu, vitrin kurgularından basın lansmanlarına kadar markaların tüm sahadaki operasyonlarını yönetti.",
-  "about.section1.p4": "O yıllarda AVM'lerin ve zincir parfümerilerin henüz olmadığı Türkiye'de, parfümün yalnızca bir ürün değil, bir duruş ve iletişim dili olduğunu sahada deneyimleyerek öğrendi.",
+  "about.section1.p4": "O yıllarda AVM'lerin ve zincir parfümerilerin henüz olmadığı Türkiye'de, <strong>parfümün yalnızca bir ürün değil, bir duruş ve iletişim dili</strong> olduğunu sahada deneyimleyerek öğrendi.",
   "about.section1.p5": "",
 
   // Section 2 - Uluslararası Deneyim ve Marka İnşası
   "about.section2.title": "Uluslararası Deneyim ve Marka İnşası",
   "about.section2.subtitle": "Lansmanlar, Global Markalar ve Pazar Liderliği",
-  "about.section2.p1": "Kariyerinin ilerleyen yıllarında Hakan Okay, kozmetik sektörünün hem yerel hem de global yüzünde aktif rol aldı. Hugo Boss, Laura Biagiotti, Aramis, Estée Lauder gibi dünya markalarının Türkiye lansmanlarını yönetti; bayilik sistemlerini kurdu, basın toplantıları ve gala geceleri organize etti.",
-  "about.section2.p2": "Aromel Kozmetik bünyesinde Genel Müdür Yardımcılığı görevini üstlenerek; parfüm serilerinin yeniden tasarlanması, yurtdışı satış organizasyonları ve ihracat ağlarının kurulmasında etkin rol oynadı. Rusya başta olmak üzere birçok pazarda birebir temaslarla ihracat bağlantıları gerçekleştirdi, yurt dışında şirket kurulumlarını yönetti.",
-  "about.section2.p3": "Bu süreçte, dünyanın en büyük kozmetik fuarı COSMOPROF Bologna'yı yıllar boyunca hem ziyaretçi hem katılımcı olarak deneyimledi. Esans üreticileriyle çalıştı, parfüm kompozisyonu, ambalaj tasarımı ve marka yönetimi üzerine uluslararası eğitimler aldı.",
-  "about.section2.p4": "Parfüm artık onun için sadece koku değil; strateji, psikoloji, tasarım ve pazarlamanın kesiştiği bir disiplin haline gelmişti.",
+  "about.section2.p1": "Kariyerinin ilerleyen yıllarında Hakan Okay, kozmetik sektörünün hem yerel hem de global yüzünde aktif rol aldı. <strong>Hugo Boss</strong>, <strong>Laura Biagiotti</strong>, <strong>Aramis</strong>, <strong>Estée Lauder</strong> gibi dünya markalarının Türkiye lansmanlarını yönetti; bayilik sistemlerini kurdu, basın toplantıları ve gala geceleri organize etti.",
+  "about.section2.p2": "Aromel Kozmetik bünyesinde <strong>Genel Müdür Yardımcılığı</strong> görevini üstlenerek; parfüm serilerinin yeniden tasarlanması, yurtdışı satış organizasyonları ve ihracat ağlarının kurulmasında etkin rol oynadı. Rusya başta olmak üzere birçok pazarda birebir temaslarla ihracat bağlantıları gerçekleştirdi, yurt dışında şirket kurulumlarını yönetti.",
+  "about.section2.p3": "Bu süreçte, dünyanın en büyük kozmetik fuarı <strong>COSMOPROF Bologna</strong>'yı yıllar boyunca hem ziyaretçi hem katılımcı olarak deneyimledi. Esans üreticileriyle çalıştı, parfüm kompozisyonu, ambalaj tasarımı ve marka yönetimi üzerine uluslararası eğitimler aldı.",
+  "about.section2.p4": "Parfüm artık onun için sadece koku değil; <strong>strateji, psikoloji, tasarım ve pazarlamanın kesiştiği bir disiplin</strong> haline gelmişti.",
 
   // Section 3 - Akademik Derinlik ve Mr. Okay
   "about.section3.title": "Akademik Derinlik ve Mr. Okay",
@@ -49,7 +49,11 @@ export const tr: Record<string, string> = {
   "about.section3.p1": "Akademik yolculuğunu yüksek lisans ve doktora çalışmalarıyla derinleştiren Hakan Okay, örgütsel yenilikçilik, entelektüel sermaye ve sürdürülebilir rekabet alanlarında uzmanlaşmıştır.",
   "about.section3.p2": "Yıllar boyunca edindiği saha deneyimini; kitaplar, eğitimler ve danışmanlık projeleriyle paylaşarak birçok markaya rehberlik etti. Aynı zamanda sanat tarihi, resim ve klasik müzikle beslenen estetik bakışı, kokuya yaklaşımının temelini oluşturdu.",
   "about.section3.p3": "Ve şimdi…",
-  "about.section3.p4": "Tüm bu birikim, ilk kez tek bir markada birleşiyor. Mr. Okay, Hakan Okay'ın 40 yıla yaklaşan deneyiminin, sezgisinin ve bakış açısının kişisel imzasıdır.",
+  "about.section3.p4": "Tüm bu birikim, ilk kez tek bir markada birleşiyor. <strong>Mr. Okay</strong>, Hakan Okay'ın 40 yıla yaklaşan deneyiminin, sezgisinin ve bakış açısının kişisel imzasıdır.",
+
+  // Hakan Okay Quote
+  "about.quote.line1": "Sözler ve davranışlar unutulabilir, ama etkili bir parfümün yarattığı his unutulmaz!",
+  "about.quote.line2": "Kokunuz imzanız, bıraktığınız izdir!",
 
   // Philosophy Section
   "about.philosophy": "Felsefemiz",
