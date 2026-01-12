@@ -26,10 +26,30 @@ export const tr: Record<string, string> = {
   // About Page
   "about.story": "Hikayemiz",
   "about.legacy": "Olağanüstü ustalığın mirası",
-  "about.hakan.bio1": "Türkiye'de modern parfüm ve kozmetik sektörünün temellerinin atıldığı dönemde kariyerine adım atmış, sektörü sıfırdan sahaya inerek öğrenmiş ve inşa etmiş öncü bir isimdir. 1985 yılında VEPA Kozmetik'te başladığı yolculuk, Estée Lauder, Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti ve Aramis gibi dünya markalarının Türkiye'de konumlandırılmasında aktif rol üstlenmesiyle şekillenmiştir.",
-  "about.hakan.bio2": "Bayilik sistemleri kurmuş, lansmanlar yönetmiş, vitrinleri bizzat tasarlamış; pazarı masa başından değil, sahadan okuyarak büyütmüştür. Türkiye'de AVM ve zincir parfümerilerin henüz olmadığı yıllarda, markaları 400'ü aşkın seçkin noktaya taşımış, basınla, perakendeyle ve tüketiciyle doğrudan temas kurmuştur. COSMOPROF başta olmak üzere uluslararası fuarlarda hem gözlemci hem katılımcı olarak yer almış, küresel kozmetik dinamiklerini birebir deneyimlemiştir. AROMEL/İNTERKOZ Kozmetik'te hissedar ve üst düzey yönetici olarak, üretimden ihracata uzanan çok katmanlı süreçleri yönetmiş; markaları yurt dışına taşımıştır. Carrefour gibi organize perakendenin Türkiye'ye girişinde aktif rol almış, pazarlama anlayışının dönüşümüne katkı sağlamıştır.",
-  "about.hakan.bio3": "Kozmetik bilgisini akademik derinlikle birleştirerek MBA ve doktora eğitimlerini tamamlamış; entelektüel sermaye, inovasyon ve sürdürülebilir rekabet üzerine uzmanlaşmıştır. Deneyimlerini kitaplara, eğitimlere ve danışmanlık projelerine dönüştürmüş; bilgisini sektöre aktarmayı ilke edinmiştir. Sanat tarihi, estetik ve klasik müzikle beslenen vizyonu, markaya yalnızca ticari değil kültürel bir perspektif kazandırmıştır.",
-  "about.hakan.bio4": "Bugün, yıllar boyunca global markalar için kurduğu dünyayı, bu kez kendi imzasıyla hayata geçirmektedir. Mr. Okay, Türkiye'den çıkan ve uluslararası arenada söz söylemeyi hedefleyen bir parfüm markası olarak doğmuştur. Bu marka, bir ürün değil; birikimin, disiplinin ve vizyonun doğal sonucudur. Tıpkı Armani ya da Tom Ford'un arkasındaki kurucular gibi, Mr. Okay'ın arkasında da hikâyesi olan bir isim vardır. Ve bu hikâye, Türkiye'den dünyaya uzanan yeni bir başlangıcı temsil eder.",
+
+  // Section 1 - Kozmetik Dünyasında Bir Ömür
+  "about.section1.title": "Kozmetik Dünyasında Bir Ömür",
+  "about.section1.p1": "1985 yılında, Türkiye'de ithalatın serbest bırakıldığı dönemde başlayan bir yolculuk… Hakan Okay, üniversite ve MBA eğitiminin ardından, sektöre VEPA Kozmetik A.Ş.'de Kozmetik Ürün Sorumlusu olarak adım attı. O yıllarda Türkiye'nin en yaygın satış ağına sahip şirketlerinden biri olan VEPA, aynı dönemde Estée Lauder ve Enrico Coveri gibi dünya markalarını Türkiye pazarına kazandırıyordu.",
+  "about.section1.p2": "Bu süreçte Hakan Okay; ürün yönetimi, tanıtım stratejileri, bayilik yapılanması ve saha satış operasyonlarını bizzat yönetti.",
+  "about.section1.p3": "Türkiye genelinde yüzlerce parfümeri ve eczaneye ulaşan dağıtım ağları kurdu, vitrin kurgularından basın lansmanlarına kadar markaların tüm sahadaki operasyonlarını yönetti.",
+  "about.section1.p4": "O yıllarda AVM'lerin ve zincir parfümerilerin henüz olmadığı Türkiye'de, parfümün yalnızca bir ürün değil, bir duruş ve iletişim dili olduğunu sahada deneyimleyerek öğrendi.",
+  "about.section1.p5": "",
+
+  // Section 2 - Uluslararası Deneyim ve Marka İnşası
+  "about.section2.title": "Uluslararası Deneyim ve Marka İnşası",
+  "about.section2.subtitle": "Lansmanlar, Global Markalar ve Pazar Liderliği",
+  "about.section2.p1": "Kariyerinin ilerleyen yıllarında Hakan Okay, kozmetik sektörünün hem yerel hem de global yüzünde aktif rol aldı. Hugo Boss, Laura Biagiotti, Aramis, Estée Lauder gibi dünya markalarının Türkiye lansmanlarını yönetti; bayilik sistemlerini kurdu, basın toplantıları ve gala geceleri organize etti.",
+  "about.section2.p2": "Aromel Kozmetik bünyesinde Genel Müdür Yardımcılığı görevini üstlenerek; parfüm serilerinin yeniden tasarlanması, yurtdışı satış organizasyonları ve ihracat ağlarının kurulmasında etkin rol oynadı. Rusya başta olmak üzere birçok pazarda birebir temaslarla ihracat bağlantıları gerçekleştirdi, yurt dışında şirket kurulumlarını yönetti.",
+  "about.section2.p3": "Bu süreçte, dünyanın en büyük kozmetik fuarı COSMOPROF Bologna'yı yıllar boyunca hem ziyaretçi hem katılımcı olarak deneyimledi. Esans üreticileriyle çalıştı, parfüm kompozisyonu, ambalaj tasarımı ve marka yönetimi üzerine uluslararası eğitimler aldı.",
+  "about.section2.p4": "Parfüm artık onun için sadece koku değil; strateji, psikoloji, tasarım ve pazarlamanın kesiştiği bir disiplin haline gelmişti.",
+
+  // Section 3 - Akademik Derinlik ve Mr. Okay
+  "about.section3.title": "Akademik Derinlik ve Mr. Okay",
+  "about.section3.subtitle": "Bilgi, Deneyim ve Kişisel İmza",
+  "about.section3.p1": "Akademik yolculuğunu yüksek lisans ve doktora çalışmalarıyla derinleştiren Hakan Okay, örgütsel yenilikçilik, entelektüel sermaye ve sürdürülebilir rekabet alanlarında uzmanlaşmıştır.",
+  "about.section3.p2": "Yıllar boyunca edindiği saha deneyimini; kitaplar, eğitimler ve danışmanlık projeleriyle paylaşarak birçok markaya rehberlik etti. Aynı zamanda sanat tarihi, resim ve klasik müzikle beslenen estetik bakışı, kokuya yaklaşımının temelini oluşturdu.",
+  "about.section3.p3": "Ve şimdi…",
+  "about.section3.p4": "Tüm bu birikim, ilk kez tek bir markada birleşiyor. Mr. Okay, Hakan Okay'ın 40 yıla yaklaşan deneyiminin, sezgisinin ve bakış açısının kişisel imzasıdır.",
 
   // Philosophy Section
   "about.philosophy": "Felsefemiz",
@@ -48,9 +68,9 @@ export const tr: Record<string, string> = {
   // Businessman Collection
   "businessman.collection": "Koleksiyon",
   "businessman.tagline": "İş, şehir ve özgürlük arasında dengelenmiş bir yaşam koleksiyonu...",
-  "businessman.philosophy": "BUSINESSMAN Felsefesi",
-  "businessman.philosophy.quote": "Başarının bir kokusu var. Tek kelime etmeden önce giydiğiniz özgüven o.",
-  "businessman.philosophy.text": "BUSINESSMAN koleksiyonu, ilk izlenimlerin önemini anlayan erkekler için tasarlandı. Bu koleksiyondaki her koku, otorite, sofistike ve unutulmaz bir varlık yansıtmak için tasarlandı.",
+  "businessman.philosophy": "BUSINESSMAN FELSEFESİ",
+  "businessman.philosophy.quote": "Başarı tesadüf değildir; ilk bakışta algılanır, söze ihtiyaç duymadan hissedilir.",
+  "businessman.philosophy.text": "Businessman Koleksiyonu, ortama uyum sağlamak için değil; bulunduğu ortamın dilini belirlemek için tasarlandı. Her koku netlik, kontrol ve karar verme gücü taşır. Bu koleksiyon, varlığını açıklamak zorunda kalmayan, etkisini sessizlikle hissettiren erkeklere aittir.",
   "businessman.discover": "Keşfet",
 
   // Product descriptions
@@ -169,9 +189,9 @@ export const tr: Record<string, string> = {
   "brandStory.stat3.label": "Ülkede Aktif Pazar Deneyimi",
 
   // Product Showcase Component
-  "showcase.subtitle": "Seçkin Koleksiyon",
-  "showcase.title": "İmza Kokular",
-  "showcase.desc": "Her koku bir şaheser, nadir malzemeler ve ödünsüz detay özeniyle tasarlandı.",
+  "showcase.subtitle": "BUSINESSMAN KOLEKSİYONU",
+  "showcase.title": "İş, Şehir ve Özgürlük Arasında",
+  "showcase.desc": "Modern erkeğin farklı anları için tasarlanmış koku seçkisi…",
   "showcase.viewAll": "Tüm Kokuları Keşfet",
 
   // Blog Page

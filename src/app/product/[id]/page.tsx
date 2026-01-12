@@ -23,36 +23,49 @@ export async function generateMetadata({
     };
   }
 
+  // Ürün bazlı açıklamalar
+  const productDescriptions: Record<string, string> = {
+    classic: "Classic, disiplinli ve özgüvenli erkekler için tasarlanmış zamansız bir koku imzasıdır. Dengeli yapısıyla klasik şıklığın gücünü yansıtır.",
+    weekend: "Weekend, şehirli ve modern erkeğin haftasonu ritüelleri için tasarlanmış enerjik bir parfümdür. Ferah ve canlı karakteriyle özgürlük hissi uyandırır.",
+    elegant: "Elegant, sofistike ve entelektüel erkekler için yaratılmış rafine bir parfümdür. Derin ve kontrollü karakteriyle elit anlara eşlik eder.",
+    avantgarde: "Avant-garde, yaratıcı, vizyoner ve cesur erkekler için tasarlanmış karakteristik bir koku imzasıdır. Sınırları zorlayan yapısıyla güçlü bir ifade sunar.",
+    holiday: "Holiday, özgür ruhlu ve enerjik erkekler için tasarlanmış ferah bir parfümdür. Deniz esintisi ve canlı notalarıyla yaşam dolu anları yansıtır.",
+  };
+
+  const seoDescription = productDescriptions[product.id.toLowerCase()] || product.description;
+  const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
+
   return {
-    title: `${product.name} - ${product.collection} Koleksiyonu`,
-    description: `${product.name} parfümü. ${product.description}. Üst notalar: ${product.scent.top.join(", ")}. ${product.ml}ml - ${product.price}₺`,
+    title: `${product.name} | ${product.collection} Koleksiyonu – Mr. Okay Beauty`,
+    description: seoDescription,
     keywords: [
-      product.name,
-      product.collection,
-      product.family,
-      "erkek parfümü",
-      "lüks parfüm",
-      ...product.scent.top,
-      ...product.scent.middle,
-      ...product.scent.base,
+      `${product.name} parfüm`,
+      `${product.collection} parfüm`,
+      "Niş parfüm",
+      `Koku ailesi ${product.family}`,
+      genderKeyword,
+      ...product.scent.top.map(note => `${note} ${product.name}`),
+      ...product.scent.middle.map(note => `${note} ${product.name}`),
+      ...product.scent.base.map(note => `${note} ${product.name}`),
+      "Cabin size",
     ],
     openGraph: {
-      title: `${product.name} | Mr Okay ${product.collection}`,
-      description: product.description,
+      title: `${product.name} | ${product.collection} Koleksiyonu – Mr. Okay Beauty`,
+      description: seoDescription,
       images: [
         {
           url: product.image,
           width: 800,
           height: 1000,
-          alt: `${product.name} - Mr Okay Parfüm`,
+          alt: `${product.name} - Mr. Okay Beauty Parfüm`,
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | Mr Okay`,
-      description: product.description,
+      title: `${product.name} | Mr. Okay Beauty`,
+      description: seoDescription,
       images: [product.image],
     },
   };

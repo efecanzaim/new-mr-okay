@@ -1,20 +1,24 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
+  title: "Hakkımızda | Mr. Okay Beauty",
   description:
-    "Mr Okay'in hikayesini keşfedin. 1920'lerden bu yana lüks parfümeri sanatını sürdüren, İstanbul merkezli bir miras markası.",
+    "Mr. Okay Beauty'nin doğuşunu, felsefesini ve zamansız kokuların ardındaki vizyonu keşfedin.",
   keywords: [
-    "Mr Okay hakkında",
-    "parfüm markası",
-    "lüks parfüm tarihi",
-    "İstanbul parfümeri",
-    "parfüm ustası",
+    "Mr. Okay hakkında",
+    "Mr. Okay Beauty hakkında",
+    "Niş parfüm markası",
+    "Parfüm tasarımcısı",
+    "Türk parfüm markası",
+    "İstanbul merkezli parfümeri",
+    "Parfüm ustası",
+    "Koku tasarımı",
+    "Parfüm markası hikâyesi",
   ],
   openGraph: {
-    title: "Hakkımızda | Mr Okay",
+    title: "Hakkımızda | Mr. Okay Beauty",
     description:
-      "Mr Okay'in hikayesini keşfedin. 1920'lerden bu yana lüks parfümeri sanatını sürdüren bir miras markası.",
+      "Mr. Okay Beauty'nin doğuşunu, felsefesini ve zamansız kokuların ardındaki vizyonu keşfedin.",
     type: "website",
   },
 };

@@ -1,30 +1,31 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Businessman Koleksiyonu",
+  title: "Businessman Koleksiyonu | Mr. Okay Beauty",
   description:
-    "Mr Okay Businessman Koleksiyonu. Modern iş insanı için tasarlanmış sofistike ve güçlü kokular. Classic, Weekend, Elegant, Avant-garde ve Holiday parfümleri.",
+    "İş, şehir ve özgürlük arasında dengelenmiş bir koku evreni. Businessman Koleksiyonu, modern erkeğin farklı anları için tasarlandı.",
   keywords: [
-    "businessman parfüm",
-    "erkek parfümü",
-    "ofis parfümü",
-    "iş parfümü",
-    "classic parfüm",
-    "elegant parfüm",
-    "weekend parfüm",
-    "avantgarde parfüm",
-    "holiday parfüm",
+    "Businessman parfüm koleksiyonu",
+    "Erkek parfümü",
+    "Niş erkek parfümü",
+    "Ofis parfümü",
+    "İş hayatı parfümü",
+    "Classic parfüm",
+    "Elegant parfüm",
+    "Weekend parfüm",
+    "Avant-garde parfüm",
+    "Holiday parfüm",
   ],
   openGraph: {
-    title: "Businessman Koleksiyonu | Mr Okay",
+    title: "Businessman Koleksiyonu | Mr. Okay Beauty",
     description:
-      "Modern iş insanı için tasarlanmış sofistike ve güçlü kokular.",
+      "İş, şehir ve özgürlük arasında dengelenmiş bir koku evreni. Businessman Koleksiyonu, modern erkeğin farklı anları için tasarlandı.",
     images: [
       {
         url: "/images/businessman_hero.png",
         width: 1200,
         height: 630,
-        alt: "Mr Okay Businessman Koleksiyonu",
+        alt: "Mr. Okay Beauty Businessman Koleksiyonu",
       },
     ],
     type: "website",

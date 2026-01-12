@@ -26,10 +26,30 @@ export const en: Record<string, string> = {
   // About Page
   "about.story": "OUR STORY",
   "about.legacy": "The legacy of extraordinary craftsmanship",
-  "about.hakan.bio1": "A pioneering figure who began his career during the foundational years of Turkey's modern perfume and cosmetics industry, learning and building the sector from the ground up. His journey, which started at VEPA Cosmetics in 1985, was shaped by his active role in positioning world-renowned brands such as Estée Lauder, Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti, and Aramis in Turkey.",
-  "about.hakan.bio2": "He established dealership systems, managed launches, and personally designed store displays; he grew the market by reading it from the field, not from behind a desk. In the years before shopping malls and chain perfumeries existed in Turkey, he brought brands to over 400 select locations, maintaining direct contact with the press, retailers, and consumers. He participated in international fairs, particularly COSMOPROF, as both an observer and participant, experiencing global cosmetics dynamics firsthand. As a shareholder and senior executive at AROMEL/INTERKOZ Cosmetics, he managed multi-layered processes from production to export; he took brands abroad. He played an active role in the entry of organized retail like Carrefour into Turkey, contributing to the transformation of marketing understanding.",
-  "about.hakan.bio3": "Combining his cosmetics knowledge with academic depth, he completed MBA and doctoral studies; he specialized in intellectual capital, innovation, and sustainable competition. He transformed his experiences into books, trainings, and consultancy projects; making it his principle to share his knowledge with the industry. His vision, nourished by art history, aesthetics, and classical music, gave the brand not only a commercial but also a cultural perspective.",
-  "about.hakan.bio4": "Today, he is bringing to life with his own signature the world he built for global brands over the years. Mr. Okay was born as a perfume brand emerging from Turkey and aiming to make a statement in the international arena. This brand is not a product; it is the natural result of accumulation, discipline, and vision. Just like the founders behind Armani or Tom Ford, there is a name with a story behind Mr. Okay. And this story represents a new beginning extending from Turkey to the world.",
+
+  // Section 1 - A Lifetime in the Cosmetics World
+  "about.section1.title": "A Lifetime in the Cosmetics World",
+  "about.section1.p1": "A journey that began in 1985, when imports were liberalized in Turkey… After completing his university and MBA education, Hakan Okay stepped into the industry as a Cosmetics Product Manager at VEPA Cosmetics Inc. VEPA, one of Turkey's companies with the widest sales network at that time, was also bringing world brands like Estée Lauder and Enrico Coveri to the Turkish market.",
+  "about.section1.p2": "During this period, Hakan Okay personally managed product management, promotion strategies, dealership structuring, and field sales operations.",
+  "about.section1.p3": "He established distribution networks reaching hundreds of perfumeries and pharmacies throughout Turkey, managing all field operations of brands from window displays to press launches.",
+  "about.section1.p4": "In those years when shopping malls and chain perfumeries did not yet exist in Turkey, he learned through field experience that perfume was not just a product, but a stance and a language of communication.",
+  "about.section1.p5": "",
+
+  // Section 2 - International Experience and Brand Building
+  "about.section2.title": "International Experience and Brand Building",
+  "about.section2.subtitle": "Launches, Global Brands and Market Leadership",
+  "about.section2.p1": "In the later years of his career, Hakan Okay took an active role in both the local and global aspects of the cosmetics industry. He managed the Turkey launches of world brands such as Hugo Boss, Laura Biagiotti, Aramis, and Estée Lauder; established dealership systems and organized press conferences and gala nights.",
+  "about.section2.p2": "As Deputy General Manager at Aromel Cosmetics, he played an active role in redesigning perfume series, organizing international sales and establishing export networks. He made export connections through direct contacts in many markets, especially Russia, and managed company establishments abroad.",
+  "about.section2.p3": "During this period, he experienced COSMOPROF Bologna, the world's largest cosmetics fair, for years as both a visitor and participant. He worked with essence producers and received international training on perfume composition, packaging design, and brand management.",
+  "about.section2.p4": "Perfume had become for him not just a scent, but a discipline where strategy, psychology, design, and marketing intersect.",
+
+  // Section 3 - Academic Depth and Mr. Okay
+  "about.section3.title": "Academic Depth and Mr. Okay",
+  "about.section3.subtitle": "Knowledge, Experience and Personal Signature",
+  "about.section3.p1": "Deepening his academic journey with master's and doctoral studies, Hakan Okay has specialized in organizational innovation, intellectual capital, and sustainable competition.",
+  "about.section3.p2": "He guided many brands by sharing his field experience through books, trainings, and consultancy projects. At the same time, his aesthetic perspective nourished by art history, painting, and classical music formed the foundation of his approach to fragrance.",
+  "about.section3.p3": "And now…",
+  "about.section3.p4": "All this accumulation comes together in a single brand for the first time. Mr. Okay is the personal signature of Hakan Okay's nearly 40 years of experience, intuition, and perspective.",
 
   // Philosophy Section
   "about.philosophy": "OUR PHILOSOPHY",
@@ -48,9 +68,9 @@ export const en: Record<string, string> = {
   // Businessman Collection
   "businessman.collection": "COLLECTION",
   "businessman.tagline": "A life collection balanced between work, city, and freedom...",
-  "businessman.philosophy": "BUSINESSMAN Philosophy",
-  "businessman.philosophy.quote": "Success has a scent. It's the confidence you wear before saying a word.",
-  "businessman.philosophy.text": "The BUSINESSMAN collection was designed for men who understand the importance of first impressions. Every fragrance in this collection is designed to reflect authority, sophistication, and an unforgettable presence.",
+  "businessman.philosophy": "BUSINESSMAN PHILOSOPHY",
+  "businessman.philosophy.quote": "Success is not a coincidence; it is perceived at first glance, felt without the need for words.",
+  "businessman.philosophy.text": "The Businessman Collection was designed not to adapt to the environment, but to define the language of the environment it inhabits. Each fragrance carries clarity, control, and decision-making power. This collection belongs to men who don't need to explain their presence, who make their impact felt through silence.",
   "businessman.discover": "DISCOVER",
 
   // Product descriptions
@@ -169,9 +189,9 @@ export const en: Record<string, string> = {
   "brandStory.stat3.label": "Countries with Active Market Experience",
 
   // Product Showcase Component
-  "showcase.subtitle": "CURATED COLLECTION",
-  "showcase.title": "Signature Scents",
-  "showcase.desc": "Each fragrance is a masterpiece, crafted with rare ingredients and uncompromising attention to detail.",
+  "showcase.subtitle": "BUSINESSMAN COLLECTION",
+  "showcase.title": "Between Work, City and Freedom",
+  "showcase.desc": "A fragrance selection designed for the modern man's different moments…",
   "showcase.viewAll": "DISCOVER ALL FRAGRANCES",
 
   // Blog Page

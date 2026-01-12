@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sepetim",
-  description: "Mr Okay alışveriş sepetiniz. Seçtiğiniz parfümleri inceleyin ve siparişinizi tamamlayın.",
+  title: "Sepet | Mr. Okay Beauty",
+  description: "Seçtiğiniz Mr. Okay Beauty ürünlerini inceleyin ve alışverişinizi güvenle tamamlayın.",
   robots: {
     index: false,
     follow: false,

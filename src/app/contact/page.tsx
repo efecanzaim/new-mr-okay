@@ -78,9 +78,9 @@ export default function ContactPage() {
                         {t["contact.info.mainStore"]}
                       </p>
                       <p className="text-silver-dark font-light">
-                        Nişantaşı Caddesi No: 123
+                        Barbaros Bulvarı Gürel İş Merkezi
                         <br />
-                        İstanbul, Türkiye
+                        No.47 D.14 Beşiktaş-İstanbul / Türkiye
                       </p>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                         {t["contact.info.phone"]}
                       </p>
                       <p className="text-silver-dark font-light">
-                        +90 (212) 555 01 23
+                        +90 507 348 44 20
                       </p>
                     </div>
                   </div>

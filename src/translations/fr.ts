@@ -26,10 +26,30 @@ export const fr: Record<string, string> = {
   // About Page
   "about.story": "NOTRE HISTOIRE",
   "about.legacy": "L'héritage d'un savoir-faire extraordinaire",
-  "about.hakan.bio1": "Une figure pionnière qui a commencé sa carrière pendant les années fondatrices de l'industrie moderne du parfum et des cosmétiques en Turquie, apprenant et construisant le secteur à partir de zéro. Son parcours, qui a débuté chez VEPA Cosmetics en 1985, a été façonné par son rôle actif dans le positionnement de marques de renommée mondiale telles qu'Estée Lauder, Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti et Aramis en Turquie.",
-  "about.hakan.bio2": "Il a établi des systèmes de distribution, géré des lancements et personnellement conçu des vitrines ; il a développé le marché en l'observant sur le terrain, pas depuis un bureau. Dans les années précédant l'existence des centres commerciaux et des chaînes de parfumeries en Turquie, il a amené des marques dans plus de 400 points de vente sélectionnés, maintenant un contact direct avec la presse, les détaillants et les consommateurs. Il a participé à des salons internationaux, notamment COSMOPROF, à la fois comme observateur et participant, expérimentant de première main les dynamiques cosmétiques mondiales. En tant qu'actionnaire et cadre supérieur chez AROMEL/INTERKOZ Cosmetics, il a géré des processus multicouches de la production à l'exportation ; il a emmené des marques à l'étranger. Il a joué un rôle actif dans l'entrée du commerce organisé comme Carrefour en Turquie, contribuant à la transformation de la compréhension marketing.",
-  "about.hakan.bio3": "Combinant ses connaissances en cosmétique avec une profondeur académique, il a complété un MBA et des études doctorales ; il s'est spécialisé dans le capital intellectuel, l'innovation et la compétition durable. Il a transformé ses expériences en livres, formations et projets de conseil ; faisant de son principe de partager ses connaissances avec l'industrie. Sa vision, nourrie par l'histoire de l'art, l'esthétique et la musique classique, a donné à la marque non seulement une perspective commerciale mais aussi culturelle.",
-  "about.hakan.bio4": "Aujourd'hui, il donne vie avec sa propre signature au monde qu'il a construit pour des marques mondiales au fil des années. Mr. Okay est né comme une marque de parfum émergeant de Turquie et visant à s'imposer sur la scène internationale. Cette marque n'est pas un produit ; c'est le résultat naturel de l'accumulation, de la discipline et de la vision. Tout comme les fondateurs derrière Armani ou Tom Ford, il y a derrière Mr. Okay un nom avec une histoire. Et cette histoire représente un nouveau départ s'étendant de la Turquie au monde.",
+
+  // Section 1 - Une Vie dans le Monde des Cosmétiques
+  "about.section1.title": "Une Vie dans le Monde des Cosmétiques",
+  "about.section1.p1": "Un voyage qui a commencé en 1985, lorsque les importations ont été libéralisées en Turquie… Après avoir terminé ses études universitaires et son MBA, Hakan Okay est entré dans l'industrie en tant que Chef de Produit Cosmétique chez VEPA Cosmetics SA. VEPA, l'une des entreprises avec le réseau de vente le plus étendu en Turquie à cette époque, apportait également des marques mondiales comme Estée Lauder et Enrico Coveri sur le marché turc.",
+  "about.section1.p2": "Pendant cette période, Hakan Okay a personnellement géré la gestion des produits, les stratégies de promotion, la structuration des distributeurs et les opérations de vente sur le terrain.",
+  "about.section1.p3": "Il a établi des réseaux de distribution atteignant des centaines de parfumeries et pharmacies à travers la Turquie, gérant toutes les opérations terrain des marques, des vitrines aux lancements presse.",
+  "about.section1.p4": "Dans ces années où les centres commerciaux et les chaînes de parfumeries n'existaient pas encore en Turquie, il a appris par l'expérience terrain que le parfum n'était pas qu'un produit, mais une posture et un langage de communication.",
+  "about.section1.p5": "",
+
+  // Section 2 - Expérience Internationale et Construction de Marque
+  "about.section2.title": "Expérience Internationale et Construction de Marque",
+  "about.section2.subtitle": "Lancements, Marques Mondiales et Leadership du Marché",
+  "about.section2.p1": "Dans les années suivantes de sa carrière, Hakan Okay a joué un rôle actif dans les aspects locaux et mondiaux de l'industrie cosmétique. Il a géré les lancements en Turquie de marques mondiales telles que Hugo Boss, Laura Biagiotti, Aramis et Estée Lauder ; a établi des systèmes de distribution et organisé des conférences de presse et des soirées de gala.",
+  "about.section2.p2": "En tant que Directeur Général Adjoint chez Aromel Cosmetics, il a joué un rôle actif dans la refonte des séries de parfums, l'organisation des ventes internationales et l'établissement de réseaux d'exportation. Il a établi des connexions d'exportation par des contacts directs dans de nombreux marchés, notamment la Russie, et a géré des créations d'entreprises à l'étranger.",
+  "about.section2.p3": "Pendant cette période, il a vécu COSMOPROF Bologne, le plus grand salon cosmétique du monde, pendant des années en tant que visiteur et participant. Il a travaillé avec des producteurs d'essences et a reçu des formations internationales sur la composition de parfums, le design d'emballage et la gestion de marque.",
+  "about.section2.p4": "Le parfum était devenu pour lui non plus seulement une fragrance, mais une discipline où se croisent stratégie, psychologie, design et marketing.",
+
+  // Section 3 - Profondeur Académique et Mr. Okay
+  "about.section3.title": "Profondeur Académique et Mr. Okay",
+  "about.section3.subtitle": "Connaissance, Expérience et Signature Personnelle",
+  "about.section3.p1": "Approfondissant son parcours académique avec des études de master et de doctorat, Hakan Okay s'est spécialisé dans l'innovation organisationnelle, le capital intellectuel et la compétition durable.",
+  "about.section3.p2": "Il a guidé de nombreuses marques en partageant son expérience terrain à travers des livres, des formations et des projets de conseil. En même temps, sa perspective esthétique nourrie par l'histoire de l'art, la peinture et la musique classique a formé le fondement de son approche de la fragrance.",
+  "about.section3.p3": "Et maintenant…",
+  "about.section3.p4": "Toute cette accumulation se réunit pour la première fois dans une seule marque. Mr. Okay est la signature personnelle de près de 40 ans d'expérience, d'intuition et de perspective de Hakan Okay.",
 
   // Philosophy Section
   "about.philosophy": "NOTRE PHILOSOPHIE",
@@ -48,9 +68,9 @@ export const fr: Record<string, string> = {
   // Businessman Collection
   "businessman.collection": "COLLECTION",
   "businessman.tagline": "Une collection de vie équilibrée entre travail, ville et liberté...",
-  "businessman.philosophy": "Philosophie BUSINESSMAN",
-  "businessman.philosophy.quote": "Le succès a un parfum. C'est la confiance que vous portez avant de prononcer un mot.",
-  "businessman.philosophy.text": "La collection BUSINESSMAN a été conçue pour les hommes qui comprennent l'importance de la première impression. Chaque fragrance de cette collection est conçue pour refléter l'autorité, la sophistication et une présence inoubliable.",
+  "businessman.philosophy": "PHILOSOPHIE BUSINESSMAN",
+  "businessman.philosophy.quote": "Le succès n'est pas un hasard ; il se perçoit au premier regard, se ressent sans avoir besoin de mots.",
+  "businessman.philosophy.text": "La Collection Businessman n'a pas été conçue pour s'adapter à l'environnement, mais pour définir le langage de l'environnement qu'elle habite. Chaque fragrance porte clarté, contrôle et pouvoir de décision. Cette collection appartient aux hommes qui n'ont pas besoin d'expliquer leur présence, qui font ressentir leur impact par le silence.",
   "businessman.discover": "DÉCOUVRIR",
 
   // Product descriptions
@@ -169,9 +189,9 @@ export const fr: Record<string, string> = {
   "brandStory.stat3.label": "Pays avec une Expérience Active sur le Marché",
 
   // Product Showcase Component
-  "showcase.subtitle": "COLLECTION SÉLECTIONNÉE",
-  "showcase.title": "Parfums Signature",
-  "showcase.desc": "Chaque fragrance est un chef-d'œuvre, élaborée avec des ingrédients rares et une attention incompromise aux détails.",
+  "showcase.subtitle": "COLLECTION BUSINESSMAN",
+  "showcase.title": "Entre Travail, Ville et Liberté",
+  "showcase.desc": "Une sélection de parfums conçue pour les différents moments de l'homme moderne…",
   "showcase.viewAll": "DÉCOUVRIR TOUS LES PARFUMS",
 
   // Blog Page

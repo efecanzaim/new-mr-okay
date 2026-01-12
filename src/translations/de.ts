@@ -26,10 +26,30 @@ export const de: Record<string, string> = {
   // About Page
   "about.story": "UNSERE GESCHICHTE",
   "about.legacy": "Das Vermächtnis außergewöhnlicher Handwerkskunst",
-  "about.hakan.bio1": "Eine Pionierfigur, die ihre Karriere in den Gründungsjahren der modernen türkischen Parfüm- und Kosmetikindustrie begann und die Branche von Grund auf lernte und aufbaute. Seine Reise, die 1985 bei VEPA Cosmetics begann, wurde durch seine aktive Rolle bei der Positionierung weltbekannter Marken wie Estée Lauder, Enrico Coveri, Arrogance, Hugo Boss, Laura Biagiotti und Aramis in der Türkei geprägt.",
-  "about.hakan.bio2": "Er etablierte Händlersysteme, managte Markteinführungen und gestaltete persönlich Schaufensterauslagen; er entwickelte den Markt durch Beobachtung vor Ort, nicht vom Schreibtisch aus. In den Jahren, bevor es in der Türkei Einkaufszentren und Parfümerieketten gab, brachte er Marken an über 400 ausgewählte Standorte und pflegte direkten Kontakt mit Presse, Einzelhändlern und Verbrauchern. Er nahm an internationalen Messen teil, insbesondere COSMOPROF, sowohl als Beobachter als auch als Teilnehmer, und erlebte die globale Kosmetikdynamik aus erster Hand. Als Gesellschafter und leitender Angestellter bei AROMEL/INTERKOZ Cosmetics managte er vielschichtige Prozesse von der Produktion bis zum Export; er brachte Marken ins Ausland. Er spielte eine aktive Rolle beim Eintritt des organisierten Einzelhandels wie Carrefour in die Türkei und trug zur Transformation des Marketing-Verständnisses bei.",
-  "about.hakan.bio3": "Durch die Verbindung seines Kosmetikwissens mit akademischer Tiefe absolvierte er MBA- und Promotionsstudien; er spezialisierte sich auf intellektuelles Kapital, Innovation und nachhaltigen Wettbewerb. Er verwandelte seine Erfahrungen in Bücher, Schulungen und Beratungsprojekte; er machte es sich zum Prinzip, sein Wissen mit der Branche zu teilen. Seine von Kunstgeschichte, Ästhetik und klassischer Musik genährte Vision verlieh der Marke nicht nur eine kommerzielle, sondern auch eine kulturelle Perspektive.",
-  "about.hakan.bio4": "Heute bringt er mit seiner eigenen Signatur die Welt zum Leben, die er über Jahre für globale Marken aufgebaut hat. Mr. Okay wurde als Parfümmarke geboren, die aus der Türkei kommt und darauf abzielt, in der internationalen Arena Stellung zu beziehen. Diese Marke ist kein Produkt; sie ist das natürliche Ergebnis von Ansammlung, Disziplin und Vision. Genau wie die Gründer hinter Armani oder Tom Ford steht hinter Mr. Okay ein Name mit Geschichte. Und diese Geschichte repräsentiert einen neuen Anfang, der sich von der Türkei in die Welt erstreckt.",
+
+  // Section 1 - Ein Leben in der Kosmetikwelt
+  "about.section1.title": "Ein Leben in der Kosmetikwelt",
+  "about.section1.p1": "Eine Reise, die 1985 begann, als die Importe in der Türkei liberalisiert wurden… Nach seinem Universitäts- und MBA-Studium trat Hakan Okay als Kosmetik-Produktmanager bei VEPA Cosmetics AG in die Branche ein. VEPA, eines der Unternehmen mit dem weitesten Vertriebsnetz in der Türkei, brachte damals auch Weltmarken wie Estée Lauder und Enrico Coveri auf den türkischen Markt.",
+  "about.section1.p2": "In dieser Zeit leitete Hakan Okay persönlich Produktmanagement, Werbestrategien, Händlerstrukturierung und Außendienstoperationen.",
+  "about.section1.p3": "Er baute Vertriebsnetze auf, die Hunderte von Parfümerien und Apotheken in der ganzen Türkei erreichten, und leitete alle Feldoperationen der Marken von Schaufensterauslagen bis zu Presselaunches.",
+  "about.section1.p4": "In jenen Jahren, als es in der Türkei noch keine Einkaufszentren und Parfümerieketten gab, lernte er durch Felderfahrung, dass Parfüm nicht nur ein Produkt war, sondern eine Haltung und eine Kommunikationssprache.",
+  "about.section1.p5": "",
+
+  // Section 2 - Internationale Erfahrung und Markenaufbau
+  "about.section2.title": "Internationale Erfahrung und Markenaufbau",
+  "about.section2.subtitle": "Launches, Globale Marken und Marktführerschaft",
+  "about.section2.p1": "In den späteren Jahren seiner Karriere übernahm Hakan Okay eine aktive Rolle sowohl im lokalen als auch im globalen Aspekt der Kosmetikindustrie. Er leitete die Türkei-Launches von Weltmarken wie Hugo Boss, Laura Biagiotti, Aramis und Estée Lauder; etablierte Händlersysteme und organisierte Pressekonferenzen und Galanächte.",
+  "about.section2.p2": "Als stellvertretender Generaldirektor bei Aromel Cosmetics spielte er eine aktive Rolle bei der Neugestaltung von Parfümserien, der Organisation internationaler Verkäufe und dem Aufbau von Exportnetzen. Er knüpfte Exportverbindungen durch direkte Kontakte in vielen Märkten, insbesondere Russland, und leitete Firmengründungen im Ausland.",
+  "about.section2.p3": "In dieser Zeit erlebte er COSMOPROF Bologna, die weltweit größte Kosmetikmesse, jahrelang sowohl als Besucher als auch als Teilnehmer. Er arbeitete mit Essenzherstellern und erhielt internationale Schulungen zu Parfümkomposition, Verpackungsdesign und Markenmanagement.",
+  "about.section2.p4": "Parfüm war für ihn nicht mehr nur ein Duft, sondern eine Disziplin geworden, in der sich Strategie, Psychologie, Design und Marketing überschneiden.",
+
+  // Section 3 - Akademische Tiefe und Mr. Okay
+  "about.section3.title": "Akademische Tiefe und Mr. Okay",
+  "about.section3.subtitle": "Wissen, Erfahrung und Persönliche Signatur",
+  "about.section3.p1": "Hakan Okay vertiefte seinen akademischen Weg mit Master- und Promotionsstudien und spezialisierte sich auf organisatorische Innovation, intellektuelles Kapital und nachhaltigen Wettbewerb.",
+  "about.section3.p2": "Er führte viele Marken, indem er seine Felderfahrung durch Bücher, Schulungen und Beratungsprojekte teilte. Gleichzeitig bildete seine von Kunstgeschichte, Malerei und klassischer Musik genährte ästhetische Perspektive die Grundlage seines Ansatzes für Düfte.",
+  "about.section3.p3": "Und jetzt…",
+  "about.section3.p4": "All diese Ansammlung kommt zum ersten Mal in einer einzigen Marke zusammen. Mr. Okay ist die persönliche Signatur von Hakan Okays fast 40-jähriger Erfahrung, Intuition und Perspektive.",
 
   // Philosophy Section
   "about.philosophy": "UNSERE PHILOSOPHIE",
@@ -48,9 +68,9 @@ export const de: Record<string, string> = {
   // Businessman Collection
   "businessman.collection": "KOLLEKTION",
   "businessman.tagline": "Eine Lebenskollektion, ausbalanciert zwischen Arbeit, Stadt und Freiheit...",
-  "businessman.philosophy": "BUSINESSMAN Philosophie",
-  "businessman.philosophy.quote": "Erfolg hat einen Duft. Es ist das Selbstvertrauen, das Sie tragen, bevor Sie ein Wort sagen.",
-  "businessman.philosophy.text": "Die BUSINESSMAN-Kollektion wurde für Männer entworfen, die die Bedeutung des ersten Eindrucks verstehen. Jeder Duft in dieser Kollektion ist darauf ausgelegt, Autorität, Raffinesse und eine unvergessliche Präsenz zu reflektieren.",
+  "businessman.philosophy": "BUSINESSMAN PHILOSOPHIE",
+  "businessman.philosophy.quote": "Erfolg ist kein Zufall; er wird auf den ersten Blick wahrgenommen, ohne Worte gespürt.",
+  "businessman.philosophy.text": "Die Businessman Kollektion wurde nicht entwickelt, um sich der Umgebung anzupassen, sondern um die Sprache der Umgebung zu bestimmen, in der sie sich befindet. Jeder Duft trägt Klarheit, Kontrolle und Entscheidungskraft. Diese Kollektion gehört Männern, die ihre Präsenz nicht erklären müssen, die ihre Wirkung durch Stille spürbar machen.",
   "businessman.discover": "ENTDECKEN",
 
   // Product descriptions
@@ -169,9 +189,9 @@ export const de: Record<string, string> = {
   "brandStory.stat3.label": "Länder mit aktiver Markterfahrung",
 
   // Product Showcase Component
-  "showcase.subtitle": "KURATIERTE KOLLEKTION",
-  "showcase.title": "Signaturdüfte",
-  "showcase.desc": "Jeder Duft ist ein Meisterwerk, gefertigt mit seltenen Zutaten und kompromissloser Liebe zum Detail.",
+  "showcase.subtitle": "BUSINESSMAN KOLLEKTION",
+  "showcase.title": "Zwischen Arbeit, Stadt und Freiheit",
+  "showcase.desc": "Eine Duftauswahl für die verschiedenen Momente des modernen Mannes…",
   "showcase.viewAll": "ALLE DÜFTE ENTDECKEN",
 
   // Blog Page

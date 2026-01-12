@@ -1,20 +1,24 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "İletişim",
+  title: "İletişim | Mr. Okay Beauty",
   description:
-    "Mr Okay ile iletişime geçin. Sorularınız, önerileriniz veya özel siparişleriniz için bize ulaşın.",
+    "Sorularınız, önerileriniz veya işbirlikleri için Mr. Okay Beauty ekibiyle iletişime geçebilirsiniz.",
   keywords: [
-    "Mr Okay iletişim",
-    "parfüm mağaza",
-    "müşteri hizmetleri",
+    "Mr. Okay iletişim",
+    "Mr. Okay iletişim bilgileri",
+    "Mr. Okay Beauty iletişim",
+    "Niş parfüm markası iletişim",
+    "Parfüm mağazası iletişim",
+    "Müşteri destek hattı",
+    "Parfüm danışmanlığı",
     "sipariş",
     "destek",
   ],
   openGraph: {
-    title: "İletişim | Mr Okay",
+    title: "İletişim | Mr. Okay Beauty",
     description:
-      "Mr Okay ile iletişime geçin. Sorularınız için bize ulaşın.",
+      "Sorularınız, önerileriniz veya işbirlikleri için Mr. Okay Beauty ekibiyle iletişime geçebilirsiniz.",
     type: "website",
   },
 };

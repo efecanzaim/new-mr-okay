@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteUrl}/collections/smartwoman`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "weekly" as const,
       priority: 0.6,
     },
   ];
