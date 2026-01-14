@@ -72,8 +72,8 @@ export async function generateMetadata({
   const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
   const siteUrl = "https://mrokayparfum.com";
   const productUrl = `${siteUrl}/product/${product.id}`;
-  // Facebook paylaşımı için ana ürün görselini kullan (detail1 görselleri 8MB limitini aşıyor)
-  const ogImageUrl = `${siteUrl}/products/${product.id}.png`;
+  // Facebook paylaşımı için detail1 görselini kullan
+  const ogImageUrl = `${siteUrl}/products/${product.id}_detail1.png`;
 
   return {
     metadataBase: new URL(siteUrl),
