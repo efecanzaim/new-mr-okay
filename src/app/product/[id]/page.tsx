@@ -72,7 +72,8 @@ export async function generateMetadata({
   const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
   const siteUrl = "https://mrokayparfum.com";
   const productUrl = `${siteUrl}/product/${product.id}`;
-  const imageUrl = `${siteUrl}${product.image}`;
+  // Facebook paylaşımı için detail1 görselini kullan
+  const ogImageUrl = `${siteUrl}/products/${product.id}_detail1.png`;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -96,9 +97,9 @@ export async function generateMetadata({
       siteName: "Mr. Okay Beauty",
       images: [
         {
-          url: imageUrl,
-          width: 800,
-          height: 1000,
+          url: ogImageUrl,
+          width: 500,
+          height: 500,
           alt: `Mr. Okay ${product.name} - ${product.collection} Parfüm`,
         },
       ],
@@ -106,12 +107,12 @@ export async function generateMetadata({
       type: "website",
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@mrokay",
       creator: "@mrokay",
       title: `Mr. Okay ${product.name} | ${product.collection}`,
       description: seoDescription,
-      images: [imageUrl],
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: productUrl,

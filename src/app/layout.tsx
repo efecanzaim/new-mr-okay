@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  other: {
+    "fb:app_id": "YOUR_FACEBOOK_APP_ID", // Facebook Developers'dan alınan App ID
+  },
   openGraph: {
     title: "Mr. Okay | Niş ve Zamansız Parfümler",
     description:
