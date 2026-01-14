@@ -46,7 +46,7 @@ const storeData: StoreLocation[] = [
     type: "physical",
     city: "Adana",
     district: "Seyhan",
-    address: "Çınarlı Mah. İnönü No:18/B Doruk Otel Karşısı Seyhan/Adana",
+    address: "Çınarlı Mah. İnönü No:18/B Gümüş Otel Karşısı Seyhan/Adana",
     coordinates: [36.99027412380862, 35.32456495431724],
   },
   {
