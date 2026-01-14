@@ -112,6 +112,9 @@ export const en: Record<string, string> = {
   "product.base": "BASE",
   "product.buyPoints": "WHERE TO BUY",
   "product.addFavorites": "ADD TO FAVORITES",
+  "product.share": "Share",
+  "product.copyLink": "Copy Link",
+  "product.linkCopied": "Copied!",
   "product.completeCollection": "COMPLETE YOUR COLLECTION",
   "product.youMayLike": "You May Also Like",
 

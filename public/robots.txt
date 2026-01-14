@@ -1,0 +1,16 @@
+# robots.txt for Mr. Okay Beauty
+# https://mrokay.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mrokay.com/sitemap.xml
+
+# Crawl-delay (optional, for rate limiting)
+Crawl-delay: 1
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/

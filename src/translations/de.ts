@@ -112,6 +112,9 @@ export const de: Record<string, string> = {
   "product.base": "Basis",
   "product.buyPoints": "Verkaufsstellen",
   "product.addFavorites": "Zu Favoriten hinzufügen",
+  "product.share": "Teilen",
+  "product.copyLink": "Link kopieren",
+  "product.linkCopied": "Kopiert!",
   "product.completeCollection": "Vervollständigen Sie Ihre Kollektion",
   "product.youMayLike": "Das könnte Ihnen auch gefallen",
 

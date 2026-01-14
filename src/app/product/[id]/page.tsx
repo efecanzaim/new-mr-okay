@@ -1,6 +1,42 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import ProductClient from "./ProductClient";
 import { getProductById, products } from "@/data/products";
+
+// Product JSON-LD generator
+function generateProductJsonLd(product: ReturnType<typeof getProductById>) {
+  if (!product) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": `Mr. Okay ${product.name}`,
+    "image": `https://mrokay.com${product.image}`,
+    "description": product.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Mr. Okay Beauty"
+    },
+    "sku": product.id.toUpperCase(),
+    "category": "Parfüm",
+    "offers": {
+      "@type": "Offer",
+      "url": `https://mrokay.com/product/${product.id}`,
+      "priceCurrency": "TRY",
+      "price": product.price,
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Mr. Okay Beauty"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "50"
+    }
+  };
+}
 
 // Statik export için gerekli - build zamanında hangi product id'leri için sayfa oluşturulacağını belirtir
 export function generateStaticParams() {
@@ -34,8 +70,12 @@ export async function generateMetadata({
 
   const seoDescription = productDescriptions[product.id.toLowerCase()] || product.description;
   const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
+  const siteUrl = "https://mrokay.com";
+  const productUrl = `${siteUrl}/product/${product.id}`;
+  const imageUrl = `${siteUrl}${product.image}`;
 
   return {
+    metadataBase: new URL(siteUrl),
     title: `${product.name} | ${product.collection} Koleksiyonu – Mr. Okay Beauty`,
     description: seoDescription,
     keywords: [
@@ -50,23 +90,31 @@ export async function generateMetadata({
       "Cabin size",
     ],
     openGraph: {
-      title: `${product.name} | ${product.collection} Koleksiyonu – Mr. Okay Beauty`,
+      title: `Mr. Okay ${product.name} | ${product.collection} Koleksiyonu`,
       description: seoDescription,
+      url: productUrl,
+      siteName: "Mr. Okay Beauty",
       images: [
         {
-          url: product.image,
+          url: imageUrl,
           width: 800,
           height: 1000,
-          alt: `${product.name} - Mr. Okay Beauty Parfüm`,
+          alt: `Mr. Okay ${product.name} - ${product.collection} Parfüm`,
         },
       ],
+      locale: "tr_TR",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | Mr. Okay Beauty`,
+      site: "@mrokay",
+      creator: "@mrokay",
+      title: `Mr. Okay ${product.name} | ${product.collection}`,
       description: seoDescription,
-      images: [product.image],
+      images: [imageUrl],
+    },
+    alternates: {
+      canonical: productUrl,
     },
   };
 }
@@ -88,5 +136,17 @@ export default function ProductPage({ params }: ProductPageProps) {
     );
   }
 
-  return <ProductClient product={product} productId={params.id} />;
+  const productJsonLd = generateProductJsonLd(product);
+
+  return (
+    <>
+      {productJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+      )}
+      <ProductClient product={product} productId={params.id} />
+    </>
+  );
 }

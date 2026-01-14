@@ -112,6 +112,9 @@ export const ar: Record<string, string> = {
   "product.base": "القاعدة",
   "product.buyPoints": "نقاط البيع",
   "product.addFavorites": "أضف للمفضلة",
+  "product.share": "مشاركة",
+  "product.copyLink": "نسخ الرابط",
+  "product.linkCopied": "تم النسخ!",
   "product.completeCollection": "أكمل مجموعتك",
   "product.youMayLike": "قد يعجبك أيضاً",
 

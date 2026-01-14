@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://mrokay.com</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hakkımızda -->
+  <url>
+    <loc>https://mrokay.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/about"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- İletişim -->
+  <url>
+    <loc>https://mrokay.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/contact"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Mağazalar -->
+  <url>
+    <loc>https://mrokay.com/stores</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/stores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/stores"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/stores"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/stores"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/stores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/stores"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://mrokay.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/blog"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Koleksiyonlar -->
+  <url>
+    <loc>https://mrokay.com/collections/businessman</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/collections/businessman"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/collections/businessman"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/collections/businessman"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/collections/businessman"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/collections/businessman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/collections/businessman"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ürünler -->
+  <url>
+    <loc>https://mrokay.com/product/classic</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/product/classic"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/product/classic"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/product/classic"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/product/classic"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/product/classic"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/product/classic"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/product/weekend</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/product/weekend"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/product/weekend"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/product/weekend"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/product/weekend"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/product/weekend"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/product/weekend"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/product/elegant</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/product/elegant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/product/elegant"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/product/elegant"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/product/elegant"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/product/elegant"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/product/elegant"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/product/avantgarde</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/product/avantgarde"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/product/avantgarde"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/product/avantgarde"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/product/avantgarde"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/product/avantgarde"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/product/avantgarde"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/product/holiday</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mrokay.com/product/holiday"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrokay.com/product/holiday"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mrokay.com/product/holiday"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mrokay.com/product/holiday"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://mrokay.com/product/holiday"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrokay.com/product/holiday"/>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Yasal Sayfalar -->
+  <url>
+    <loc>https://mrokay.com/privacy</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/terms</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mrokay.com/shipping</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

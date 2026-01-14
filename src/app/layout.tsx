@@ -93,6 +93,66 @@ export const metadata: Metadata = {
   category: "parfüm",
 };
 
+// JSON-LD Structured Data
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mr. Okay Beauty",
+  "alternateName": "Mr. Okay",
+  "url": "https://mrokay.com",
+  "logo": "https://mrokay.com/images/logo.png",
+  "description": "Sofistike kadınlar ve erkekler için tasarlanan niş parfümler. Mr. Okay Beauty, zamansız kokularla kişisel imzalar yaratır.",
+  "foundingDate": "2024",
+  "sameAs": [
+    "https://www.instagram.com/mrokay",
+    "https://www.facebook.com/mrokay",
+    "https://www.tiktok.com/@mrokay"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": ["Turkish", "English", "German", "French", "Arabic"]
+  }
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mr. Okay Beauty",
+  "url": "https://mrokay.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mrokay.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Mr. Okay Beauty",
+  "image": "https://mrokay.com/images/logo.png",
+  "url": "https://mrokay.com",
+  "description": "Niş parfümler ve özel kokular sunan premium parfüm markası",
+  "priceRange": "$$",
+  "servesCuisine": "Parfüm",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.0082",
+    "longitude": "28.9784"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -103,6 +163,19 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         <style dangerouslySetInnerHTML={{
           __html: `
             @font-face {

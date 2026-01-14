@@ -112,6 +112,9 @@ export const tr: Record<string, string> = {
   "product.base": "Alt",
   "product.buyPoints": "Satın Alma Noktaları",
   "product.addFavorites": "Favorilere Ekle",
+  "product.share": "Paylaş",
+  "product.copyLink": "Linki Kopyala",
+  "product.linkCopied": "Kopyalandı!",
   "product.completeCollection": "Koleksiyonunuzu Tamamlayın",
   "product.youMayLike": "Bunları da Beğenebilirsiniz",
 
