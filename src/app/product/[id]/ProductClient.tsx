@@ -58,7 +58,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
   const shareMenuRef = useRef<HTMLDivElement>(null);
 
   // Share URL and text
-  const shareUrl = `https://mrokay.com/product/${productId}`;
+  const shareUrl = `https://mrokayparfum.com/product/${productId}`;
   const shareTitle = `Mr. Okay ${product.name} - ${product.collection}`;
   const shareText = product.description;
 

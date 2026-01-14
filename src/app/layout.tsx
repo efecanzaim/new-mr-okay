@@ -8,7 +8,7 @@ import Providers from "@/components/Providers";
 
 const GA_MEASUREMENT_ID = "G-V1DMQ3GKR1";
 
-const siteUrl = "https://mrokay.com";
+const siteUrl = "https://mrokayparfum.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -99,8 +99,8 @@ const organizationJsonLd = {
   "@type": "Organization",
   "name": "Mr. Okay Beauty",
   "alternateName": "Mr. Okay",
-  "url": "https://mrokay.com",
-  "logo": "https://mrokay.com/images/logo.png",
+  "url": "https://mrokayparfum.com",
+  "logo": "https://mrokayparfum.com/images/logo.png",
   "description": "Sofistike kadınlar ve erkekler için tasarlanan niş parfümler. Mr. Okay Beauty, zamansız kokularla kişisel imzalar yaratır.",
   "foundingDate": "2024",
   "sameAs": [
@@ -119,10 +119,10 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Mr. Okay Beauty",
-  "url": "https://mrokay.com",
+  "url": "https://mrokayparfum.com",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://mrokay.com/search?q={search_term_string}",
+    "target": "https://mrokayparfum.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -131,8 +131,8 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Mr. Okay Beauty",
-  "image": "https://mrokay.com/images/logo.png",
-  "url": "https://mrokay.com",
+  "image": "https://mrokayparfum.com/images/logo.png",
+  "url": "https://mrokayparfum.com",
   "description": "Niş parfümler ve özel kokular sunan premium parfüm markası",
   "priceRange": "$$",
   "servesCuisine": "Parfüm",

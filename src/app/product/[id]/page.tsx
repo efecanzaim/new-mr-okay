@@ -11,7 +11,7 @@ function generateProductJsonLd(product: ReturnType<typeof getProductById>) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": `Mr. Okay ${product.name}`,
-    "image": `https://mrokay.com${product.image}`,
+    "image": `https://mrokayparfum.com${product.image}`,
     "description": product.description,
     "brand": {
       "@type": "Brand",
@@ -21,7 +21,7 @@ function generateProductJsonLd(product: ReturnType<typeof getProductById>) {
     "category": "Parfüm",
     "offers": {
       "@type": "Offer",
-      "url": `https://mrokay.com/product/${product.id}`,
+      "url": `https://mrokayparfum.com/product/${product.id}`,
       "priceCurrency": "TRY",
       "price": product.price,
       "availability": "https://schema.org/InStock",
@@ -70,7 +70,7 @@ export async function generateMetadata({
 
   const seoDescription = productDescriptions[product.id.toLowerCase()] || product.description;
   const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
-  const siteUrl = "https://mrokay.com";
+  const siteUrl = "https://mrokayparfum.com";
   const productUrl = `${siteUrl}/product/${product.id}`;
   const imageUrl = `${siteUrl}${product.image}`;
 

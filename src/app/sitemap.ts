@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { products } from "@/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://mrokay.com";
+  const siteUrl = "https://mrokayparfum.com";
 
   // Statik sayfalar
   const staticPages = [
