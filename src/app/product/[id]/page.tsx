@@ -95,14 +95,7 @@ export async function generateMetadata({
       description: seoDescription,
       url: productUrl,
       siteName: "Mr. Okay Beauty",
-      images: [
-        {
-          url: ogImageUrl,
-          width: 500,
-          height: 500,
-          alt: `Mr. Okay ${product.name} - ${product.collection} Parfüm`,
-        },
-      ],
+      images: [ogImageUrl],
       locale: "tr_TR",
       type: "website",
     },
