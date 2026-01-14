@@ -13,7 +13,8 @@ export const fr: Record<string, string> = {
   "nav.contact": "Contact",
 
   // Homepage Hero
-  "home.hero.subtitle": "Vivez la nouvelle année avec votre nouveau parfum.",
+  "home.hero.title": "BUSINESSMAN",
+  "home.hero.subtitle": "Une collection exclusive, Cinq caractères distincts.",
   "home.hero.discover": "DÉCOUVRIR LA COLLECTION",
 
   // Collection Banner

@@ -13,7 +13,8 @@ export const ar: Record<string, string> = {
   "nav.contact": "اتصل بنا",
 
   // Homepage Hero
-  "home.hero.subtitle": "عِش العام الجديد بعطرك الجديد.",
+  "home.hero.title": "BUSINESSMAN",
+  "home.hero.subtitle": "مجموعة حصرية، خمس شخصيات مميزة.",
   "home.hero.discover": "اكتشف المجموعة",
 
   // Collection Banner

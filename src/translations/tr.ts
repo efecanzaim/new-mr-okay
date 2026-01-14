@@ -13,7 +13,8 @@ export const tr: Record<string, string> = {
   "nav.contact": "İletişim",
 
   // Homepage Hero
-  "home.hero.subtitle": "Yeni yılı, yeni kokunuzla yaşayın.",
+  "home.hero.title": "BUSINESSMAN",
+  "home.hero.subtitle": "Seçkin bir koleksiyon, Beş farklı karakter.",
   "home.hero.discover": "Koleksiyonu Keşfet",
 
   // Collection Banner

@@ -99,12 +99,26 @@ export default function HeroSection() {
       {/* CTA Content - Bottom of Hero */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pb-24 lg:pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Heading */}
+          {/* Main Title - Only show on image slide (index 0) */}
+          {currentSlide === 0 && (
+            <motion.h1
+              key={`title-${currentSlide}`}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+              className="avenir text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide mb-4"
+              style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
+            >
+              {t["home.hero.title"]}
+            </motion.h1>
+          )}
+
+          {/* Subtitle */}
           <motion.h2
-            key={currentSlide}
+            key={`subtitle-${currentSlide}`}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 1.2, delay: currentSlide === 0 ? 0.2 : 0, ease: [0.23, 1, 0.32, 1] }}
             className="avenir text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed tracking-wide mb-8"
             style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
           >
