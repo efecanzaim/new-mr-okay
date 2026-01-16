@@ -20,21 +20,34 @@ export default function AboutPage() {
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-50 to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/mrokay_banner.png"
+            alt="Mr. Okay"
+            fill
+            className="object-cover"
+            style={{ objectPosition: 'center 80%' }}
+            priority
+            quality={100}
+          />
+        </div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="relative z-10 text-center px-6"
         >
-          <p className="text-[10px] tracking-ultrawide uppercase text-silver-dark mb-4">
-            {t["about.story"]}
-          </p>
-          <h1 className="font-serif text-5xl md:text-7xl text-black">
-            Mr Okay
+          <h1 
+            className="text-5xl md:text-7xl text-white"
+            style={{ fontFamily: 'Blacksword, serif', fontStyle: 'normal', letterSpacing: '0' }}
+          >
+            Mr. Okay
           </h1>
-          <p className="text-lg text-silver-dark font-light mt-4 max-w-xl mx-auto">
-            {t["about.legacy"]}
+          <p className="text-2xl text-white/90 font-regular mt-4 max-w-xl mx-auto">
+            Bilimin hassasiyeti, sanatın ruhuyla buluştu!
           </p>
         </motion.div>
       </section>

@@ -22,8 +22,8 @@ export default function HeroSection() {
   const t = allTranslations[language];
 
   const slides = [
-    { type: 'image', src: `${basePath}/images/slider2.jpg`, headingKey: 'home.hero.subtitle' },
-    { type: 'video', src: `${basePath}/images/hero_video.mp4`, headingKey: 'product.classic.tagline' },
+    { type: 'image', src: `${basePath}/images/slider2.jpg`, headingKey: 'home.hero.subtitle', objectPosition: 'center' },
+    { type: 'video', src: `${basePath}/images/hero_video.mp4`, headingKey: 'product.classic.tagline', objectPosition: 'center' },
   ];
 
   // Auto-advance slider - resets when resetKey changes
@@ -86,7 +86,8 @@ export default function HeroSection() {
                   src={slide.src}
                   alt="Hero Slider"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover"
+                  style={{ objectPosition: slide.objectPosition || 'center' }}
                   priority
                   quality={100}
                 />
