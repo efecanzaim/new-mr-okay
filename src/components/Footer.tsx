@@ -3,23 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { Instagram, Facebook, Mail, Send, MessageCircle, Truck, Store, Shield } from "lucide-react";
-
-const XIcon = ({ size = 16, className = "" }: { size?: number; className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 512 462.799"
-    fill="currentColor"
-    className={className}
-  >
-    <path
-      fillRule="nonzero"
-      d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
-    />
-  </svg>
-);
+import { Instagram, Facebook, Youtube, Mail, Send, MessageCircle, Truck, Store, Shield } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { tr } from "@/translations/tr";
 import { en } from "@/translations/en";
@@ -140,13 +124,13 @@ export default function Footer() {
                   <Facebook size={16} strokeWidth={1.5} />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com"
+                  href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   className="w-9 h-9 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300"
                 >
-                  <XIcon size={14} />
+                  <Youtube size={16} strokeWidth={1.5} />
                 </motion.a>
               </div>
             </motion.div>

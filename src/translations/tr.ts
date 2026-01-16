@@ -80,27 +80,27 @@ export const tr: Record<string, string> = {
 
   // Product descriptions
   "product.classic.tagline": "Özgüveni keşfet.",
-  "product.classic.desc": "Düzen, netlik ve zamansız bir maskülenlik üzerine kurulu bir koku. İlk anda berrak ve sakin, zamanla derinleşen yapısıyla disiplinli ve kendinden emin bir duruşu yansıtır.",
+  "product.classic.desc": "Zamansız, Disiplinli & Özgüvenli",
   "product.classic.story1": "Siyah-beyaz bir zeminde başlayan sessiz bir oyunun merkezindedir. İlk sıkımda ferah ve kontrollü bir açılış hissi verir; net, ölçülü ve kararlı. Satranç taşları gibi acele etmez, hamlelerini hesaplar. Bu koku, gücünü bağırarak değil, duruşuyla hissettiren erkekler için tasarlanmıştır.",
   "product.classic.story2": "Zaman geçtikçe derinleşen yapısı, zemine düşen uzun bir gölge gibi varlığını kalıcı kılar. Classic, iş hayatında stratejiyle hareket eden, şehirde kendi alanını bilen ve liderliği doğal kabul eden erkeklerin imzasıdır. Ne fazlalık ister ne de tesadüf; doğru hamlenin, doğru anda yapılması gibi.",
 
   "product.weekend.tagline": "Ritmini değiştir.",
-  "product.weekend.desc": "Şehirden kopmadan özgürleşmenin kokusu. Canlı, ferah ve modern bir açılışın ardından, rahat ama kontrollü bir enerjiyle hafta sonlarının keyfini taşır.",
+  "product.weekend.desc": "Rahat, Modern & Karizmatik",
   "product.weekend.story1": "Hafta sonuna hazırlanmanın kendine özgü bir ritüel olduğunu bilen erkekler için tasarlandı. Bu koku, aceleyle değil özenle seçilir; dışarı çıkmadan önce yapılan son dokunuş gibidir. Şehir ışıkları yanmadan, planlar netleşmeden önce devreye girer ve günün temposunu keyfe dönüştürür.",
   "product.weekend.story2": "Sıkıldığında ferah, enerjik ve modern bir etki yaratır; tıpkı özel bir akşam için hazırlanan bir sahne gibi. Weekend, ilgi görmekten çekinmeyen, detaylara önem veren ve hafta sonunu sıradan bir mola değil, bir deneyim olarak yaşayan erkeklerin imzasıdır. Bu bir kaçış değil; şehirde, doğru anda, doğru şekilde görünme halidir.",
 
   "product.elegant.tagline": "Derinliği hisset.",
-  "product.elegant.desc": "Sessiz bir güç ve rafine bir zarafet. İlk anda net ve sofistike, ilerledikçe koyulaşan dokusuyla entelektüel bir imza bırakır.",
+  "product.elegant.desc": "Güçlü, Sofistike & Entelektüel",
   "product.elegant.story1": "Sıradan olanla yetinmeyen erkekler için tasarlanmış nadir bir imzadır. Tıpkı ustasının elinden çıkmış eşsiz bir kılıç gibi; sessiz, kusursuz ve geri dönülmez bir etki bırakır. İlk anda sakin ve soğukkanlıdır; gücünü göstermek için yükselmez, varlığıyla alan yaratır.",
   "product.elegant.story2": "Tenle buluştukça derinleşir ve yalnızca gerçekten özel anlarda kendini ele verir. Elegant, herkesin fark etmesi için değil, doğru bakışların onu tanıması için vardır. Bu bir stil değil, bir ayrıcalıktır; geçici etkilerden arınmış, kalıcı bir zarafet halidir.",
 
   "product.avantgarde.tagline": "Sınırları zorla.",
-  "product.avantgarde.desc": "Cesur, yaratıcı ve öngörülemez bir enerjiyle açılır; baharatlı bir kıvılcım düşünceyi harekete geçirir. Derinleştikçe karanlık, sanatsal ve güçlü bir iz bırakır. Vizyoner bir erkeğin sessiz ama iddialı imzası.",
+  "product.avantgarde.desc": "Cesur, Özgün & Yaratıcı",
   "product.avantgarde.story1": "Alışılmış yolların dışına çıkma cesaretiyle başlar. Yağmurun şehirle bütünleştiği bir gecede, düşünceler berraklaşır; ışıklar silikleşirken zihnin yönü netleşir. Bu koku ilk anda canlı ve keskindir, güvenli sınırları değil yeni ihtimalleri çağırır.",
   "product.avantgarde.story2": "Ten üzerinde ilerledikçe sakinleşir ama kaybolmaz; tıpkı gece boyunca parlayan bir fikir gibi. Avant-garde, kalıplara uyum sağlamak için değil, kendi çizgisini yaratmak için vardır. Bu bir duruş değil, bir bakış açısıdır; modern, bağımsız ve ileriye dönük.",
 
   "product.holiday.tagline": "Özgürlüğü hisset.",
-  "product.holiday.desc": "Canlı, ferah ve enerjik bir açılışla hayatı dolu dolu yaşamayı çağrıştırır. Akdeniz esintisini anımsatan taze dokusuyla, özgür ruhlu bir erkeğin hafif ama kalıcı izini bırakır.",
+  "product.holiday.desc": "Özgür, Enerjik & Maceracı",
   "product.holiday.story1": "Zamanı yavaşlatan bir anla başlar. Suyun altındaki sessizlik, zihindeki gürültüyü susturur; tuzlu bir esinti gibi ferah ve hafif bir his bırakır. İlk sıkımda serin, canlı ve özgürdür; sorumluluklardan arınmış bir sabah dalışı gibi.",
   "product.holiday.story2": "Tenle buluştukça rahatlar, yayılır ve güneşle ısınan bir günün huzuruna dönüşür. Holiday, planlara değil anlara eşlik eder; aceleye değil keyfe yakışır. Bu koku, kaçmak için değil, gerçekten nefes almak için vardır. Tatilin kendisi değil, o tatilde hissettiğin özgürlük duygusudur.",
 

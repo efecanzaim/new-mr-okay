@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-end justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -38,7 +38,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="relative z-10 text-center px-6"
+          className="relative z-10 text-center px-6 pb-16"
         >
           <h1 
             className="text-5xl md:text-7xl text-white"
@@ -153,15 +153,15 @@ export default function AboutPage() {
       </section>
 
       {/* Hakan Okay Quote */}
-      <section className="py-24 lg:py-32 bg-black">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+      <section className="py-12 lg:py-16 bg-black">
+        <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
-            <div className="w-px h-16 bg-white/30 mx-auto mb-8" />
-            <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-8">
-              <p className="mb-4">{t["about.quote.line1"]}</p>
+            <div className="w-px h-10 bg-white/30 mx-auto mb-5" />
+            <blockquote className="font-serif text-xl md:text-2xl lg:text-3xl text-white leading-relaxed mb-5">
+              <p className="mb-3">{t["about.quote.line1"]}</p>
               <p>{t["about.quote.line2"]}</p>
             </blockquote>
-            <div className="w-px h-16 bg-white/30 mx-auto mb-6" />
+            <div className="w-px h-10 bg-white/30 mx-auto mb-4" />
             <p className="text-white/60 text-sm tracking-widest uppercase">
               Hakan Okay
             </p>

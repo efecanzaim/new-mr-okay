@@ -80,27 +80,27 @@ export const fr: Record<string, string> = {
 
   // Product descriptions
   "product.classic.tagline": "Découvrez la confiance.",
-  "product.classic.desc": "Une fragrance construite sur l'ordre, la clarté et une masculinité intemporelle. Claire et calme au début, sa structure qui s'approfondit au fil du temps reflète une posture disciplinée et assurée.",
+  "product.classic.desc": "Intemporel, Discipliné & Confiant",
   "product.classic.story1": "Au centre d'un jeu silencieux commençant sur un terrain noir et blanc. La première pulvérisation donne une ouverture fraîche et contrôlée ; claire, mesurée et déterminée. Comme les pièces d'échecs, il ne se précipite pas, il calcule ses mouvements. Cette fragrance est conçue pour les hommes qui font sentir leur pouvoir par leur présence, pas en criant.",
   "product.classic.story2": "Sa structure qui s'approfondit au fil du temps rend sa présence permanente comme une longue ombre tombant au sol. Classic est la signature des hommes qui bougent stratégiquement dans les affaires, connaissent leur place dans la ville et acceptent naturellement le leadership. Elle ne veut ni excès ni coïncidence ; comme faire le bon mouvement au bon moment.",
 
   "product.weekend.tagline": "Changez votre rythme.",
-  "product.weekend.desc": "Le parfum de la libération sans se déconnecter de la ville. Après une ouverture vibrante, fraîche et moderne, il porte le plaisir des week-ends avec une énergie détendue mais contrôlée.",
+  "product.weekend.desc": "Détendu, Moderne & Charismatique",
   "product.weekend.story1": "Conçu pour les hommes qui savent que la préparation du week-end est un rituel unique. Cette fragrance est choisie avec soin, pas à la hâte ; c'est comme la touche finale avant de sortir. Elle entre en jeu avant que les lumières de la ville ne s'allument, avant que les plans ne se clarifient, transformant le tempo de la journée en plaisir.",
   "product.weekend.story2": "Une fois pulvérisée, elle crée un effet frais, énergique et moderne ; comme une scène préparée pour une soirée spéciale. Weekend est la signature des hommes qui n'ont pas peur de l'attention, qui se soucient des détails et qui vivent le week-end non pas comme une pause ordinaire mais comme une expérience. Ce n'est pas une fuite ; c'est être vu au bon moment, de la bonne manière, dans la ville.",
 
   "product.elegant.tagline": "Ressentez la profondeur.",
-  "product.elegant.desc": "Pouvoir silencieux et élégance raffinée. Claire et sophistiquée au début, elle laisse une signature intellectuelle avec sa texture qui s'assombrit en progressant.",
+  "product.elegant.desc": "Puissant, Sophistiqué & Intellectuel",
   "product.elegant.story1": "Une signature rare conçue pour les hommes qui ne se contentent pas de l'ordinaire. Comme une épée unique de la main d'un maître ; silencieuse, parfaite et laisse un impact irréversible. Calme et composée au début ; elle ne s'élève pas pour montrer le pouvoir, elle crée l'espace avec sa présence.",
   "product.elegant.story2": "Elle s'approfondit en rencontrant la peau et ne se révèle que dans des moments vraiment spéciaux. Elegant existe non pas pour que tout le monde la remarque, mais pour que les bons yeux la reconnaissent. Ce n'est pas un style, c'est un privilège ; purifiée des effets temporaires, c'est un état d'élégance durable.",
 
   "product.avantgarde.tagline": "Repoussez les limites.",
-  "product.avantgarde.desc": "S'ouvre avec une énergie audacieuse, créative et imprévisible ; une étincelle épicée met la pensée en mouvement. En s'approfondissant, elle laisse une marque sombre, artistique et puissante. La signature discrète mais affirmée d'un homme visionnaire.",
+  "product.avantgarde.desc": "Audacieux, Original & Créatif",
   "product.avantgarde.story1": "Commence avec le courage de sortir des sentiers battus. Par une nuit où la pluie se fond dans la ville, les pensées deviennent claires ; tandis que les lumières s'estompent, la direction de l'esprit se clarifie. Cette fragrance est vibrante et vive au début, appelant de nouvelles possibilités plutôt que des frontières sûres.",
   "product.avantgarde.story2": "Elle se calme en progressant sur la peau mais ne disparaît pas ; comme une idée qui brille toute la nuit. Avant-garde existe non pas pour se conformer aux modèles mais pour créer sa propre ligne. Ce n'est pas une posture, c'est une perspective ; moderne, indépendante et tournée vers l'avenir.",
 
   "product.holiday.tagline": "Ressentez la liberté.",
-  "product.holiday.desc": "Avec une ouverture vibrante, fraîche et énergique, elle évoque le fait de vivre la vie pleinement. Avec sa texture fraîche rappelant les brises méditerranéennes, elle laisse la trace légère mais durable d'un homme à l'esprit libre.",
+  "product.holiday.desc": "Libre, Énergique & Aventurier",
   "product.holiday.story1": "Commence par un moment qui ralentit le temps. Le silence sous l'eau fait taire le bruit dans l'esprit ; il laisse une sensation fraîche et légère comme une brise salée. Fraîche, vibrante et libre à la première pulvérisation ; comme une plongée matinale libre de responsabilités.",
   "product.holiday.story2": "Elle se détend en rencontrant la peau, se répand et se transforme en la paix d'une journée réchauffée par le soleil. Holiday accompagne les moments, pas les plans ; elle convient au plaisir, pas à la hâte. Cette fragrance existe non pas pour fuir mais pour vraiment respirer. Pas les vacances elles-mêmes, mais le sentiment de liberté que vous ressentez pendant ces vacances.",
 
