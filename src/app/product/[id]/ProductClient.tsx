@@ -145,16 +145,16 @@ export default function ProductClient({ product, productId }: ProductClientProps
             >
               {/* Thumbnail Gallery - Sol tarafta dikey, büyük resimle aynı yükseklikte */}
               {galleryImages.length > 1 && (
-                <div className="flex lg:flex-col gap-2 lg:w-28 flex-shrink-0 lg:self-stretch">
+                <div className="flex lg:flex-col gap-2 h-20 lg:h-auto lg:w-36 flex-shrink-0 lg:self-stretch">
                   {galleryImages.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
-                      className="relative group flex-1"
+                      className="relative group flex-1 min-w-0"
                     >
                       {/* Thumbnail Image */}
                       <div
-                        className="relative h-full w-full overflow-hidden"
+                        className="relative h-full w-full overflow-hidden aspect-square lg:aspect-auto"
                         style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
                       >
                         <Image
@@ -162,8 +162,8 @@ export default function ProductClient({ product, productId }: ProductClientProps
                           alt={`${product.name} - Thumbnail ${index + 1}`}
                           fill
                           className="object-cover transition-opacity duration-300 group-hover:opacity-80"
-                          sizes="80px"
-                          quality={80}
+                          sizes="(max-width: 1024px) 80px, 144px"
+                          quality={100}
                         />
                       </div>
                       {/* Sliding Indicator Line */}
@@ -187,13 +187,13 @@ export default function ProductClient({ product, productId }: ProductClientProps
                 className="relative aspect-[3/4] overflow-hidden flex-1"
                 style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
               >
-                <AnimatePresence mode="wait">
+                <AnimatePresence initial={false}>
                   <motion.div
                     key={selectedImageIndex}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="absolute inset-0"
                   >
                     <Image

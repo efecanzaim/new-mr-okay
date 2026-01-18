@@ -239,8 +239,8 @@ export default function StoresPage() {
     return storeData.filter((store) => {
       const matchesCity = selectedCity === "Tümü" || store.city === selectedCity;
       const matchesSearch = store.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           store.address.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           store.city.toLowerCase().includes(searchQuery.toLowerCase());
+        store.address.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        store.city.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCity && matchesSearch;
     });
   }, [selectedCity, searchQuery]);
@@ -283,7 +283,7 @@ export default function StoresPage() {
           >
             <MapPin size={24} strokeWidth={1} className="text-black/70" />
           </motion.div>
-          <p className="text-[10px] tracking-ultrawide uppercase text-stone-500 mb-4">
+          <p className="text-xs tracking-widest uppercase text-black font-medium mb-4">
             {t["stores.subtitle"]}
           </p>
           <h1 className="font-serif text-5xl md:text-7xl text-black mb-4">
@@ -301,21 +301,19 @@ export default function StoresPage() {
               <div className="inline-flex border border-stone-200 bg-stone-50">
                 <button
                   onClick={() => setActiveTab("physical")}
-                  className={`px-8 py-4 text-xs tracking-ultrawide uppercase font-medium transition-all duration-300 ${
-                    activeTab === "physical"
-                      ? "bg-black text-white"
-                      : "bg-transparent text-stone-600 hover:bg-stone-100"
-                  }`}
+                  className={`px-8 py-4 text-xs tracking-ultrawide uppercase font-medium transition-all duration-300 ${activeTab === "physical"
+                    ? "bg-black text-white"
+                    : "bg-transparent text-stone-600 hover:bg-stone-100"
+                    }`}
                 >
                   {t["stores.physicalStores"]}
                 </button>
                 <button
                   onClick={() => setActiveTab("marketplace")}
-                  className={`px-8 py-4 text-xs tracking-ultrawide uppercase font-medium transition-all duration-300 ${
-                    activeTab === "marketplace"
-                      ? "bg-black text-white"
-                      : "bg-transparent text-stone-600 hover:bg-stone-100"
-                  }`}
+                  className={`px-8 py-4 text-xs tracking-ultrawide uppercase font-medium transition-all duration-300 ${activeTab === "marketplace"
+                    ? "bg-black text-white"
+                    : "bg-transparent text-stone-600 hover:bg-stone-100"
+                    }`}
                 >
                   {t["stores.marketplaces"]}
                 </button>
@@ -329,208 +327,206 @@ export default function StoresPage() {
               {/* Filter Bar */}
               <ScrollReveal>
                 <div className="bg-stone-50 border border-stone-200 p-4 lg:p-6 mb-8">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                {/* Search */}
-                <div className="relative flex-1 max-w-md">
-                  <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" />
-                  <input
-                    type="text"
-                    placeholder={t["stores.searchPlaceholder"]}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-white border border-stone-200 text-sm focus:outline-none focus:border-black transition-colors"
-                  />
-                </div>
-
-                {/* Store Count */}
-                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-200">
-                  <Store size={14} className="text-stone-600" />
-                  <span className="text-xs tracking-wide text-stone-600">
-                    {physicalStores.length} {t["stores.results"]}
-                  </span>
-                </div>
-
-                {/* City Filter Toggle */}
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 text-xs tracking-wide uppercase bg-white border border-stone-200 hover:border-black transition-colors"
-                >
-                  <Filter size={14} />
-                  {t["stores.cityFilter"]}
-                  <ChevronRight size={14} className={`transition-transform ${showFilters ? "rotate-90" : ""}`} />
-                </button>
-              </div>
-
-              {/* City Filter Dropdown */}
-              <AnimatePresence>
-                {showFilters && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="flex flex-wrap gap-2 pt-4 mt-4 border-t border-stone-200">
-                      {cities.map((city) => (
-                        <button
-                          key={city}
-                          onClick={() => setSelectedCity(city)}
-                          className={`px-4 py-2 text-xs tracking-wide transition-all ${
-                            selectedCity === city
-                              ? "bg-black text-white"
-                              : "bg-white text-stone-600 border border-stone-200 hover:border-black"
-                          }`}
-                        >
-                          {city}
-                        </button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </ScrollReveal>
-
-          {/* Map & List Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Store List */}
-            <div className="order-2 lg:order-1 space-y-8">
-              {/* Physical Stores */}
-              {physicalStores.length > 0 && (
-                <ScrollReveal direction="left">
-                  <div>
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-black flex items-center justify-center">
-                        <Store size={18} className="text-white" />
-                      </div>
-                      <div>
-                        <h2 className="font-serif text-2xl text-black">{t["stores.physicalStores"]}</h2>
-                        <p className="text-xs text-stone-500">{physicalStores.length} {t["stores.location"]}</p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      {physicalStores.map((store, index) => (
-                        <motion.div
-                          key={store.id}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05 }}
-                          onClick={() => setSelectedStore(store)}
-                          className={`group cursor-pointer border transition-all duration-300 ${
-                            selectedStore?.id === store.id
-                              ? "border-black bg-stone-50"
-                              : "border-stone-200 hover:border-black bg-white"
-                          }`}
-                        >
-                          <div className="p-5">
-                            <div className="flex items-start justify-between">
-                              <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <h3 className="font-medium text-black">{store.name}</h3>
-                                </div>
-                                <p className="text-sm text-stone-500 mb-3">{store.address}</p>
-                                <div className="flex flex-wrap items-center gap-4 text-xs text-stone-500">
-                                  {store.phone && (
-                                    <span className="flex items-center gap-1.5">
-                                      <Phone size={12} />
-                                      {store.phone}
-                                    </span>
-                                  )}
-                                  {store.workingHours && (
-                                    <span className="flex items-center gap-1.5">
-                                      <Clock size={12} />
-                                      {store.workingHours}
-                                    </span>
-                                  )}
-                                </div>
-                              </div>
-                              <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="w-10 h-10 border border-black flex items-center justify-center">
-                                  <Navigation size={16} className="text-black" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </ScrollReveal>
-              )}
-
-              {/* No Results */}
-              {filteredStores.length === 0 && (
-                <div className="text-center py-16">
-                  <MapPin size={48} className="mx-auto text-stone-300 mb-4" />
-                  <p className="text-stone-500">Aramanızla eşleşen sonuç bulunamadı.</p>
-                </div>
-              )}
-            </div>
-
-            {/* Map */}
-            <div className="order-1 lg:order-2">
-              <ScrollReveal direction="right">
-                <div className="sticky top-24">
-                  <div className="bg-stone-100 border border-stone-200 overflow-hidden">
-                    <div className="h-[400px] lg:h-[calc(100vh-200px)] min-h-[500px]">
-                      <StoreMap
-                        stores={physicalStores}
-                        selectedStore={selectedStore}
-                        onStoreSelect={setSelectedStore}
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                    {/* Search */}
+                    <div className="relative flex-1 max-w-md">
+                      <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" />
+                      <input
+                        type="text"
+                        placeholder={t["stores.searchPlaceholder"]}
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full pl-12 pr-4 py-3 bg-white border border-stone-200 text-sm focus:outline-none focus:border-black transition-colors"
                       />
                     </div>
+
+                    {/* Store Count */}
+                    <div className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-200">
+                      <Store size={14} className="text-stone-600" />
+                      <span className="text-xs tracking-wide text-stone-600">
+                        {physicalStores.length} {t["stores.results"]}
+                      </span>
+                    </div>
+
+                    {/* City Filter Toggle */}
+                    <button
+                      onClick={() => setShowFilters(!showFilters)}
+                      className="flex items-center gap-2 px-4 py-2 text-xs tracking-wide uppercase bg-white border border-stone-200 hover:border-black transition-colors"
+                    >
+                      <Filter size={14} />
+                      {t["stores.cityFilter"]}
+                      <ChevronRight size={14} className={`transition-transform ${showFilters ? "rotate-90" : ""}`} />
+                    </button>
                   </div>
 
-                  {/* Selected Store Info */}
+                  {/* City Filter Dropdown */}
                   <AnimatePresence>
-                    {selectedStore && (
+                    {showFilters && (
                       <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        className="mt-4 bg-black text-white p-6"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
                       >
-                        <div className="flex items-start justify-between">
-                          <div>
-                            <p className="text-[10px] tracking-ultrawide uppercase text-white/50 mb-2">
-                              Seçili Mağaza
-                            </p>
-                            <h3 className="font-serif text-xl mb-2">{selectedStore.name}</h3>
-                            <p className="text-sm text-white/70 mb-4">{selectedStore.address}</p>
-                            <div className="flex flex-wrap gap-4 text-xs text-white/60">
-                              {selectedStore.phone && (
-                                <span className="flex items-center gap-1.5">
-                                  <Phone size={12} />
-                                  {selectedStore.phone}
-                                </span>
-                              )}
-                              {selectedStore.workingHours && (
-                                <span className="flex items-center gap-1.5">
-                                  <Clock size={12} />
-                                  {selectedStore.workingHours}
-                                </span>
-                              )}
-                            </div>
-                          </div>
-                          <a
-                            href={`https://www.google.com/maps/dir/?api=1&destination=${selectedStore.coordinates[0]},${selectedStore.coordinates[1]}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-white text-black text-xs tracking-wide uppercase hover:bg-stone-100 transition-colors"
-                          >
-                            <Navigation size={14} />
-                            Yol Tarifi
-                          </a>
+                        <div className="flex flex-wrap gap-2 pt-4 mt-4 border-t border-stone-200">
+                          {cities.map((city) => (
+                            <button
+                              key={city}
+                              onClick={() => setSelectedCity(city)}
+                              className={`px-4 py-2 text-xs tracking-wide transition-all ${selectedCity === city
+                                ? "bg-black text-white"
+                                : "bg-white text-stone-600 border border-stone-200 hover:border-black"
+                                }`}
+                            >
+                              {city}
+                            </button>
+                          ))}
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
               </ScrollReveal>
-            </div>
-          </div>
+
+              {/* Map & List Layout */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Store List */}
+                <div className="order-2 lg:order-1 space-y-8">
+                  {/* Physical Stores */}
+                  {physicalStores.length > 0 && (
+                    <ScrollReveal direction="left">
+                      <div>
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="w-10 h-10 bg-black flex items-center justify-center">
+                            <Store size={18} className="text-white" />
+                          </div>
+                          <div>
+                            <h2 className="font-serif text-2xl text-black">{t["stores.physicalStores"]}</h2>
+                            <p className="text-xs text-stone-500">{physicalStores.length} {t["stores.location"]}</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          {physicalStores.map((store, index) => (
+                            <motion.div
+                              key={store.id}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: index * 0.05 }}
+                              onClick={() => setSelectedStore(store)}
+                              className={`group cursor-pointer border transition-all duration-300 ${selectedStore?.id === store.id
+                                ? "border-black bg-stone-50"
+                                : "border-stone-200 hover:border-black bg-white"
+                                }`}
+                            >
+                              <div className="p-5">
+                                <div className="flex items-start justify-between">
+                                  <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-2">
+                                      <h3 className="font-medium text-black">{store.name}</h3>
+                                    </div>
+                                    <p className="text-sm text-stone-500 mb-3">{store.address}</p>
+                                    <div className="flex flex-wrap items-center gap-4 text-xs text-stone-500">
+                                      {store.phone && (
+                                        <span className="flex items-center gap-1.5">
+                                          <Phone size={12} />
+                                          {store.phone}
+                                        </span>
+                                      )}
+                                      {store.workingHours && (
+                                        <span className="flex items-center gap-1.5">
+                                          <Clock size={12} />
+                                          {store.workingHours}
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                  <div className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div className="w-10 h-10 border border-black flex items-center justify-center">
+                                      <Navigation size={16} className="text-black" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  )}
+
+                  {/* No Results */}
+                  {filteredStores.length === 0 && (
+                    <div className="text-center py-16">
+                      <MapPin size={48} className="mx-auto text-stone-300 mb-4" />
+                      <p className="text-stone-500">Aramanızla eşleşen sonuç bulunamadı.</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Map */}
+                <div className="order-1 lg:order-2">
+                  <ScrollReveal direction="right">
+                    <div className="sticky top-24">
+                      <div className="bg-stone-100 border border-stone-200 overflow-hidden">
+                        <div className="h-[400px] lg:h-[calc(100vh-200px)] min-h-[500px]">
+                          <StoreMap
+                            stores={physicalStores}
+                            selectedStore={selectedStore}
+                            onStoreSelect={setSelectedStore}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Selected Store Info */}
+                      <AnimatePresence>
+                        {selectedStore && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            className="mt-4 bg-black text-white p-6"
+                          >
+                            <div className="flex items-start justify-between">
+                              <div>
+                                <p className="text-[10px] tracking-ultrawide uppercase text-white/50 mb-2">
+                                  Seçili Mağaza
+                                </p>
+                                <h3 className="font-serif text-xl mb-2">{selectedStore.name}</h3>
+                                <p className="text-sm text-white/70 mb-4">{selectedStore.address}</p>
+                                <div className="flex flex-wrap gap-4 text-xs text-white/60">
+                                  {selectedStore.phone && (
+                                    <span className="flex items-center gap-1.5">
+                                      <Phone size={12} />
+                                      {selectedStore.phone}
+                                    </span>
+                                  )}
+                                  {selectedStore.workingHours && (
+                                    <span className="flex items-center gap-1.5">
+                                      <Clock size={12} />
+                                      {selectedStore.workingHours}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                              <a
+                                href={`https://www.google.com/maps/dir/?api=1&destination=${selectedStore.coordinates[0]},${selectedStore.coordinates[1]}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2 bg-white text-black text-xs tracking-wide uppercase hover:bg-stone-100 transition-colors"
+                              >
+                                <Navigation size={14} />
+                                Yol Tarifi
+                              </a>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </ScrollReveal>
+                </div>
+              </div>
             </>
           )}
 
