@@ -131,37 +131,34 @@ export default function ProductClient({ product, productId }: ProductClientProps
     }));
 
   return (
-    <div className="bg-white min-h-screen pt-24">
+    <div className="bg-white min-h-screen pt-20">
       {/* Product Detail */}
-      <section className="py-12 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Left Side - Image Gallery */}
+      <section className="py-4 lg:py-8">
+        <div className="max-w-7xl mx-auto px-2 lg:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+            {/* Left Side - Image Gallery (3/5 = 60%) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="flex flex-col-reverse lg:flex-row gap-3"
+              className="lg:col-span-3 flex flex-col-reverse lg:flex-row gap-3"
             >
               {/* Thumbnail Gallery - Sol tarafta dikey, büyük resimle aynı yükseklikte */}
               {galleryImages.length > 1 && (
-                <div className="flex lg:flex-col gap-2 h-20 lg:h-auto lg:w-36 flex-shrink-0 lg:self-stretch">
+                <div className="flex lg:flex-col gap-1 lg:gap-0 h-20 lg:h-auto w-full lg:w-36 flex-shrink-0 lg:max-h-[100vh]">
                   {galleryImages.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
-                      className="relative group flex-1 min-w-0"
+                      className="relative group flex-1 min-w-0 min-h-0"
                     >
                       {/* Thumbnail Image */}
-                      <div
-                        className="relative h-full w-full overflow-hidden aspect-square lg:aspect-auto"
-                        style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
-                      >
+                      <div className="relative h-full w-full overflow-hidden bg-white">
                         <Image
                           src={img}
                           alt={`${product.name} - Thumbnail ${index + 1}`}
                           fill
-                          className="object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          className="object-contain transition-opacity duration-300 group-hover:opacity-80"
                           sizes="(max-width: 1024px) 80px, 144px"
                           quality={100}
                         />
@@ -184,10 +181,10 @@ export default function ProductClient({ product, productId }: ProductClientProps
 
               {/* Main Image */}
               <div
-                className="relative aspect-[3/4] overflow-hidden flex-1"
+                className="relative flex-1 min-w-0 flex items-center justify-center"
                 style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
               >
-                <AnimatePresence initial={false}>
+                <AnimatePresence initial={false} mode="wait">
                   <motion.div
                     key={selectedImageIndex}
                     initial={{ opacity: 0 }}
@@ -210,12 +207,12 @@ export default function ProductClient({ product, productId }: ProductClientProps
               </div>
             </motion.div>
 
-            {/* Right Side - Product Info */}
+            {/* Right Side - Product Info (2/5 = 40%) */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="lg:sticky lg:top-32 lg:self-start space-y-6"
+              className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start space-y-6"
             >
               {/* Collection & Name */}
               <div>

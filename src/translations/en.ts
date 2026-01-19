@@ -64,7 +64,7 @@ export const en: Record<string, string> = {
   // Values
   "about.values": "OUR VALUES",
   "about.values.quality": "Uncompromising Quality",
-  "about.values.quality.desc": "Every ingredient is hand-selected, every formula tested hundreds of times before earning the Mr. Okay name.",
+  "about.values.quality.desc": "Every ingredient is carefully selected, every formula tested hundreds of times before earning the Mr. Okay name.",
   "about.values.elegance": "Timeless Elegance",
   "about.values.elegance.desc": "We don't follow trends. We create signatures that transcend seasons and remain relevant for decades.",
   "about.values.sustainability": "Sustainable Luxury",
@@ -78,29 +78,36 @@ export const en: Record<string, string> = {
   "businessman.philosophy.text": "The Businessman Collection was designed not to adapt to the environment, but to define the language of the environment it inhabits. Each fragrance carries clarity, control, and decision-making power. This collection belongs to men who don't need to explain their presence, who make their impact felt through silence.",
   "businessman.discover": "DISCOVER",
 
+  // Header Menu Descriptions (Mega Menu)
+  "header.menu.elegant": "Powerful, Sophisticated & Intellectual",
+  "header.menu.avantgarde": "Bold, Original & Creative",
+  "header.menu.classic": "Timeless, Disciplined & Confident",
+  "header.menu.weekend": "Relaxed, Modern & Charismatic",
+  "header.menu.holiday": "Free, Energetic & Adventurous",
+
   // Product descriptions
   "product.classic.tagline": "Discover confidence.",
-  "product.classic.desc": "Timeless, Disciplined & Confident",
+  "product.classic.desc": "A fragrance built on order, clarity, and timeless masculinity. Clear and calm at first, its deepening structure over time reflects a disciplined and self-assured stance.",
   "product.classic.story1": "At the center of a silent game beginning on a black-and-white ground. The first spray gives a fresh and controlled opening; clear, measured, and determined. Like chess pieces, it doesn't rush, it calculates its moves. This fragrance is designed for men who make their power felt through their presence, not by shouting.",
   "product.classic.story2": "Its deepening structure over time makes its presence permanent like a long shadow falling on the ground. Classic is the signature of men who move strategically in business, know their space in the city, and accept leadership naturally. It wants neither excess nor coincidence; like making the right move at the right moment.",
 
   "product.weekend.tagline": "Change your rhythm.",
-  "product.weekend.desc": "Relaxed, Modern & Charismatic",
+  "product.weekend.desc": "The scent of liberation without disconnecting from the city. After a vibrant, fresh, and modern opening, it carries the pleasure of weekends with a relaxed but controlled energy.",
   "product.weekend.story1": "Designed for men who know that preparing for the weekend is a unique ritual. This fragrance is chosen with care, not haste; it's like the final touch before going out. It kicks in before the city lights come on, before plans become clear, transforming the day's tempo into pleasure.",
   "product.weekend.story2": "When sprayed, it creates a fresh, energetic, and modern effect; like a stage being prepared for a special evening. Weekend is the signature of men who don't shy away from attention, care about details, and live the weekend not as an ordinary break but as an experience. This is not an escape; it's being seen at the right time, in the right way, in the city.",
 
   "product.elegant.tagline": "Feel the depth.",
-  "product.elegant.desc": "Powerful, Sophisticated & Intellectual",
+  "product.elegant.desc": "Quiet power and refined elegance. Clear and sophisticated at first, it leaves an intellectual signature with its darkening texture as it progresses.",
   "product.elegant.story1": "A rare signature designed for men who won't settle for the ordinary. Like a unique sword from a master's hand; silent, flawless, and leaves an irreversible impact. Calm and composed at first; it doesn't rise to show power, it creates space with its presence.",
   "product.elegant.story2": "It deepens as it meets the skin and reveals itself only in truly special moments. Elegant exists not for everyone to notice, but for the right eyes to recognize it. This is not a style, it's a privilege; purified from temporary effects, it is a state of lasting elegance.",
 
   "product.avantgarde.tagline": "Push the boundaries.",
-  "product.avantgarde.desc": "Bold, Original & Creative",
+  "product.avantgarde.desc": "Opens with bold, creative, and unpredictable energy; a spicy spark sets thought in motion. As it deepens, it leaves a dark, artistic, and powerful mark. The quiet but assertive signature of a visionary man.",
   "product.avantgarde.story1": "Begins with the courage to step outside conventional paths. On a night when rain merges with the city, thoughts become clear; as lights dim, the mind's direction clarifies. This fragrance is vibrant and sharp at first, calling for new possibilities rather than safe boundaries.",
   "product.avantgarde.story2": "It calms as it progresses on the skin but doesn't disappear; like an idea shining throughout the night. Avant-garde exists not to conform to patterns but to create its own line. This is not a stance, it's a perspective; modern, independent, and forward-looking.",
 
   "product.holiday.tagline": "Feel the freedom.",
-  "product.holiday.desc": "Free, Energetic & Adventurous",
+  "product.holiday.desc": "With a vibrant, fresh, and energetic opening, it evokes living life to the fullest. With its fresh texture reminiscent of Mediterranean breezes, it leaves the light but lasting mark of a free-spirited man.",
   "product.holiday.story1": "Begins with a moment that slows time. The silence underwater silences the noise in the mind; it leaves a fresh and light feeling like a salty breeze. Fresh, vibrant, and free at first spray; like a morning dive free from responsibilities.",
   "product.holiday.story2": "It relaxes as it meets the skin, spreads, and transforms into the peace of a sun-warmed day. Holiday accompanies moments, not plans; it suits pleasure, not haste. This fragrance exists not to escape but to truly breathe. Not the vacation itself, but the feeling of freedom you feel on that vacation.",
 
@@ -110,7 +117,7 @@ export const en: Record<string, string> = {
   "product.top": "TOP",
   "product.middle": "MIDDLE",
   "product.base": "BASE",
-  "product.buyPoints": "WHERE TO BUY",
+  "product.buyPoints": "Sales Points",
   "product.addFavorites": "ADD TO FAVORITES",
   "product.share": "Share",
   "product.copyLink": "Copy Link",
