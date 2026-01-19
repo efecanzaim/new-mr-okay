@@ -143,23 +143,27 @@ export default function ProductClient({ product, productId }: ProductClientProps
               transition={{ duration: 1 }}
               className="lg:col-span-3 flex flex-col-reverse lg:flex-row gap-3"
             >
-              {/* Thumbnail Gallery - Sol tarafta dikey, büyük resimle aynı yükseklikte */}
+              {/* Thumbnail Gallery - Mobilde altta yatay, masaüstünde solda dikey */}
               {galleryImages.length > 1 && (
-                <div className="flex lg:flex-col gap-1 lg:gap-0 h-20 lg:h-auto w-full lg:w-36 flex-shrink-0 lg:max-h-[100vh]">
+                <div className="grid grid-cols-4 lg:grid-cols-1 gap-2 lg:gap-0 w-full lg:w-36 flex-shrink-0 lg:max-h-[100vh] lg:flex lg:flex-col">
                   {galleryImages.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
-                      className="relative group flex-1 min-w-0 min-h-0"
+                      className="relative group lg:flex-1 lg:min-h-0"
                     >
                       {/* Thumbnail Image */}
-                      <div className="relative h-full w-full overflow-hidden bg-white">
+                      <div 
+                        className="relative overflow-hidden"
+                        style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
+                      >
                         <Image
                           src={img}
                           alt={`${product.name} - Thumbnail ${index + 1}`}
-                          fill
-                          className="object-contain transition-opacity duration-300 group-hover:opacity-80"
-                          sizes="(max-width: 1024px) 80px, 144px"
+                          width={200}
+                          height={300}
+                          className="w-full h-auto lg:w-full lg:h-full lg:object-contain transition-opacity duration-300 group-hover:opacity-80"
+                          sizes="(max-width: 1024px) 25vw, 144px"
                           quality={100}
                         />
                       </div>
@@ -181,7 +185,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
 
               {/* Main Image */}
               <div
-                className="relative flex-1 min-w-0 flex items-center justify-center"
+                className="relative flex-1 min-w-0 lg:aspect-auto"
                 style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
               >
                 <AnimatePresence initial={false} mode="wait">
@@ -191,13 +195,14 @@ export default function ProductClient({ product, productId }: ProductClientProps
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0"
+                    className="lg:absolute lg:inset-0"
                   >
                     <Image
                       src={galleryImages[selectedImageIndex]}
                       alt={`${product.name} - Görsel ${selectedImageIndex + 1}`}
-                      fill
-                      className="object-cover"
+                      width={1000}
+                      height={1500}
+                      className="w-full h-auto lg:w-full lg:h-full lg:object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       quality={100}
                       priority
