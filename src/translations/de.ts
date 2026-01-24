@@ -64,7 +64,7 @@ export const de: Record<string, string> = {
   // Values
   "about.values": "UNSERE WERTE",
   "about.values.quality": "Kompromisslose Qualität",
-  "about.values.quality.desc": "Jeder Inhaltsstoff wird von Hand ausgewählt, jede Formel hundertfach getestet, bevor sie den Namen Mr. Okay trägt.",
+  "about.values.quality.desc": "Jeder Inhaltsstoff wird sorgfältig ausgewählt, jede Formel hundertfach getestet, bevor sie den Namen Mr. Okay trägt.",
   "about.values.elegance": "Zeitlose Eleganz",
   "about.values.elegance.desc": "Wir folgen keinen Trends. Wir kreieren Signaturen, die Jahreszeiten überdauern und über Jahrzehnte relevant bleiben.",
   "about.values.sustainability": "Nachhaltige Luxus",
@@ -78,29 +78,36 @@ export const de: Record<string, string> = {
   "businessman.philosophy.text": "Die Businessman Kollektion wurde nicht entwickelt, um sich der Umgebung anzupassen, sondern um die Sprache der Umgebung zu bestimmen, in der sie sich befindet. Jeder Duft trägt Klarheit, Kontrolle und Entscheidungskraft. Diese Kollektion gehört Männern, die ihre Präsenz nicht erklären müssen, die ihre Wirkung durch Stille spürbar machen.",
   "businessman.discover": "ENTDECKEN",
 
+  // Header Menu Descriptions (Mega Menu)
+  "header.menu.elegant": "Kraftvoll, Raffiniert & Intellektuell",
+  "header.menu.avantgarde": "Kühn, Original & Kreativ",
+  "header.menu.classic": "Zeitlos, Diszipliniert & Selbstbewusst",
+  "header.menu.weekend": "Entspannt, Modern & Charismatisch",
+  "header.menu.holiday": "Frei, Energisch & Abenteuerlustig",
+
   // Product descriptions
   "product.classic.tagline": "Entdecke Selbstvertrauen.",
-  "product.classic.desc": "Zeitlos, Diszipliniert & Selbstbewusst",
+  "product.classic.desc": "Ein Duft, der auf Ordnung, Klarheit und zeitloser Männlichkeit aufgebaut ist. Anfangs klar und ruhig, reflektiert seine sich vertiefende Struktur im Laufe der Zeit eine disziplinierte und selbstsichere Haltung.",
   "product.classic.story1": "Im Zentrum eines stillen Spiels, das auf einem schwarz-weißen Grund beginnt. Der erste Sprühstoß gibt eine frische und kontrollierte Eröffnung; klar, gemessen und entschlossen. Wie Schachfiguren beeilt er sich nicht, er berechnet seine Züge. Dieser Duft ist für Männer konzipiert, die ihre Kraft durch ihre Präsenz spürbar machen, nicht durch Schreien.",
   "product.classic.story2": "Seine sich vertiefende Struktur macht seine Präsenz mit der Zeit dauerhaft wie ein langer Schatten, der auf den Boden fällt. Classic ist die Signatur von Männern, die sich im Geschäftsleben strategisch bewegen, ihren Platz in der Stadt kennen und Führung natürlich akzeptieren. Er will weder Übermaß noch Zufall; wie den richtigen Zug im richtigen Moment zu machen.",
 
   "product.weekend.tagline": "Ändere deinen Rhythmus.",
-  "product.weekend.desc": "Entspannt, Modern & Charismatisch",
+  "product.weekend.desc": "Der Duft der Befreiung ohne Trennung von der Stadt. Nach einer lebhaften, frischen und modernen Eröffnung trägt er das Vergnügen der Wochenenden mit einer entspannten aber kontrollierten Energie.",
   "product.weekend.story1": "Entworfen für Männer, die wissen, dass die Vorbereitung auf das Wochenende ein einzigartiges Ritual ist. Dieser Duft wird mit Sorgfalt gewählt, nicht in Eile; er ist wie der letzte Schliff vor dem Ausgehen. Er setzt ein, bevor die Stadtlichter angehen, bevor Pläne klar werden, und verwandelt das Tempo des Tages in Vergnügen.",
   "product.weekend.story2": "Beim Aufsprühen erzeugt er eine frische, energische und moderne Wirkung; wie eine Bühne, die für einen besonderen Abend vorbereitet wird. Weekend ist die Signatur von Männern, die keine Scheu vor Aufmerksamkeit haben, auf Details achten und das Wochenende nicht als gewöhnliche Pause, sondern als Erlebnis leben. Das ist keine Flucht; es ist zur richtigen Zeit, auf die richtige Weise, in der Stadt gesehen zu werden.",
 
   "product.elegant.tagline": "Spüre die Tiefe.",
-  "product.elegant.desc": "Kraftvoll, Raffiniert & Intellektuell",
+  "product.elegant.desc": "Stille Kraft und raffinierte Eleganz. Anfangs klar und raffiniert, hinterlässt er mit seiner dunkler werdenden Textur eine intellektuelle Signatur.",
   "product.elegant.story1": "Eine seltene Signatur für Männer, die sich nicht mit dem Gewöhnlichen zufrieden geben. Wie ein einzigartiges Schwert aus der Hand eines Meisters; still, makellos und hinterlässt einen unumkehrbaren Eindruck. Anfangs ruhig und gelassen; er erhebt sich nicht, um Macht zu zeigen, er schafft Raum mit seiner Präsenz.",
   "product.elegant.story2": "Er vertieft sich, wenn er auf die Haut trifft und offenbart sich nur in wirklich besonderen Momenten. Elegant existiert nicht, damit jeder ihn bemerkt, sondern damit die richtigen Augen ihn erkennen. Das ist kein Stil, es ist ein Privileg; von vorübergehenden Effekten gereinigt, ist es ein Zustand dauerhafter Eleganz.",
 
   "product.avantgarde.tagline": "Überschreite die Grenzen.",
-  "product.avantgarde.desc": "Kühn, Original & Kreativ",
+  "product.avantgarde.desc": "Eröffnet mit kühner, kreativer und unvorhersehbarer Energie; ein würziger Funke setzt das Denken in Bewegung. Beim Vertiefen hinterlässt er eine dunkle, künstlerische und kraftvolle Spur. Die leise aber bestimmte Signatur eines visionären Mannes.",
   "product.avantgarde.story1": "Beginnt mit dem Mut, konventionelle Wege zu verlassen. In einer Nacht, wenn der Regen mit der Stadt verschmilzt, werden Gedanken klar; während die Lichter verblassen, wird die Richtung des Geistes deutlich. Dieser Duft ist anfangs lebendig und scharf, ruft nach neuen Möglichkeiten statt sicherer Grenzen.",
   "product.avantgarde.story2": "Er beruhigt sich auf der Haut, verschwindet aber nicht; wie eine Idee, die die ganze Nacht leuchtet. Avant-garde existiert nicht, um sich Mustern anzupassen, sondern um seine eigene Linie zu kreieren. Das ist keine Haltung, es ist eine Perspektive; modern, unabhängig und zukunftsorientiert.",
 
   "product.holiday.tagline": "Spüre die Freiheit.",
-  "product.holiday.desc": "Frei, Energisch & Abenteuerlustig",
+  "product.holiday.desc": "Mit einer lebhaften, frischen und energischen Eröffnung weckt er das Gefühl, das Leben in vollen Zügen zu leben. Mit seiner frischen Textur, die an mediterrane Brisen erinnert, hinterlässt er die leichte aber dauerhafte Spur eines freigeistigen Mannes.",
   "product.holiday.story1": "Beginnt mit einem Moment, der die Zeit verlangsamt. Die Stille unter Wasser beruhigt den Lärm im Kopf; sie hinterlässt ein frisches und leichtes Gefühl wie eine salzige Brise. Frisch, lebendig und frei beim ersten Sprühstoß; wie ein morgendlicher Tauchgang frei von Verantwortung.",
   "product.holiday.story2": "Er entspannt sich, wenn er auf die Haut trifft, breitet sich aus und verwandelt sich in den Frieden eines sonnendurchwärmten Tages. Holiday begleitet Momente, nicht Pläne; er passt zu Vergnügen, nicht zu Eile. Dieser Duft existiert nicht zum Fliehen, sondern um wirklich zu atmen. Nicht der Urlaub selbst, sondern das Gefühl der Freiheit, das Sie in diesem Urlaub spüren.",
 
@@ -110,7 +117,7 @@ export const de: Record<string, string> = {
   "product.top": "Kopf",
   "product.middle": "Herz",
   "product.base": "Basis",
-  "product.buyPoints": "Verkaufsstellen",
+  "product.buyPoints": "Verkaufspunkte",
   "product.addFavorites": "Zu Favoriten hinzufügen",
   "product.share": "Teilen",
   "product.copyLink": "Link kopieren",

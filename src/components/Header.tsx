@@ -24,11 +24,11 @@ const allTranslations = {
 };
 
 const businessmanCategories = [
-  { name: "Elegant", href: "/product/elegant", description: "Sofistike, zarif ve entelektüel", image: "/products/elegant.png" },
-  { name: "Avant-garde", href: "/product/avantgarde", description: "Yaratıcı, özgün, cesur", image: "/products/avantgarde.png" },
-  { name: "Classic", href: "/product/classic", description: "Klasik, disiplinli, özgüvenli", image: "/products/classic.png" },
-  { name: "Weekend", href: "/product/weekend", description: "Rahat, modern ve hafif", image: "/products/weekend.png" },
-  { name: "Holiday", href: "/product/holiday", description: "Hayatı dolu dolu yaşayan", image: "/products/holiday.png" },
+  { name: "Elegant", href: "/product/elegant", descKey: "header.menu.elegant", image: "/products/elegant.png" },
+  { name: "Avant-garde", href: "/product/avantgarde", descKey: "header.menu.avantgarde", image: "/products/avantgarde.png" },
+  { name: "Classic", href: "/product/classic", descKey: "header.menu.classic", image: "/products/classic.png" },
+  { name: "Weekend", href: "/product/weekend", descKey: "header.menu.weekend", image: "/products/weekend.png" },
+  { name: "Holiday", href: "/product/holiday", descKey: "header.menu.holiday", image: "/products/holiday.png" },
 ];
 
 export default function Header() {
@@ -494,7 +494,7 @@ export default function Header() {
                           {category.name}
                         </h3>
                         <p className="text-xs text-silver-dark mt-1 font-light tracking-wide">
-                          {category.description}
+                          {t[category.descKey]}
                         </p>
                       </Link>
                     </motion.div>
