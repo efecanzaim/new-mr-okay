@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   MapPin,
@@ -177,49 +178,50 @@ const marketplaces = [
   {
     id: "trendyol",
     name: "Trendyol",
-    logo: "https://cdn.dsmcdn.com/Assets/t/y/creative/2021/mobile/logo-ty.svg",
+    logo: "/logos/trendyol.svg",
     url: "https://www.trendyol.com/sr?q=mr%20okay&qt=mr%20okay&st=mr%20okay&os=1",
   },
   {
     id: "lorisparfum",
     name: "Loris Parfum",
-    logo: "",
+    logo: "/logos/loris.png",
     url: "https://lorisparfum.com/collections/kreasyon/products/businessman-classic-50-ml?_pos=1&_fid=efd173327&_ss=c",
   },
   {
     id: "hepsiburada",
     name: "Hepsiburada",
-    logo: "https://images.hepsiburada.net/assets/svg/hepsiburada-logo.svg",
+    logo: "/logos/hepsiburada.svg",
     url: "https://www.hepsiburada.com/loris-mr-okay-businessman-classic-50-ml-p-HBCV0000BOOE73",
   },
   {
     id: "pttavm",
     name: "PTT AVM",
-    logo: "https://www.pttavm.com/Assets/images/logo.svg",
+    logo: "/logos/pttavm.png",
     url: "https://www.pttavm.com/mr-okay-businessman-classic-50-ml-p-1411937013",
   },
   {
     id: "lcwaikiki",
     name: "LC Waikiki",
-    logo: "https://lcwaikiki.com/assets/images/logo.svg",
+    logo: "/logos/lcwaikiki.png",
     url: "https://www.lcw.com/mr-okay-businessman-classic-50-ml-renksiz-o-5260536",
   },
   {
     id: "pazarama",
     name: "Pazarama",
-    logo: "",
+    logo: "/logos/pazarama.svg",
     url: "https://www.pazarama.com/mr-okay-businessman-classic-50-ml-p-8681933131355",
   },
   {
     id: "n11",
     name: "N11",
-    logo: "",
+    logo: "/logos/n11.svg",
     url: "https://www.n11.com/urun/mr-okay-businessman-classic-50-ml-fresh-116348820",
   },
   {
     id: "idefix",
     name: "Idefix",
-    logo: "",
+    logo: "/logos/idefix.svg",
+    logoClass: "max-h-28",
     url: "https://www.idefix.com/mr-okay-businessman-classic-50-ml-p-18090284",
   },
 ];
@@ -558,11 +560,24 @@ export default function StoresPage() {
                       transition={{ delay: index * 0.1 }}
                       className="group relative bg-white border border-stone-200 hover:border-black transition-all duration-300 overflow-hidden"
                     >
-                      <div className="aspect-[4/3] flex items-center justify-center p-8 bg-stone-50 group-hover:bg-white transition-colors duration-300">
-                        <div className="text-center w-full">
-                          <h3 className="font-medium text-black text-lg mb-2">{marketplace.name}</h3>
-                          <p className="text-xs text-stone-500 uppercase tracking-wide">Satın Al</p>
-                        </div>
+                      <div className="aspect-[4/3] flex flex-col items-center justify-center p-8 bg-stone-50 group-hover:bg-white transition-colors duration-300">
+                        {marketplace.logo ? (
+                          <>
+                            <Image
+                              src={marketplace.logo}
+                              alt={marketplace.name}
+                              width={200}
+                              height={100}
+                              className={`object-contain w-auto brightness-0 mb-3 ${marketplace.logoClass || "max-h-14"}`}
+                            />
+                            <p className="text-sm font-semibold text-black uppercase tracking-wide">Satın Al</p>
+                          </>
+                        ) : (
+                          <div className="text-center w-full">
+                            <h3 className="font-medium text-black text-lg mb-2">{marketplace.name}</h3>
+                            <p className="text-sm font-semibold text-black uppercase tracking-wide">Satın Al</p>
+                          </div>
+                        )}
                       </div>
                       <div className="absolute inset-0 border-2 border-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </motion.a>

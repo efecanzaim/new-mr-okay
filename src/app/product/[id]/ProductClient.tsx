@@ -185,7 +185,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
 
               {/* Main Image */}
               <div
-                className="relative flex-1 min-w-0 lg:aspect-auto"
+                className="relative flex-1 min-w-0 aspect-[2/3]"
                 style={{ background: 'linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%)' }}
               >
                 <AnimatePresence initial={false} mode="wait">
@@ -195,15 +195,14 @@ export default function ProductClient({ product, productId }: ProductClientProps
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="lg:absolute lg:inset-0"
+                    className="absolute inset-0"
                   >
                     <Image
                       src={galleryImages[selectedImageIndex]}
                       alt={`${product.name} - Görsel ${selectedImageIndex + 1}`}
-                      width={1000}
-                      height={1500}
-                      className="w-full h-auto lg:w-full lg:h-full lg:object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 60vw"
                       quality={100}
                       priority
                     />
