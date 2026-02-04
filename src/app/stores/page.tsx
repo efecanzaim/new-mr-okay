@@ -178,7 +178,7 @@ const marketplaces = [
     id: "trendyol",
     name: "Trendyol",
     logo: "https://cdn.dsmcdn.com/Assets/t/y/creative/2021/mobile/logo-ty.svg",
-    url: "https://www.trendyol.com/pd/loris/mr-okay-businessman-classic-50-ml-p-1075310730",
+    url: "https://www.trendyol.com/sr?q=mr%20okay&qt=mr%20okay&st=mr%20okay&os=1",
   },
   {
     id: "lorisparfum",

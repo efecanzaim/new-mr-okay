@@ -106,7 +106,7 @@ export default function Footer() {
               </h3>
               <div className="flex items-center gap-2">
                 <motion.a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/mr.okayparfum/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}

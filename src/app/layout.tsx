@@ -107,7 +107,7 @@ const organizationJsonLd = {
   "description": "Sofistike kadınlar ve erkekler için tasarlanan niş parfümler. Mr. Okay Beauty, zamansız kokularla kişisel imzalar yaratır.",
   "foundingDate": "2024",
   "sameAs": [
-    "https://www.instagram.com/mrokay",
+    "https://www.instagram.com/mr.okayparfum/",
     "https://www.facebook.com/mrokay",
     "https://www.tiktok.com/@mrokay"
   ],
