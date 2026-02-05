@@ -72,7 +72,7 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl lg:text-4xl text-black mb-8">
                 {t["about.section1.title"]}
               </h2>
-              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
+              <div className="space-y-5 text-black font-semibold leading-relaxed text-[15px]">
                 <p dangerouslySetInnerHTML={{ __html: t["about.section1.p1"] }} />
                 <p>{t["about.section1.p2"]}</p>
                 <p>{t["about.section1.p3"]}</p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               <p className="text-lg text-black font-medium mb-8 italic">
                 {t["about.section2.subtitle"]}
               </p>
-              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
+              <div className="space-y-5 text-black font-semibold leading-relaxed text-[15px]">
                 <p dangerouslySetInnerHTML={{ __html: t["about.section2.p1"] }} />
                 <p dangerouslySetInnerHTML={{ __html: t["about.section2.p2"] }} />
                 <p dangerouslySetInnerHTML={{ __html: t["about.section2.p3"] }} />
@@ -141,10 +141,10 @@ export default function AboutPage() {
               <p className="text-lg text-black font-medium mb-8 italic">
                 {t["about.section3.subtitle"]}
               </p>
-              <div className="space-y-5 text-black font-medium leading-relaxed text-[15px]">
+              <div className="space-y-5 text-black font-semibold leading-relaxed text-[15px]">
                 <p>{t["about.section3.p1"]}</p>
                 <p>{t["about.section3.p2"]}</p>
-                <p className="font-semibold text-black">{t["about.section3.p3"]}</p>
+                <p className="font-bold text-black">{t["about.section3.p3"]}</p>
                 <p dangerouslySetInnerHTML={{ __html: t["about.section3.p4"] }} />
               </div>
             </ScrollReveal>
@@ -181,23 +181,39 @@ export default function AboutPage() {
               {
                 title: t["about.values.quality"],
                 description: t["about.values.quality.desc"],
+                icon: "/icons/kalite.png",
+                iconClass: "w-20 h-20",
               },
               {
                 title: t["about.values.elegance"],
                 description: t["about.values.elegance.desc"],
+                icon: "/icons/zarafet.png",
+                iconClass: "w-28 h-28",
               },
               {
                 title: t["about.values.sustainability"],
                 description: t["about.values.sustainability.desc"],
+                icon: "/icons/luks.png",
+                iconClass: "w-20 h-20",
               },
             ].map((value, index) => (
               <ScrollReveal key={value.title} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="w-px h-12 bg-silver-dark mx-auto mb-6" />
+                  <div className="h-28 flex items-center justify-center mx-auto mb-6">
+                    <div className={value.iconClass}>
+                      <Image
+                        src={value.icon}
+                        alt={value.title}
+                        width={112}
+                        height={112}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
+                  </div>
                   <h3 className="font-serif text-xl text-black mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-silver-dark font-light text-sm leading-relaxed">
+                  <p className="text-black font-semibold text-sm leading-relaxed">
                     {value.description}
                   </p>
                 </div>
