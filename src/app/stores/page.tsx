@@ -161,6 +161,15 @@ const storeData: StoreLocation[] = [
     address: "Cevizli, Tugay Yolu Cd. No:67, 34846 Maltepe/İstanbul",
     coordinates: [40.91944858462875, 29.164501038733896],
   },
+  {
+    id: "istanbul-deposite",
+    name: "İstanbul/Deposite AVM",
+    type: "physical",
+    city: "İstanbul",
+    district: "Başakşehir",
+    address: "Giyim Koop. Sanayi Sitesi Ziya Gökalp Osb, Başak, Atatürk Blv. No:25, 34490 Başakşehir/İstanbul",
+    coordinates: [41.071681825637796, 28.808971302817508],
+  },
   // İzmir
   {
     id: "izmir-karsiyaka",
