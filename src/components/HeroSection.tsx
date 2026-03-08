@@ -39,11 +39,6 @@ export default function HeroSection() {
     setResetKey((prev) => prev + 1);
   }, []);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    resetTimer();
-  };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     resetTimer();
@@ -82,13 +77,13 @@ export default function HeroSection() {
                 animate={{ opacity: currentSlide === index ? 1 : 0 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
                 className="absolute inset-0 w-full h-full"
-                style={{ backgroundColor: slide.bgColor || 'transparent' }}
+                style={{ backgroundColor: 'transparent' }}
               >
                 <Image
                   src={slide.src}
                   alt="Hero Slider"
                   fill
-                  className={slide.objectFit === 'contain' ? 'object-contain' : 'object-cover'}
+                  className="object-cover"
                   style={{ objectPosition: slide.objectPosition || 'center' }}
                   priority
                   quality={100}
@@ -128,7 +123,7 @@ export default function HeroSection() {
             className="avenir text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed tracking-wide mb-8"
             style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
           >
-            {slides[currentSlide].subtitle || t[slides[currentSlide].headingKey] || slides[currentSlide].headingKey}
+            {slides[currentSlide].subtitle || (slides[currentSlide].headingKey && t[slides[currentSlide].headingKey as keyof typeof t]) || slides[currentSlide].headingKey}
           </motion.h2>
 
           {/* CTA Button */}
