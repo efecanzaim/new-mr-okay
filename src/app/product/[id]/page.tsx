@@ -66,10 +66,15 @@ export async function generateMetadata({
     elegant: "Elegant, sofistike ve entelektüel erkekler için yaratılmış rafine bir parfümdür. Derin ve kontrollü karakteriyle elit anlara eşlik eder.",
     avantgarde: "Avant-garde, yaratıcı, vizyoner ve cesur erkekler için tasarlanmış karakteristik bir koku imzasıdır. Sınırları zorlayan yapısıyla güçlü bir ifade sunar.",
     holiday: "Holiday, özgür ruhlu ve enerjik erkekler için tasarlanmış ferah bir parfümdür. Deniz esintisi ve canlı notalarıyla yaşam dolu anları yansıtır.",
+    mystery: "Mystery, gecenin gizemini taşıyan sofistike ve büyüleyici bir kadın parfümüdür. Kendine güvenen kadınlar için tasarlandı.",
+    celebrity: "Celebrity, ışıltılı ve karizmatik kadınlar için tasarlanmış göz alıcı bir koku imzasıdır.",
+    majesty: "Majesty, asil ve güçlü kadınlar için yaratılmış etkileyici bir parfümdür.",
+    dreamy: "Dreamy, hayalperest ve romantik ruhlar için tasarlanmış zarif bir koku deneyimidir.",
+    shiny: "Shiny, enerjik ve canlı kadınlar için tasarlanmış parlak ve ferah bir parfümdür.",
   };
 
   const seoDescription = productDescriptions[product.id.toLowerCase()] || product.description;
-  const genderKeyword = product.collection === "Businessman" ? "erkek parfümü" : "kadın parfümü";
+  const genderKeyword = product.category === "businessman" ? "erkek parfümü" : "kadın parfümü";
   const siteUrl = "https://mrokayparfum.com";
   const productUrl = `${siteUrl}/product/${product.id}`;
   // Facebook paylaşımı için detail1 görselini kullan

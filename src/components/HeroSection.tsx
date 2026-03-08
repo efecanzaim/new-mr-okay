@@ -22,8 +22,9 @@ export default function HeroSection() {
   const t = allTranslations[language];
 
   const slides = [
-    { type: 'image', src: `${basePath}/images/slider2.jpg`, headingKey: 'home.hero.subtitle', objectPosition: 'center' },
-    { type: 'video', src: `${basePath}/images/hero_video.mp4`, headingKey: 'product.classic.tagline', objectPosition: 'center' },
+    { type: 'image', src: `${basePath}/images/slider3.png`, supertitle: 'Yeni Koleksiyon', title: 'SMARTWOMAN', subtitle: 'Beş Farklı An, Bir Kadın.', link: '/collections/smartwoman', objectPosition: 'center' },
+    { type: 'image', src: `${basePath}/images/slider2.jpg`, headingKey: 'home.hero.subtitle', link: '/collections/businessman', objectPosition: 'center' },
+    { type: 'video', src: `${basePath}/images/hero_video.mp4`, headingKey: 'product.classic.tagline', link: '/collections/businessman', objectPosition: 'center' },
   ];
 
   // Auto-advance slider - resets when resetKey changes
@@ -81,12 +82,13 @@ export default function HeroSection() {
                 animate={{ opacity: currentSlide === index ? 1 : 0 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
                 className="absolute inset-0 w-full h-full"
+                style={{ backgroundColor: slide.bgColor || 'transparent' }}
               >
                 <Image
                   src={slide.src}
                   alt="Hero Slider"
                   fill
-                  className="object-cover"
+                  className={slide.objectFit === 'contain' ? 'object-contain' : 'object-cover'}
                   style={{ objectPosition: slide.objectPosition || 'center' }}
                   priority
                   quality={100}
@@ -97,11 +99,14 @@ export default function HeroSection() {
 
         </div>
 
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-[5] pointer-events-none" />
+
       {/* CTA Content - Bottom of Hero */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pb-24 lg:pb-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Title - Only show on image slide (index 0) */}
-          {currentSlide === 0 && (
+          {/* Main Title */}
+          {(slides[currentSlide].title || currentSlide === 1) && (
             <motion.h1
               key={`title-${currentSlide}`}
               initial={{ opacity: 0, y: 40 }}
@@ -110,7 +115,7 @@ export default function HeroSection() {
               className="avenir text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide mb-4"
               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
             >
-              {t["home.hero.title"]}
+              {slides[currentSlide].title || t["home.hero.title"]}
             </motion.h1>
           )}
 
@@ -119,11 +124,11 @@ export default function HeroSection() {
             key={`subtitle-${currentSlide}`}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: currentSlide === 0 ? 0.2 : 0, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 1.2, delay: slides[currentSlide].title || currentSlide === 1 ? 0.2 : 0, ease: [0.23, 1, 0.32, 1] }}
             className="avenir text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed tracking-wide mb-8"
             style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)' }}
           >
-            {t[slides[currentSlide].headingKey] || slides[currentSlide].headingKey}
+            {slides[currentSlide].subtitle || t[slides[currentSlide].headingKey] || slides[currentSlide].headingKey}
           </motion.h2>
 
           {/* CTA Button */}
@@ -132,7 +137,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.8, ease: [0.23, 1, 0.32, 1] }}
           >
-            <Link href="/collections/businessman">
+            <Link href={slides[currentSlide].link || '/collections/businessman'}>
               <button
                 className="px-12 py-4 bg-white text-black text-xs tracking-ultrawide uppercase font-medium transition-colors duration-300 hover:bg-black hover:text-white avenir"
               >

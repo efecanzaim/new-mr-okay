@@ -31,11 +31,19 @@ const businessmanCategories = [
   { name: "Holiday", href: "/product/holiday", descKey: "header.menu.holiday", image: "/products/holiday.png" },
 ];
 
+const smartwomanCategories = [
+  { name: "Majesty", href: "/product/majesty", descKey: "header.menu.majesty", image: "/products/majesty.png" },
+  { name: "Dreamy", href: "/product/dreamy", descKey: "header.menu.dreamy", image: "/products/dreamy.png" },
+  { name: "Mystery", href: "/product/mystery", descKey: "header.menu.mystery", image: "/products/mystery.png" },
+  { name: "Celebrity", href: "/product/celebrity", descKey: "header.menu.celebrity", image: "/products/celebrity.png" },
+  { name: "Shiny", href: "/product/shiny", descKey: "header.menu.shiny", image: "/products/shiny.png" },
+];
+
 export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState<false | "businessman" | "smartwoman">(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [logoAnimationComplete, setLogoAnimationComplete] = useState(false);
@@ -122,11 +130,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [logoAnimationComplete, isHomePage]);
 
-  const handleMegaMenuEnter = () => {
+  const handleMegaMenuEnter = (collection: "businessman" | "smartwoman") => {
     if (megaMenuTimeoutRef.current) {
       clearTimeout(megaMenuTimeoutRef.current);
     }
-    setIsMegaMenuOpen(true);
+    setIsMegaMenuOpen(collection);
   };
 
   const handleMegaMenuLeave = () => {
@@ -154,26 +162,29 @@ export default function Header() {
               isHomePage && !showNavigation ? 'opacity-0 pointer-events-none' : 'opacity-100'
             }`}>
               <Link
-                href="/about"
-                className="text-base font-sans font-medium uppercase text-black/70 hover:text-black transition-colors duration-400 line-through-hover header-font"
+                href="/collections/smartwoman"
+                className="text-base font-sans font-light uppercase text-black/70 hover:text-black transition-colors duration-400 line-through-hover header-font"
+                onMouseEnter={() => handleMegaMenuEnter("smartwoman")}
+                onMouseLeave={handleMegaMenuLeave}
               >
-                Mr. Okay
+                SMARTWOMAN
               </Link>
 
               <Link
                 href="/collections/businessman"
                 className="text-base font-sans font-light uppercase text-black/70 hover:text-black transition-colors duration-400 line-through-hover header-font"
-                onMouseEnter={handleMegaMenuEnter}
+                onMouseEnter={() => handleMegaMenuEnter("businessman")}
                 onMouseLeave={handleMegaMenuLeave}
               >
                 BUSINESSMAN
               </Link>
 
-              <span
-                className="text-base font-sans font-light uppercase text-black/30 cursor-not-allowed header-font"
+              <Link
+                href="/about"
+                className="text-base font-sans font-medium uppercase text-black/70 hover:text-black transition-colors duration-400 line-through-hover header-font"
               >
-                SMARTWOMAN
-              </span>
+                {t["header.aboutUs"] || "Hikayemiz"}
+              </Link>
             </div>
 
             {/* Center Logo */}
@@ -462,13 +473,13 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-              onMouseEnter={handleMegaMenuEnter}
+              onMouseEnter={() => handleMegaMenuEnter(isMegaMenuOpen as "businessman" | "smartwoman")}
               onMouseLeave={handleMegaMenuLeave}
               className="absolute top-full left-0 right-0 bg-white shadow-lg"
             >
               <div className="w-full px-4 lg:px-6 py-12">
                 <div className="grid grid-cols-5 gap-8">
-                  {businessmanCategories.map((category, index) => (
+                  {(isMegaMenuOpen === "smartwoman" ? smartwomanCategories : businessmanCategories).map((category, index) => (
                     <motion.div
                       key={category.name}
                       initial={{ opacity: 0, y: 20 }}
@@ -502,11 +513,11 @@ export default function Header() {
                 </div>
                 <div className="mt-8 pt-6 border-t border-black/5">
                   <Link
-                    href="/collections/businessman"
+                    href={isMegaMenuOpen === "smartwoman" ? "/collections/smartwoman" : "/collections/businessman"}
                     className="text-xs tracking-ultrawide uppercase text-black font-semibold hover:text-black transition-colors duration-300"
                     onClick={() => setIsMegaMenuOpen(false)}
                   >
-                    Tüm BUSINESSMAN Koleksiyonunu Gör →
+                    {isMegaMenuOpen === "smartwoman" ? "Tüm SMARTWOMAN Koleksiyonunu Gör →" : "Tüm BUSINESSMAN Koleksiyonunu Gör →"}
                   </Link>
                 </div>
               </div>
@@ -533,25 +544,45 @@ export default function Header() {
             >
               {/* Ana Menü Linkleri */}
               <div className="space-y-6 text-center">
+                {/* Smartwoman */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
+                  className="pt-4"
                 >
                   <Link
-                    href="/about"
+                    href="/collections/smartwoman"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors"
+                    className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors mb-4"
                   >
-                    {t["header.aboutUs"]}
+                    {'Smartwoman'.toLocaleUpperCase('en-US')}
                   </Link>
+                  <div className="space-y-2">
+                    {smartwomanCategories.map((cat, index) => (
+                      <motion.div
+                        key={cat.name}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + index * 0.05 }}
+                      >
+                        <Link
+                          href={cat.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-sm text-silver-dark hover:text-black transition-colors py-1"
+                        >
+                          {cat.name}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
                 </motion.div>
 
                 {/* Businessman */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
+                  transition={{ delay: 0.5 }}
                   className="pt-4"
                 >
                   <Link
@@ -567,7 +598,7 @@ export default function Header() {
                         key={cat.name}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 + index * 0.05 }}
+                        transition={{ delay: 0.6 + index * 0.05 }}
                       >
                         <Link
                           href={cat.href}
@@ -581,25 +612,26 @@ export default function Header() {
                   </div>
                 </motion.div>
 
-                {/* Smartwoman */}
+                {/* Hikayemiz */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="pt-4"
+                  transition={{ delay: 0.7 }}
                 >
-                  <span
-                    className="block font-serif text-2xl text-black/30 cursor-not-allowed"
+                  <Link
+                    href="/about"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block font-serif text-2xl text-black hover:text-silver-dark transition-colors"
                   >
-                    {'Smartwoman'.toLocaleUpperCase('en-US')}
-                  </span>
+                    {t["header.aboutUs"] || "Hikayemiz"}
+                  </Link>
                 </motion.div>
 
                 {/* İletişim */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 }}
+                  transition={{ delay: 0.8 }}
                   className="pt-4"
                 >
                   <Link
@@ -615,7 +647,7 @@ export default function Header() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
+                  transition={{ delay: 0.9 }}
                   className="pt-8 border-t border-black/10 mt-8"
                 >
                   <div className="flex items-center justify-center space-x-3">

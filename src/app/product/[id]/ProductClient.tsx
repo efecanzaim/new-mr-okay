@@ -116,9 +116,9 @@ export default function ProductClient({ product, productId }: ProductClientProps
       ]
     : [product.image];
 
-  // Get related products (exclude current product)
+  // Get related products (same category, exclude current product)
   const relatedProducts = products
-    .filter((p) => p.id !== productId)
+    .filter((p) => p.id !== productId && p.category === product.category)
     .slice(0, 4)
     .map((p) => ({
       id: p.id,
@@ -273,6 +273,47 @@ export default function ProductClient({ product, productId }: ProductClientProps
                   </div>
                 )}
 
+                {/* Smartwoman Products */}
+                {productId === "mystery" && (
+                  <div className="mb-4">
+                    <p className="text-black font-medium leading-relaxed">
+                      {t["product.mystery.desc"]}
+                    </p>
+                  </div>
+                )}
+
+                {productId === "celebrity" && (
+                  <div className="mb-4">
+                    <p className="text-black font-medium leading-relaxed">
+                      {t["product.celebrity.desc"]}
+                    </p>
+                  </div>
+                )}
+
+                {productId === "majesty" && (
+                  <div className="mb-4">
+                    <p className="text-black font-medium leading-relaxed">
+                      {t["product.majesty.desc"]}
+                    </p>
+                  </div>
+                )}
+
+                {productId === "dreamy" && (
+                  <div className="mb-4">
+                    <p className="text-black font-medium leading-relaxed">
+                      {t["product.dreamy.desc"]}
+                    </p>
+                  </div>
+                )}
+
+                {productId === "shiny" && (
+                  <div className="mb-4">
+                    <p className="text-black font-medium leading-relaxed">
+                      {t["product.shiny.desc"]}
+                    </p>
+                  </div>
+                )}
+
                 <p className="text-xs tracking-ultrawide uppercase text-black mb-2 font-semibold">
                   {t["product.scentFamily"]}
                 </p>
@@ -398,7 +439,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                           key={note}
                           className="px-3 py-1 bg-black/5 text-sm text-black"
                         >
-                          {note}
+                          {t[`scent.${note}`] || note}
                         </span>
                       ))}
                     </div>
@@ -413,7 +454,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                           key={note}
                           className="px-3 py-1 bg-black/5 text-sm text-black"
                         >
-                          {note}
+                          {t[`scent.${note}`] || note}
                         </span>
                       ))}
                     </div>
@@ -428,7 +469,7 @@ export default function ProductClient({ product, productId }: ProductClientProps
                           key={note}
                           className="px-3 py-1 bg-black/5 text-sm text-black"
                         >
-                          {note}
+                          {t[`scent.${note}`] || note}
                         </span>
                       ))}
                     </div>

@@ -42,6 +42,15 @@ const StoreMap = dynamic(() => import("@/components/StoreMap"), {
 const storeData: StoreLocation[] = [
   // Adana
   {
+    id: "adana-01burda",
+    name: "Adana/Seyhan/01 Burda AVM",
+    type: "physical",
+    city: "Adana",
+    district: "Seyhan",
+    address: "Ahmet Remzi Yüreğir, Turhan Cemal Beriker Blv. No:162 D:1, 01130 Seyhan/Adana",
+    coordinates: [36.99401523871273, 35.308219586973635],
+  },
+  {
     id: "adana-2",
     name: "Adana/Seyhan/Çınar Mahallesi",
     type: "physical",
@@ -170,6 +179,16 @@ const storeData: StoreLocation[] = [
     address: "Giyim Koop. Sanayi Sitesi Ziya Gökalp Osb, Başak, Atatürk Blv. No:25, 34490 Başakşehir/İstanbul",
     coordinates: [41.071681825637796, 28.808971302817508],
   },
+  // Şanlıurfa
+  {
+    id: "sanliurfa-merkez",
+    name: "Şanlıurfa/Merkez",
+    type: "physical",
+    city: "Şanlıurfa",
+    district: "Haliliye",
+    address: "Mimar Sinan Mah. Atatürk Cad. Kerem Ezer Apt. Altı No:40 Haliliye / Şanlıurfa",
+    coordinates: [37.16235627437356, 38.79281654617526],
+  },
   // İzmir
   {
     id: "izmir-karsiyaka",
@@ -235,7 +254,7 @@ const marketplaces = [
   },
 ];
 
-const cities = ["Tümü", "İstanbul", "Ankara", "Adana", "Çanakkale", "İzmir"];
+const cities = ["Tümü", "İstanbul", "Ankara", "Adana", "Çanakkale", "İzmir", "Şanlıurfa"];
 
 export default function StoresPage() {
   const [selectedStore, setSelectedStore] = useState<StoreLocation | null>(null);
