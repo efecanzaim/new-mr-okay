@@ -75,7 +75,7 @@ export default function CollectionBanner() {
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
             className="group"
           >
-            <div className="cursor-default">
+            <Link href="/collections/smartwoman" className="block">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <div className="absolute inset-0">
                   <Image
@@ -90,15 +90,6 @@ export default function CollectionBanner() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                {/* Coming Soon Badge */}
-                <div className="absolute top-8 lg:top-12 left-1/2 -translate-x-1/2">
-                  <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-sm shadow-lg">
-                    <p className="text-base lg:text-lg font-semibold text-black tracking-widest">
-                      {t["collection.comingSoon"]}
-                    </p>
-                  </div>
-                </div>
 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
@@ -118,7 +109,7 @@ export default function CollectionBanner() {
                   />
                 </div>
               </div>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>

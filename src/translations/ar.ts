@@ -281,6 +281,12 @@ export const ar: Record<string, string> = {
   "showcase.desc": "مجموعة عطور مصممة للحظات المختلفة للرجل العصري…",
   "showcase.viewAll": "اكتشف جميع العطور",
 
+  // Smartwoman Showcase
+  "showcase.smartwoman.subtitle": "مجموعة SMARTWOMAN",
+  "showcase.smartwoman.title": "بين الأناقة والقوة والأصالة",
+  "showcase.smartwoman.desc": "مجموعة عطور مصممة للحظات المختلفة للمرأة العصرية…",
+  "showcase.smartwoman.viewAll": "اكتشف جميع العطور",
+
   // Blog Page
   "blog.subtitle": "المجلة",
   "blog.title": "المدونة",

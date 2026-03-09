@@ -281,6 +281,11 @@ export const en: Record<string, string> = {
   "showcase.desc": "A fragrance selection designed for the modern man's different moments…",
   "showcase.viewAll": "DISCOVER ALL FRAGRANCES",
 
+  "showcase.smartwoman.subtitle": "SMARTWOMAN COLLECTION",
+  "showcase.smartwoman.title": "Between Elegance, Power and Authenticity",
+  "showcase.smartwoman.desc": "A fragrance selection designed for the modern woman's different moments…",
+  "showcase.smartwoman.viewAll": "DISCOVER ALL FRAGRANCES",
+
   // Blog Page
   "blog.subtitle": "JOURNAL",
   "blog.title": "Blog",

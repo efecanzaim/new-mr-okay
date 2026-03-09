@@ -281,6 +281,12 @@ export const fr: Record<string, string> = {
   "showcase.desc": "Une sélection de parfums conçue pour les différents moments de l'homme moderne…",
   "showcase.viewAll": "DÉCOUVRIR TOUS LES PARFUMS",
 
+  // Smartwoman Showcase
+  "showcase.smartwoman.subtitle": "COLLECTION SMARTWOMAN",
+  "showcase.smartwoman.title": "Entre Élégance, Pouvoir et Authenticité",
+  "showcase.smartwoman.desc": "Une sélection de parfums conçue pour les différents moments de la femme moderne…",
+  "showcase.smartwoman.viewAll": "DÉCOUVRIR TOUS LES PARFUMS",
+
   // Blog Page
   "blog.subtitle": "JOURNAL",
   "blog.title": "Blog",

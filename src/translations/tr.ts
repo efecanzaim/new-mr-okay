@@ -281,6 +281,11 @@ export const tr: Record<string, string> = {
   "showcase.desc": "Modern erkeğin farklı anları için tasarlanmış koku seçkisi…",
   "showcase.viewAll": "Tüm Kokuları Keşfet",
 
+  "showcase.smartwoman.subtitle": "SMARTWOMAN KOLEKSİYONU",
+  "showcase.smartwoman.title": "Zarafet, Güç ve Özgünlük Arasında",
+  "showcase.smartwoman.desc": "Modern kadının farklı anları için tasarlanmış koku seçkisi…",
+  "showcase.smartwoman.viewAll": "Tüm Kokuları Keşfet",
+
   // Blog Page
   "blog.subtitle": "Dergi",
   "blog.title": "Blog",

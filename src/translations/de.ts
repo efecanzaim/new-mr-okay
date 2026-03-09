@@ -281,6 +281,11 @@ export const de: Record<string, string> = {
   "showcase.desc": "Eine Duftauswahl für die verschiedenen Momente des modernen Mannes…",
   "showcase.viewAll": "ALLE DÜFTE ENTDECKEN",
 
+  "showcase.smartwoman.subtitle": "SMARTWOMAN KOLLEKTION",
+  "showcase.smartwoman.title": "Zwischen Eleganz, Stärke und Authentizität",
+  "showcase.smartwoman.desc": "Eine Duftauswahl für die verschiedenen Momente der modernen Frau…",
+  "showcase.smartwoman.viewAll": "ALLE DÜFTE ENTDECKEN",
+
   // Blog Page
   "blog.subtitle": "JOURNAL",
   "blog.title": "Blog",
