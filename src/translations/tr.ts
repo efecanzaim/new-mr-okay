@@ -161,7 +161,7 @@ export const tr: Record<string, string> = {
   "contact.info.address": "Adres",
   "contact.info.phone": "Telefon",
   "contact.info.email": "E-posta",
-  "contact.info.mainStore": "Ana Mağaza",
+  "contact.info.mainStore": "Merkez Ofis",
   "contact.info.workingHours": "Çalışma Saatleri",
   "contact.info.hours.weekdays": "Pazartesi – Cuma: 10:00 – 19:00",
   "contact.info.hours.saturday": "Cumartesi: 11:00 – 18:00",

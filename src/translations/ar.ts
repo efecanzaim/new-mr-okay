@@ -161,7 +161,7 @@ export const ar: Record<string, string> = {
   "contact.info.address": "العنوان",
   "contact.info.phone": "الهاتف",
   "contact.info.email": "البريد الإلكتروني",
-  "contact.info.mainStore": "المتجر الرئيسي",
+  "contact.info.mainStore": "المكتب الرئيسي",
   "contact.info.workingHours": "ساعات العمل",
   "contact.info.hours.weekdays": "الاثنين – الجمعة: 10:00 صباحاً – 7:00 مساءً",
   "contact.info.hours.saturday": "السبت: 11:00 صباحاً – 6:00 مساءً",

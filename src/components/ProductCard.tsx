@@ -136,7 +136,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             {/* Category Tag */}
             <div className="absolute top-4 left-4">
               <span className="text-[10px] tracking-ultrawide text-white bg-black px-3 py-1 font-bold">
-                {product.category === 'businessman' ? t["productCard.new"] : product.category.toLocaleUpperCase('en-US')}
+                {product.category === 'businessman' ? 'BUSINESSMAN' : t["productCard.new"]}
               </span>
             </div>
           </div>

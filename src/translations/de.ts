@@ -161,7 +161,7 @@ export const de: Record<string, string> = {
   "contact.info.address": "Adresse",
   "contact.info.phone": "Telefon",
   "contact.info.email": "E-Mail",
-  "contact.info.mainStore": "Hauptgeschäft",
+  "contact.info.mainStore": "Hauptbüro",
   "contact.info.workingHours": "Öffnungszeiten",
   "contact.info.hours.weekdays": "Montag – Freitag: 10:00 – 19:00",
   "contact.info.hours.saturday": "Samstag: 11:00 – 18:00",
