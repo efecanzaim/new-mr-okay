@@ -106,14 +106,9 @@ export default function ProductClient({ product, productId }: ProductClientProps
     setShowShareMenu(false);
   };
 
-  // Galeri görselleri - sıralama: detail2, hover, detail1, ana görsel
+  // Galeri görselleri - sıralama: 1, 2, hover, 4
   const galleryImages = product.images && product.images.length > 0
-    ? [
-        product.images[3], // detail2
-        product.images[1], // hover
-        product.images[2], // detail1
-        product.images[0], // ana görsel
-      ]
+    ? product.images
     : [product.image];
 
   // Get related products (same category, exclude current product)
