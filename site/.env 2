@@ -1,0 +1,9 @@
+# Veritabanı — VDS'deki PostgreSQL bağlantı bilgilerini girin
+DATABASE_URL="postgresql://KULLANICI:SIFRE@localhost:5432/mrokay?schema=public"
+
+# NextAuth — güçlü rastgele bir string girin (örn: openssl rand -base64 32)
+NEXTAUTH_SECRET="BURAYA_GUCLU_BIR_SECRET_GIRIN"
+NEXTAUTH_URL="http://localhost:3000"
+
+# Dosya yükleme dizini (opsiyonel, default: public/uploads)
+# UPLOAD_DIR="/var/www/uploads"
