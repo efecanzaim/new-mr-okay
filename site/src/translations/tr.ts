@@ -71,7 +71,7 @@ export const tr: Record<string, string> = {
   "about.values.sustainability.desc": "Gerçek lüks sorumludur. Güzellikten ödün vermeden etik kaynak kullanıyor ve sürdürülebilir paketliyoruz.",
 
   // Businessman Collection
-  "businessman.collection": "Koleksiyon",
+  "businessman.collection": "Koleksiyonu",
   "businessman.tagline": "İş, şehir ve özgürlük arasında dengelenmiş bir yaşam koleksiyonu...",
   "businessman.philosophy": "BUSINESSMAN FELSEFESİ",
   "businessman.philosophy.quote": "Başarı tesadüf değildir; ilk bakışta algılanır, söze ihtiyaç duymadan hissedilir.",

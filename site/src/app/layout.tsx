@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import Providers from "@/components/Providers";
@@ -224,7 +225,7 @@ export default function RootLayout({
           `
         }} />
       </head>
-      <body className="bg-white text-black antialiased">
+      <body className="bg-[#faf9f6] text-black antialiased">
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
@@ -239,7 +240,10 @@ export default function RootLayout({
           `}
         </Script>
         <Providers>
-          <Header />
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <AnnouncementBar />
+            <Header />
+          </div>
           <main className="min-h-screen">{children}</main>
           <Footer />
           <MobileBottomNav />

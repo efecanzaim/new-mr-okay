@@ -1,7 +1,5 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -14,104 +12,101 @@ import { ar } from "@/translations/ar";
 const allTranslations = { tr, en, de, fr, ar };
 
 export default function CollectionBanner() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const { language } = useLanguage();
   const t = allTranslations[language];
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Businessman Collection */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
-            transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="group"
-          >
-            <Link href="/collections/businessman">
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <div className="absolute inset-0">
-                  <Image
-                    src={`${basePath}/images/businessman_banner.jpg`}
-                    alt="Businessman Collection"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    quality={100}
-                  />
-                </div>
+    <section
+      className="bg-[#faf9f6] w-full"
+      style={{ paddingTop: '40px', paddingBottom: '56px', paddingLeft: '24px', paddingRight: '24px' }}
+    >
+      <div className="flex gap-3">
+        {/* Businessman */}
+        <Link href="/collections/businessman" className="flex-1 relative overflow-hidden block" style={{ aspectRatio: '16/9' }}>
+          <Image
+            src={`${basePath}/images/businessman_banner.jpg`}
+            alt="Businessman Collection"
+            fill
+            className="object-cover"
+            sizes="50vw"
+            quality={100}
+          />
+          {/* Gradient — r_gradient-overlay */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 35%, transparent 65%)' }}
+          />
+          {/* Content — r_inside-bottom r_text-center */}
+          <div className="absolute bottom-0 left-0 right-0 pb-10 text-center px-6">
+            <p
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '12px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase' }}
+            >
+              {t["collection.forMen"] || "Erkekler İçin"}
+            </p>
+            <h3
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '24px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', marginTop: '4px' }}
+            >
+              BUSINESSMAN
+            </h3>
+            <p
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '14px', fontWeight: 500, letterSpacing: '0.5px', marginTop: '6px', opacity: 0.85 }}
+            >
+              {t["collection.businessman.desc"] || "Erkekliğin cesur ifadesi."}
+            </p>
+            <span
+              className="inline-block bg-white text-black hover:bg-black hover:text-white transition-colors duration-300"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '13px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', marginTop: '16px', padding: '11px 36px' }}
+            >
+              {t["home.hero.discover"] || "Discover"}
+            </span>
+          </div>
+        </Link>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
-                  <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
-                    {t["collection.forMen"]}
-                  </p>
-                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
-                    BUSINESSMAN
-                  </h3>
-                  <p className="text-sm text-white/70 font-light max-w-sm">
-                    {t["collection.businessman.desc"]}
-                  </p>
-                  <motion.div
-                    initial={{ width: "0%" }}
-                    whileHover={{ width: "100%" }}
-                    className="h-px bg-white/50 mt-6"
-                  />
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-
-          {/* Smartwoman Collection */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
-            transition={{ duration: 1, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
-            className="group"
-          >
-            <Link href="/collections/smartwoman" className="block">
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <div className="absolute inset-0">
-                  <Image
-                    src={`${basePath}/images/smartwoman_banner.jpg`}
-                    alt="Smartwoman Collection"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    quality={100}
-                  />
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
-                  <p className="text-[10px] tracking-ultrawide uppercase text-white/80 mb-2">
-                    {t["collection.forWomen"]}
-                  </p>
-                  <h3 className="font-serif text-3xl lg:text-4xl text-white mb-4 transition-all duration-500">
-                    SMARTWOMAN
-                  </h3>
-                  <p className="text-sm text-white/70 font-light max-w-sm">
-                    {t["collection.smartwoman.desc"]}
-                  </p>
-                  <motion.div
-                    initial={{ width: "0%" }}
-                    whileHover={{ width: "100%" }}
-                    className="h-px bg-white/50 mt-6"
-                  />
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        </div>
+        {/* Smartwoman */}
+        <Link href="/collections/smartwoman" className="flex-1 relative overflow-hidden block" style={{ aspectRatio: '16/9' }}>
+          <Image
+            src={`${basePath}/images/smartwoman_banner.jpg`}
+            alt="Smartwoman Collection"
+            fill
+            className="object-cover"
+            sizes="50vw"
+            quality={100}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 35%, transparent 65%)' }}
+          />
+          <div className="absolute bottom-0 left-0 right-0 pb-10 text-center px-6">
+            <p
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '12px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase' }}
+            >
+              {t["collection.forWomen"] || "Kadınlar İçin"}
+            </p>
+            <h3
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '24px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', marginTop: '4px' }}
+            >
+              SMARTWOMAN
+            </h3>
+            <p
+              className="text-white"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '14px', fontWeight: 500, letterSpacing: '0.5px', marginTop: '6px', opacity: 0.85 }}
+            >
+              {t["collection.smartwoman.desc"] || "Her notada zarif güven."}
+            </p>
+            <span
+              className="inline-block bg-white text-black hover:bg-black hover:text-white transition-colors duration-300"
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: '13px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', marginTop: '16px', padding: '11px 36px' }}
+            >
+              {t["home.hero.discover"] || "Discover"}
+            </span>
+          </div>
+        </Link>
       </div>
     </section>
   );

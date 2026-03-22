@@ -168,26 +168,25 @@ Bir adım tamamlandığında yanına `[x]` işareti koy.
 ## AŞAMA 4 — Site: Yeni Tasarım (Tom Ford / Guerlain Stili)
 
 ### 4.1 Temel Tasarım Sistemi
-- [ ] Renk paleti: siyah, beyaz, krem, gold aksan
-- [ ] Tipografi: serif başlık fontu + sans-serif body (Google Fonts)
-- [ ] `site/src/app/globals.css` — CSS değişkenleri ve temel stiller
-- [ ] `tailwind.config.ts` — özel renkler ve fontlar
+- [x] Renk paleti: #faf9f6 krem, #020202 siyah, #545454 gri — inline stillerle uygulandı
+- [x] Tipografi: Helvetica Neue (sans-serif) tüm componentlere uygulandı
+- [ ] `site/src/app/globals.css` — CSS değişkenleri ve temel stiller (henüz yapılmadı)
+- [ ] `tailwind.config.ts` — özel renkler ve fontlar (henüz yapılmadı)
 
 ### 4.2 Componentler
-- [ ] `Header.tsx` — yeni tasarım (logo ortada, nav solda, sepet sağda, minimal)
-- [ ] `Footer.tsx` — yeni tasarım
-- [ ] `ProductCard.tsx` — lüks kart tasarımı (hover efekti, hızlı ekleme)
-- [ ] `HeroSection.tsx` — tam ekran video/görsel hero
-- [ ] `MobileBottomNav.tsx` — mobil alt navigasyon güncelleme
+- [x] `AnnouncementBar.tsx` — üst bildirim barı (Helvetica Neue, underline kaldırıldı)
+- [x] `Header.tsx` — logo, nav (SMARTWOMAN / BUSINESSMAN / HİKAYEMİZ / MAĞAZALARIMIZ), arama, sepet ikonu, hesap ikonu, dil seçici, mega menu
+- [x] `HeroSection.tsx` — tam ekran görsel hero, Guerlain stili gradient + bottom-center metin + CTA butonu, sticky scroll efekti
+- [x] `EditorialBanner.tsx` — Tom Ford stili 21/9 editorial banner (Businessman)
+- [x] `SmartWomanBanner.tsx` — Tom Ford stili 21/9 editorial banner (Smartwoman)
+- [x] `ProductShowcase.tsx` — Guerlain Section 1 stili ürün carousel (4 kart, ok + sayfa göstergesi, hover görsel değişimi, ExpandButton animasyonu) — category prop ile hem Businessman hem Smartwoman için kullanılıyor
+- [x] `CollectionBanner.tsx` — Guerlain Section 2 stili 2 kolonlu banner (16/9, bottom-center metin, CTA butonu)
+- [x] `BrandStory.tsx` — marka hikayesi bölümü
+- [ ] `Footer.tsx` — yeni tasarım- [ ] `MobileBottomNav.tsx` — mobil alt navigasyon güncelleme
 
 ### 4.3 Sayfalar
-- [ ] Ana sayfa (`page.tsx`) — hero, öne çıkan ürünler, koleksiyonlar, marka hikayesi
-- [ ] Koleksiyon sayfaları — grid layout, filtre
-- [ ] Ürün detay sayfası — büyük görseller, varyant seçimi, stok bilgisi, sepete ekle
-- [ ] Sepet sayfası — minimal tasarım
-- [ ] Checkout sayfası — temiz form tasarımı
-- [ ] Hakkımızda, İletişim, Blog sayfaları
-
+- [x] Ana sayfa (`page.tsx`) — sticky hero + EditorialBanner + ProductShowcase (Businessman) + SmartWomanBanner + ProductShowcase (Smartwoman) + CollectionBanner + BrandStory
+- [ ] `/collections/businessman` — koleksiyon sayfası (grid layout, filtre)- [ ] `/collections/smartwoman` — koleksiyon sayfası (grid layout, filtre)- [ ] `/product/[id]` — ürün detay sayfası (büyük görseller, varyant seçimi, sepete ekle)- [ ] `/cart` — sepet sayfası- [ ] `/account` — hesap sayfası (giriş / kayıt / siparişlerim)- [ ] `/checkout` — ödeme formu sayfası- [ ] `/about` — hikayemiz sayfası- [ ] `/stores` — mağazalarımız sayfası- [ ] `/contact` — iletişim sayfası
 ---
 
 ## AŞAMA 5 — Ödeme Entegrasyonu (Garanti BBVA)
