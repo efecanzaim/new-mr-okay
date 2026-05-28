@@ -25,7 +25,7 @@ export default function EditorialBanner() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src={`${basePath}/images/slider2.jpg`}
+          src={`${basePath}/images/slider2.jpeg`}
           alt="Businessman Collection"
           fill
           className="object-cover"

@@ -87,22 +87,11 @@ export default function Header() {
         style={{ height: "56px" }}
       >
         <div
-          className="h-full flex items-center justify-between"
+          className="h-full grid grid-cols-3 items-center"
           style={{ padding: "0 24px" }}
         >
-          {/* LEFT — Logo + Nav together */}
-          <div className="flex items-center">
-          <Link href="/" className="shrink-0 flex items-center mr-6">
-            <span
-              className="text-black leading-none"
-              style={{ fontFamily: "Blacksword, serif", fontSize: "28px", fontWeight: "normal" }}
-            >
-              Mr. Okay
-            </span>
-          </Link>
-
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center">
+          {/* LEFT — Nav */}
+          <nav className="hidden lg:flex items-center justify-self-start">
             {/* Smartwoman */}
             <div onMouseEnter={() => onMegaEnter("smartwoman")} onMouseLeave={onMegaLeave}>
               <Link href="/collections/smartwoman" style={navLinkStyle} className="text-black hover:text-black/60 transition-colors duration-200 block">
@@ -128,10 +117,18 @@ export default function Header() {
             </Link>
           </nav>
 
-          </div>{/* end left group */}
+          {/* CENTER — Logo */}
+          <Link href="/" className="shrink-0 flex items-center justify-self-center">
+            <span
+              className="text-black leading-none"
+              style={{ fontFamily: "Blacksword, serif", fontSize: "28px", fontWeight: "normal" }}
+            >
+              Mr. Okay
+            </span>
+          </Link>
 
           {/* RIGHT — Icons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3 justify-self-end">
 
             {/* Search input */}
             <div className="flex items-center border-b border-black/30 focus-within:border-black transition-colors duration-200">
@@ -200,7 +197,7 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden text-black"
+            className="lg:hidden text-black justify-self-end"
             onClick={() => setMobileOpen(v => !v)}
           >
             {mobileOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}

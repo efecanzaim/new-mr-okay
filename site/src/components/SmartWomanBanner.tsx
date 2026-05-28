@@ -23,7 +23,7 @@ export default function SmartWomanBanner() {
     >
       <div className="absolute inset-0">
         <Image
-          src={`${basePath}/images/smartwoman_banner.jpg`}
+          src={`${basePath}/images/slider1.jpeg`}
           alt="Smartwoman Collection"
           fill
           className="object-cover"

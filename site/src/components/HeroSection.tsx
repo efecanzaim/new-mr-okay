@@ -22,7 +22,7 @@ export default function HeroSection() {
       {/* ── Background image ── */}
       <div className="absolute inset-0">
         <Image
-          src={`${basePath}/images/slider3.png`}
+          src={`${basePath}/images/slider3.jpeg`}
           alt="Mr. Okay Hero"
           fill
           className="object-cover"
