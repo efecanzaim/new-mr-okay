@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-28T00:00:00Z",
+  "title": "Design System: Mr. Okay Beauty",
+  "extensions": {
+    "colorMeta": {
+      "surface-primary": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(0.978 0.005 80)",
+        "purpose": "Page background across all routes. The cream paper the system prints onto.",
+        "tonalRamp": [
+          "oklch(0.20 0.005 80)",
+          "oklch(0.32 0.005 80)",
+          "oklch(0.45 0.005 80)",
+          "oklch(0.58 0.005 80)",
+          "oklch(0.72 0.005 80)",
+          "oklch(0.86 0.005 80)",
+          "oklch(0.94 0.005 80)",
+          "oklch(0.978 0.005 80)"
+        ]
+      },
+      "surface-elevated": {
+        "role": "neutral",
+        "displayName": "Label White",
+        "canonical": "oklch(1 0 0)",
+        "purpose": "Inverted CTAs, newsletter input fill, product-frame highlights. Reserved.",
+        "tonalRamp": [
+          "oklch(0.20 0 0)",
+          "oklch(0.36 0 0)",
+          "oklch(0.50 0 0)",
+          "oklch(0.65 0 0)",
+          "oklch(0.78 0 0)",
+          "oklch(0.88 0 0)",
+          "oklch(0.95 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "ink-primary": {
+        "role": "primary",
+        "displayName": "Deep Ink",
+        "canonical": "oklch(0.135 0 0)",
+        "purpose": "Body text, primary CTA fill, hairline dividers at 10% alpha. Carries 95% of voice.",
+        "tonalRamp": [
+          "oklch(0.10 0 0)",
+          "oklch(0.135 0 0)",
+          "oklch(0.20 0 0)",
+          "oklch(0.32 0 0)",
+          "oklch(0.45 0 0)",
+          "oklch(0.60 0 0)",
+          "oklch(0.78 0 0)",
+          "oklch(0.92 0 0)"
+        ]
+      },
+      "ink-inverse": {
+        "role": "primary",
+        "displayName": "Reverse Ink",
+        "canonical": "oklch(1 0 0)",
+        "purpose": "Text on dark surfaces: image overlays, inverted CTA hover state, product-tag text.",
+        "tonalRamp": [
+          "oklch(0.20 0 0)",
+          "oklch(0.36 0 0)",
+          "oklch(0.50 0 0)",
+          "oklch(0.65 0 0)",
+          "oklch(0.78 0 0)",
+          "oklch(0.88 0 0)",
+          "oklch(0.95 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "neutral-mid": {
+        "role": "neutral",
+        "displayName": "Ash Whisper",
+        "canonical": "oklch(0.475 0 0)",
+        "purpose": "Secondary metadata, marketplace labels, 'collection' pretitles. Never primary text.",
+        "tonalRamp": [
+          "oklch(0.18 0 0)",
+          "oklch(0.28 0 0)",
+          "oklch(0.38 0 0)",
+          "oklch(0.475 0 0)",
+          "oklch(0.58 0 0)",
+          "oklch(0.70 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.94 0 0)"
+        ]
+      },
+      "overlay-scrim": {
+        "role": "primary",
+        "displayName": "Ink Scrim",
+        "canonical": "oklch(0.135 0 0 / 0.65)",
+        "purpose": "Hero image gradient overlay; only place ink appears as a semi-opaque wash.",
+        "tonalRamp": [
+          "oklch(0.135 0 0 / 0.10)",
+          "oklch(0.135 0 0 / 0.25)",
+          "oklch(0.135 0 0 / 0.40)",
+          "oklch(0.135 0 0 / 0.55)",
+          "oklch(0.135 0 0 / 0.65)",
+          "oklch(0.135 0 0 / 0.75)",
+          "oklch(0.135 0 0 / 0.85)",
+          "oklch(0.135 0 0 / 0.95)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Wordmark Display",
+        "purpose": "Blacksword decorative serif. The wordmark only. One instance per page."
+      },
+      "headline": {
+        "displayName": "Editorial Headline",
+        "purpose": "Playfair Display serif. Section heads, product names, collection titles."
+      },
+      "title": {
+        "displayName": "Working Title",
+        "purpose": "Avenir sans. Card titles, footer column heads, newsletter heading."
+      },
+      "body": {
+        "displayName": "Reader Body",
+        "purpose": "AvenirThin/Avenir. Marketing copy, narrative, product descriptions. Cap at 65-75ch."
+      },
+      "label": {
+        "displayName": "Guerlain Label",
+        "purpose": "Helvetica Neue uppercase, 13px, 0.092em tracking. Every CTA, nav link, badge."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-signature",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "The single ease curve. Used for every transition, hover, page entrance, magnetic interaction."
+      },
+      {
+        "name": "duration-color",
+        "value": "300ms",
+        "purpose": "Color and opacity state changes (nav hover, CTA hover, link active)."
+      },
+      {
+        "name": "duration-image",
+        "value": "500ms",
+        "purpose": "Image cross-fades (product card default → hover), CTA slide-up reveal."
+      },
+      {
+        "name": "duration-scale",
+        "value": "700ms",
+        "purpose": "Image scale on hover (mega-menu thumbs scale 1.05)."
+      },
+      {
+        "name": "duration-entrance",
+        "value": "800ms",
+        "purpose": "Page entrance, scroll-reveal, hero text animate-up. The longest motion allowed."
+      },
+      {
+        "name": "magnetic-scale-hover",
+        "value": "scale(1.02)",
+        "purpose": "whileHover transform on primary CTAs and product cards."
+      },
+      {
+        "name": "magnetic-scale-tap",
+        "value": "scale(0.98)",
+        "purpose": "whileTap transform — pressed-state feedback."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid ink block, white text, square. Inverts on hover. The site's confident voice.",
+      "html": "<button class=\"ds-btn-primary\">KOLEKSİYONU KEŞFET</button>",
+      "css": ".ds-btn-primary { background: #050505; color: #ffffff; border: 1px solid #050505; padding: 12px 40px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.23; letter-spacing: 0.092em; text-transform: uppercase; border-radius: 0; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:hover { background: #ffffff; color: #050505; transform: scale(1.02); } .ds-btn-primary:focus-visible { outline: 2px solid #050505; outline-offset: 3px; } .ds-btn-primary:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Cream-on-ink reverse, sits on dark image overlays (hero CTA). Inverts on hover.",
+      "html": "<button class=\"ds-btn-inverse\">DISCOVER</button>",
+      "css": ".ds-btn-inverse { background: #ffffff; color: #050505; border: 1px solid #ffffff; padding: 11px 36px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.23; letter-spacing: 0.154em; text-transform: uppercase; border-radius: 0; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-inverse:hover { background: #050505; color: #ffffff; } .ds-btn-inverse:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Link",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Uppercase nav link / 'discover more' inline action. No background, no border.",
+      "html": "<a class=\"ds-link-ghost\" href=\"#\">TÜM KOLEKSİYONU KEŞFET →</a>",
+      "css": ".ds-link-ghost { display: inline-block; background: transparent; color: #050505; padding: 4px 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 1.23; letter-spacing: 0.092em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: color 0.2s cubic-bezier(0.23, 1, 0.32, 1); } .ds-link-ghost:hover { color: rgba(5, 5, 5, 0.6); } .ds-link-ghost:focus-visible { outline: 2px solid #050505; outline-offset: 2px; }"
+    },
+    {
+      "name": "Underline Input",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Transparent fill, bottom hairline. Border darkens on focus. Used in forms.",
+      "html": "<label class=\"ds-input-underline-wrap\"><span class=\"ds-input-underline-label\">E-POSTA</span><input class=\"ds-input-underline\" type=\"email\" placeholder=\"ornek@mrokay.com\" /></label>",
+      "css": ".ds-input-underline-wrap { display: flex; flex-direction: column; gap: 4px; } .ds-input-underline-label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(5, 5, 5, 0.6); } .ds-input-underline { width: 100%; background: transparent; color: #050505; border: none; border-bottom: 1px solid rgba(5, 5, 5, 0.2); padding: 12px 0; font-family: 'AvenirThin', 'Avenir', system-ui, sans-serif; font-size: 15px; line-height: 1.65; letter-spacing: 0.05em; border-radius: 0; outline: none; transition: border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1); } .ds-input-underline::placeholder { color: rgba(5, 5, 5, 0.35); } .ds-input-underline:focus-visible { border-bottom-color: #050505; outline: none; }"
+    },
+    {
+      "name": "Newsletter Filled Input",
+      "kind": "input",
+      "refersTo": "newsletter-input",
+      "description": "White-fill input with attached send button. The footer subscribe pattern.",
+      "html": "<form class=\"ds-newsletter\"><input class=\"ds-newsletter-input\" type=\"email\" placeholder=\"E-posta adresiniz\" /><button class=\"ds-newsletter-send\" aria-label=\"Abone ol\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon></svg></button></form>",
+      "css": ".ds-newsletter { display: flex; max-width: 28rem; } .ds-newsletter-input { flex: 1; background: #ffffff; color: #050505; border: 1px solid rgba(5, 5, 5, 0.2); padding: 8px 12px; font-family: 'AvenirThin', 'Avenir', system-ui, sans-serif; font-size: 14px; line-height: 1.5; letter-spacing: 0.05em; border-radius: 0; outline: none; transition: border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1); } .ds-newsletter-input::placeholder { color: rgba(5, 5, 5, 0.4); } .ds-newsletter-input:focus-visible { border-color: rgba(5, 5, 5, 0.6); } .ds-newsletter-send { background: #050505; color: #ffffff; border: 1px solid #050505; padding: 8px 16px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; transition: background-color 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.2s cubic-bezier(0.23, 1, 0.32, 1); } .ds-newsletter-send:hover { background: rgba(5, 5, 5, 0.9); transform: scale(1.02); } .ds-newsletter-send:active { transform: scale(0.98); } .ds-newsletter-send:focus-visible { outline: 2px solid #050505; outline-offset: 3px; }"
+    },
+    {
+      "name": "Product Tag",
+      "kind": "chip",
+      "refersTo": "product-tag",
+      "description": "Top-left badge on product cards. Tiny uppercase label, ink-on-ink-inverse.",
+      "html": "<span class=\"ds-tag\">BUSINESSMAN</span>",
+      "css": ".ds-tag { display: inline-block; background: #050505; color: #ffffff; padding: 4px 12px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 700; line-height: 1.2; letter-spacing: 0.35em; text-transform: uppercase; border-radius: 0; }"
+    },
+    {
+      "name": "Product Card Frame",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Framed product photograph (3:4) with gradient substrate. The site's signature module.",
+      "html": "<a class=\"ds-product-card\" href=\"#\"><div class=\"ds-product-frame\"><img class=\"ds-product-image\" src=\"#\" alt=\"Elegant Parfüm\" /><span class=\"ds-product-card-tag\">BUSINESSMAN</span></div><div class=\"ds-product-info\"><p class=\"ds-product-pretitle\">BUSINESSMAN</p><h3 class=\"ds-product-name\">Elegant</h3><p class=\"ds-product-desc\">Zamansız bir imza için odun ve ferah notalar.</p></div></a>",
+      "css": ".ds-product-card { display: block; text-decoration: none; color: inherit; } .ds-product-frame { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: linear-gradient(107deg, rgba(89, 89, 89, 0.20) 0%, rgba(89, 89, 89, 0.03) 100%); margin-bottom: 24px; } .ds-product-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1); } .ds-product-card:hover .ds-product-image { transform: scale(1.05); } .ds-product-card-tag { position: absolute; top: 16px; left: 16px; background: #050505; color: #ffffff; padding: 4px 12px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; } .ds-product-info { display: flex; flex-direction: column; gap: 8px; } .ds-product-pretitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 900; letter-spacing: 0.35em; text-transform: uppercase; color: #686868; margin: 0; } .ds-product-name { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 600; line-height: 1.2; color: #050505; margin: 0; transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1); } .ds-product-card:hover .ds-product-name { color: #686868; } .ds-product-desc { font-family: 'AvenirThin', 'Avenir', system-ui, sans-serif; font-size: 12px; font-weight: 700; line-height: 1.5; color: #686868; margin: 0; }"
+    },
+    {
+      "name": "Mega-Menu Category Thumb",
+      "kind": "nav",
+      "refersTo": "mega-menu-item",
+      "description": "Category thumbnail in the header mega-menu. Smaller sibling of product card.",
+      "html": "<a class=\"ds-mega-thumb\" href=\"#\"><div class=\"ds-mega-frame\"><img class=\"ds-mega-image\" src=\"#\" alt=\"Elegant\" /></div><p class=\"ds-mega-name\">Elegant</p><p class=\"ds-mega-desc\">Zamansız imza.</p></a>",
+      "css": ".ds-mega-thumb { display: block; text-decoration: none; color: inherit; } .ds-mega-frame { aspect-ratio: 3 / 4; margin-bottom: 12px; overflow: hidden; position: relative; background: linear-gradient(107deg, rgba(89, 89, 89, 0.15) 0%, rgba(89, 89, 89, 0.03) 100%); } .ds-mega-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1); } .ds-mega-thumb:hover .ds-mega-image { transform: scale(1.05); } .ds-mega-name { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 1.23; letter-spacing: 0.092em; text-transform: uppercase; color: #050505; margin: 0 0 2px 0; transition: color 0.2s cubic-bezier(0.23, 1, 0.32, 1); } .ds-mega-thumb:hover .ds-mega-name { color: rgba(5, 5, 5, 0.6); } .ds-mega-desc { font-family: 'AvenirThin', 'Avenir', system-ui, sans-serif; font-size: 11px; letter-spacing: 0.04em; color: rgba(5, 5, 5, 0.4); margin: 0; }"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": "wordmark",
+      "description": "The Blacksword 'Mr. Okay' signature. One per page.",
+      "html": "<span class=\"ds-wordmark\">Mr. Okay</span>",
+      "css": ".ds-wordmark { font-family: 'Blacksword', Georgia, serif; font-size: 28px; font-weight: 400; line-height: 1; letter-spacing: 0; color: #050505; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Margiela Apothecary",
+    "overview": "Mr. Okay is a parfümerie storefront that behaves like a Margiela Replica white-label rack crossed with a quiet apothecary. Surfaces are warm paper, ink is near-black, edges are sharp. Every koku gets the same modular label treatment; hierarchy comes from sequence and breathing room, not from sparkle or scale. The aesthetic explicitly rejects three lanes: Chanel-era luxury clichés, generic Turkish e-commerce chrome, and SaaS-cream pastel gradients. Tactile and confident at the component level; hushed at the layout level.",
+    "keyCharacteristics": [
+      "Cream warm paper surface (#faf9f6); pure white reserved for inverted CTAs and elevated product frames",
+      "Near-black ink (#050505) carries 95% of text load; mid-gray (#686868) for secondary support only",
+      "Sharp corners throughout (border-radius: 0); circular only for social-media icon medallions",
+      "One decorative serif (Blacksword) for the wordmark; Playfair Display + Avenir do the working typography",
+      "Label typography is Helvetica Neue, uppercase, letter-spacing 0.092em — the Guerlain register",
+      "Motion uses a single ease curve (cubic-bezier(0.23, 1, 0.32, 1)); durations stair-step from 300ms (color) to 800ms (entrances)",
+      "Elevation is flat; depth comes from 1px hairline borders at rgba(0,0,0,0.1) and tonal layering of cream over white"
+    ],
+    "rules": [
+      { "name": "The Two-Tone Rule", "body": "Cream and ink. That is the palette. A third color does not enter the system without an Editorial board meeting. Hover states invert (cream→ink, ink→cream); they do not introduce new hues.", "section": "colors" },
+      { "name": "The Cream-Default Rule", "body": "Pure white (#ffffff) appears only as inverted CTAs, the newsletter input fill, and the product-frame highlight. The page surface is always cream. If a section wants 'more white', the answer is more whitespace, not a whiter color.", "section": "colors" },
+      { "name": "The No-Accent Rule", "body": "There is no brand accent color. No magenta, no gold, no teal, no Trendyol red. The product photograph is the accent; the interface holds still while the photograph does the work.", "section": "colors" },
+      { "name": "The One-Wordmark Rule", "body": "Blacksword appears exactly once per page: the wordmark. Never section heads, never product names, never decoration. It is the brand signature, not a font.", "section": "typography" },
+      { "name": "The Uppercase-Label Rule", "body": "Every CTA, navigation link, badge, and pretitle is uppercase Helvetica Neue with ≥0.05em letter-spacing. Title-case CTAs ('Discover Now') are forbidden; they read as e-commerce default-template.", "section": "typography" },
+      { "name": "The 65-Character Rule", "body": "Body copy paragraphs do not exceed 75 characters of line length on desktop.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "box-shadow is forbidden. If something needs to feel 'lifted', layer a surface-elevated (#ffffff) block onto the cream surface or add a hairline border. If those don't read, the element doesn't need to be lifted.", "section": "elevation" },
+      { "name": "The Hairline-Only Rule", "body": "Dividers, panel edges, dropdown outlines: always 1px solid rgba(0,0,0,0.1). No 2px borders, no colored borders, no border-left accents. Side-stripe borders are absolutely banned.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use surface-primary (#faf9f6) as the page background on every new route. Cream is the default.",
+      "Do invert hover states (ink↔cream) rather than introducing new hover colors.",
+      "Do keep all buttons, inputs, cards, modals, and frames square (border-radius: 0). Circular shape is reserved for social-media icon medallions only.",
+      "Do use the label typography (Helvetica Neue, uppercase, 0.092em letter-spacing, 13px) for every CTA, nav link, badge, and pretitle.",
+      "Do use the single ease curve cubic-bezier(0.23, 1, 0.32, 1) for motion. Pick a duration from {300ms color, 500ms image, 700ms scale, 800ms entrance}.",
+      "Do lift elements with tonal layering (#ffffff over cream) or hairline borders (1px rgba(0,0,0,0.1)), not shadows.",
+      "Do cap body copy line length at 65-75ch.",
+      "Do respect prefers-reduced-motion: reduce on every Framer Motion animation, scroll-reveal, magnetic-button, and parallax."
+    ],
+    "donts": [
+      "Don't introduce a brand accent color (no magenta, no gold, no teal, no Trendyol red). The site is two-tone.",
+      "Don't use Chanel-era lux clichés: gold scrollwork, marble texture, italic script gilded headlines.",
+      "Don't add generic Turkish e-com chrome: red discount badges, popup timers, 'stoklar tükeniyor' overlays.",
+      "Don't import SaaS-cream + dijital-luxury hybrid styling: soft gradient cards, neutral-purple AI palettes, 'modern startup' rounded-2xl everything.",
+      "Don't use background-clip: text with a gradient. The current .text-gradient-silver utility violates the absolute ban on gradient text.",
+      "Don't use glassmorphism (backdrop-filter: blur). The .glass / .glass-light utilities should be deleted.",
+      "Don't use box-shadow for elevation. None exists today; none should be added.",
+      "Don't use border-left or border-right greater than 1px as a colored accent. Side-stripe borders are absolutely banned.",
+      "Don't title-case CTAs ('Discover Now'). Labels are uppercase with letter-spacing.",
+      "Don't rely on font-serif (Playfair Display) alone for the wordmark. The wordmark is Blacksword.",
+      "Don't use em-dashes in UI copy. Use commas, colons, periods, or parentheses."
+    ]
+  }
+}

@@ -16,6 +16,13 @@ export const ar: Record<string, string> = {
   "home.hero.title": "BUSINESSMAN",
   "home.hero.subtitle": "مجموعة حصرية، خمس شخصيات مميزة.",
   "home.hero.discover": "اكتشف المجموعة",
+  "home.hero.ontitle": "مجموعة جديدة",
+  "home.hero.alt": "صورة فنية تجسد مجموعة عطور سمارت وومان",
+
+  // Banners
+  "banner.new": "جديد",
+  "banner.businessman.alt": "بانر تحريري لمجموعة بزنس مان",
+  "banner.smartwoman.alt": "بانر تحريري لمجموعة سمارت وومان",
 
   // Collection Banner
   "collection.forMen": "للرجال",
@@ -286,6 +293,10 @@ export const ar: Record<string, string> = {
   "showcase.smartwoman.title": "بين الأناقة والقوة والأصالة",
   "showcase.smartwoman.desc": "مجموعة عطور مصممة للحظات المختلفة للمرأة العصرية…",
   "showcase.smartwoman.viewAll": "اكتشف جميع العطور",
+  "showcase.previous": "العناصر السابقة",
+  "showcase.next": "العناصر التالية",
+  "showcase.addFavorite": "أضف إلى المفضلة",
+  "showcase.quickBuy": "شراء سريع",
 
   // Blog Page
   "blog.subtitle": "المجلة",

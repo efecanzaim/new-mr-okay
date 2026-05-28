@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { announcementStyle } from "@/styles/typography";
 
 const MESSAGES: Record<string, { text: string; href: string }> = {
   tr: { text: "Tüm siparişlerde ücretsiz kargo & özel ayrıcalıklar", href: "/stores" },
@@ -21,20 +22,20 @@ export default function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="relative bg-black flex items-center justify-center" style={{ height: "32px" }}>
+    <div className="relative bg-black flex items-center justify-center" style={{ height: "32px" }} role="region" aria-label="Duyuru">
       <Link
         href={msg.href}
-        className="text-white text-center px-10"
-        style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontSize: "14px", fontWeight: 400, letterSpacing: "0.6px", lineHeight: "20px", textDecoration: "none" }}
+        className="text-white text-center px-10 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        style={announcementStyle}
       >
         {msg.text}
       </Link>
       <button
         onClick={() => setVisible(false)}
-        aria-label="Kapat"
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200"
+        aria-label="Duyuruyu kapat"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
-        <X size={12} strokeWidth={1.5} />
+        <X size={12} strokeWidth={1.5} aria-hidden="true" />
       </button>
     </div>
   );

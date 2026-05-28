@@ -16,6 +16,13 @@ export const de: Record<string, string> = {
   "home.hero.title": "BUSINESSMAN",
   "home.hero.subtitle": "Eine exklusive Kollektion, Fünf einzigartige Charaktere.",
   "home.hero.discover": "KOLLEKTION ENTDECKEN",
+  "home.hero.ontitle": "Neue Kollektion",
+  "home.hero.alt": "Editorial-Stillleben der Smartwoman-Duftkollektion",
+
+  // Banners
+  "banner.new": "NEU",
+  "banner.businessman.alt": "Editorial-Banner der Businessman-Kollektion",
+  "banner.smartwoman.alt": "Editorial-Banner der Smartwoman-Kollektion",
 
   // Collection Banner
   "collection.forMen": "FÜR MÄNNER",
@@ -285,6 +292,10 @@ export const de: Record<string, string> = {
   "showcase.smartwoman.title": "Zwischen Eleganz, Stärke und Authentizität",
   "showcase.smartwoman.desc": "Eine Duftauswahl für die verschiedenen Momente der modernen Frau…",
   "showcase.smartwoman.viewAll": "ALLE DÜFTE ENTDECKEN",
+  "showcase.previous": "Vorherige Artikel",
+  "showcase.next": "Nächste Artikel",
+  "showcase.addFavorite": "Zu Favoriten hinzufügen",
+  "showcase.quickBuy": "Schnellkauf",
 
   // Blog Page
   "blog.subtitle": "JOURNAL",

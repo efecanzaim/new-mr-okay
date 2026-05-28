@@ -8,17 +8,16 @@ import BrandStory from "@/components/BrandStory";
 export default function Home() {
   return (
     <>
-      {/* Hero sticky — sections scroll over it */}
+      {/* Hero sticks; sections slide over it */}
       <div style={{ position: "sticky", top: 0, zIndex: 0 }}>
         <HeroSection />
       </div>
 
-      {/* Content slides over hero */}
       <div style={{ position: "relative", zIndex: 1, background: "#faf9f6" }}>
         <EditorialBanner />
-        <ProductShowcase category="businessman" title="BUSINESSMAN KOLEKSİYONU" />
+        <ProductShowcase category="businessman" titleKey="showcase.subtitle" />
         <SmartWomanBanner />
-        <ProductShowcase category="smartwoman" title="SMARTWOMAN KOLEKSİYONU" />
+        <ProductShowcase category="smartwoman" titleKey="showcase.smartwoman.subtitle" />
         <CollectionBanner />
         <BrandStory />
       </div>

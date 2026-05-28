@@ -16,6 +16,13 @@ export const tr: Record<string, string> = {
   "home.hero.title": "BUSINESSMAN",
   "home.hero.subtitle": "Seçkin bir koleksiyon, Beş farklı karakter.",
   "home.hero.discover": "Koleksiyonu Keşfet",
+  "home.hero.ontitle": "Yeni Koleksiyon",
+  "home.hero.alt": "Smartwoman koleksiyonu için sahnelenmiş parfüm fotoğrafı",
+
+  // Banners
+  "banner.new": "YENİ",
+  "banner.businessman.alt": "Businessman koleksiyonu için sahnelenmiş editorial banner görseli",
+  "banner.smartwoman.alt": "Smartwoman koleksiyonu için sahnelenmiş editorial banner görseli",
 
   // Collection Banner
   "collection.forMen": "Erkekler İçin",
@@ -285,6 +292,10 @@ export const tr: Record<string, string> = {
   "showcase.smartwoman.title": "Zarafet, Güç ve Özgünlük Arasında",
   "showcase.smartwoman.desc": "Modern kadının farklı anları için tasarlanmış koku seçkisi…",
   "showcase.smartwoman.viewAll": "Tüm Kokuları Keşfet",
+  "showcase.previous": "Önceki ürünler",
+  "showcase.next": "Sonraki ürünler",
+  "showcase.addFavorite": "Favorilere Ekle",
+  "showcase.quickBuy": "Hemen Satın Al",
 
   // Blog Page
   "blog.subtitle": "Dergi",

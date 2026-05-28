@@ -244,7 +244,7 @@ export default function RootLayout({
             <AnnouncementBar />
             <Header />
           </div>
-          <main className="min-h-screen">{children}</main>
+          <main id="main" className="min-h-screen">{children}</main>
           <Footer />
           <MobileBottomNav />
         </Providers>

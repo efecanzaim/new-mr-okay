@@ -16,6 +16,13 @@ export const en: Record<string, string> = {
   "home.hero.title": "BUSINESSMAN",
   "home.hero.subtitle": "An exclusive collection, Five distinct characters.",
   "home.hero.discover": "DISCOVER THE COLLECTION",
+  "home.hero.ontitle": "New Collection",
+  "home.hero.alt": "Editorial still life staging the Smartwoman fragrance collection",
+
+  // Banners
+  "banner.new": "NEW",
+  "banner.businessman.alt": "Editorial banner staging the Businessman collection",
+  "banner.smartwoman.alt": "Editorial banner staging the Smartwoman collection",
 
   // Collection Banner
   "collection.forMen": "FOR MEN",
@@ -285,6 +292,10 @@ export const en: Record<string, string> = {
   "showcase.smartwoman.title": "Between Elegance, Power and Authenticity",
   "showcase.smartwoman.desc": "A fragrance selection designed for the modern woman's different moments…",
   "showcase.smartwoman.viewAll": "DISCOVER ALL FRAGRANCES",
+  "showcase.previous": "Previous items",
+  "showcase.next": "Next items",
+  "showcase.addFavorite": "Add to favorites",
+  "showcase.quickBuy": "Quick buy",
 
   // Blog Page
   "blog.subtitle": "JOURNAL",
